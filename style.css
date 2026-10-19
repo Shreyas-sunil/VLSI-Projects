@@ -83,4 +83,8 @@ pre.syl{white-space:pre-wrap;word-break:break-word;font:13px/1.5 ui-monospace,Me
 .ebadge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.8px;padding:2px 8px;border-radius:999px;background:var(--grad);color:var(--onGold);margin-bottom:4px}.ebadge.sm{font-size:10px;vertical-align:middle;margin:0 4px 0 0}
 section.course.elec{border-left:3px dashed var(--gold);padding-left:14px;margin-top:22px}
 aside.side b.elb{color:var(--goldd)}
+.glance{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin:10px 0 18px}
+.gcol{border-radius:12px;padding:12px 16px;background:var(--card);border:1px solid var(--line)}.gcol h3{margin:4px 0 6px;font-size:17px}.gcol h3 small{font-weight:400;color:var(--mut);font-size:12px;margin-left:6px}
+.gcol.core{border-top:5px solid var(--ink)}.gcol.elective{border:2px dashed var(--gold);background:var(--goldbg)}
+.gcol ul{margin:0;padding-left:18px;font-size:14px}.gcol li{margin:3px 0}
 @media print{#medal,header.top,aside.side,.tools,.filters,footer{display:none}details.proj{break-inside:avoid}details.proj>*{display:block}.layout{display:block}}
