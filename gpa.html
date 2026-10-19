@@ -1,0 +1,97 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SGPA and CGPA calculator | VLSI Engineering Project Playbook</title><meta name="description" content="RVCE M.Tech VLSI Design &amp; Embedded Systems 2024 scheme: project library organised by semester and subject.">
+<link rel="stylesheet" href="style.css"></head><body>
+<header class="top"><div class="bar"><a class="brand" href="index.html">VLSI <span>Project Playbook</span></a>
+<nav class="main"><a href="index.html">Home</a><a href="semester-1.html">Sem I</a><a href="semester-2.html">Sem II</a><a href="semester-3.html">Sem III</a><a href="semester-4.html">Sem IV</a><a href="syllabus.html">Syllabus</a><a href="gpa.html" class=on>SGPA/CGPA</a><a href="explorer.html">All projects</a><a href="roadmap.html">Roadmap</a><a href="shortlists.html">Shortlists</a><a href="guide.html">Guide</a><a href="tools.html">Tools</a><a href="glossary.html">Glossary</a><a href="references.html">References</a><a href="coverage.html">Coverage audit</a></nav>
+<form class="search" id="gs"><input id="gq" type="search" placeholder="Search projects" aria-label="Search projects"><button type="button" onclick="toggleTheme()" title="Toggle theme">Theme</button></form></div></header>
+<div id="medal" aria-live="polite"></div>
+<main><h1>SGPA and CGPA calculator</h1>
+<p class="lead">Pick your electives, enter your grades, and see SGPA per semester and CGPA overall. Credits come from the 2024 scheme tables.</p>
+<div class="note warn"><b>Grade scale is editable and unverified.</b> The scheme PDF does not contain a grading table. The default is the common 10-point scale (O 10, A+ 9, A 8, B+ 7, B 6, C 5, P 4, F 0). Check it against the RVCE academic regulations and change the points below if they differ. Results are for your own planning, not an official record.</div>
+<h2>How it is calculated</h2>
+<p><b>SGPA</b> = &Sigma;(credits &times; grade points) / &Sigma;credits for the semester's graded courses. <b>CGPA</b> = the same credit-weighted average across all graded courses in all semesters (not an average of SGPAs). Courses left as &quot;Not graded&quot; are ignored. Re-exam, grade-improvement and pass/fail rules are not modelled.</p>
+<h2>Grade scale</h2><div class="tw" style="max-width:340px" id="scale"></div>
+<div class="note warn"><b>The gold-medal cut-off is not in the scheme PDF.</b> I don't know RVCE's criterion. Ask your department what it is (final CGPA, rank, no backlogs, or something else) and enter a realistic target CGPA below. The strip at the top of every page uses that number.</div>
+<h2>Result</h2><div id="summary"></div>
+<div class="filters"><label>Gold medal target CGPA <input type="number" step="0.01" min="0" max="10" id="target" placeholder="e.g. 9.0"></label><button id="reset" type="button">Reset everything</button></div>
+<h2>Courses and grades</h2><div id="sems"></div>
+<p class="meta">Your entries are saved only in this browser (localStorage) and never leave your device. If storage is blocked, the calculator still works for the current visit.</p></main>
+<footer>VLSI Engineering Project Playbook, built from the RVCE M.Tech VLSI Design &amp; Embedded Systems 2024 scheme. Project cards are plans. Scores, effort and outcomes are estimates until you build and measure. Nothing here promises a job or a salary.</footer>
+<script src="app.js"></script><script>window.GPA=[{"n": 1, "slots": [{"label": "Static Timing Analysis", "credits": 4, "options": [{"code": "MVE311TA", "title": "Static Timing Analysis"}]}, {"label": "Low Power Digital IC Design", "credits": 4, "options": [{"code": "MVE212IA", "title": "Low Power Digital IC Design"}]}, {"label": "Advanced Embedded System Design", "credits": 4, "options": [{"code": "MVE313IA", "title": "Advanced Embedded System Design"}]}, {"label": "Professional Cluster Elective A", "credits": 4, "options": [{"code": "MCS214A1", "title": "Programming, Data Structures and Algorithms using Python"}, {"code": "MDC214A2", "title": "Multimedia Communications"}, {"code": "MPE214A3", "title": "Electric and Hybrid Vehicles"}, {"code": "MVE214A4", "title": "Digital System Design with FPGA"}]}, {"label": "Design Thinking Lab", "credits": 2, "options": [{"code": "MVE415DL", "title": "Design Thinking Lab"}]}, {"label": "Technical English", "credits": 1, "options": [{"code": "HSS116EL", "title": "Technical English"}]}]}, {"n": 2, "slots": [{"label": "Analog IC Design", "credits": 4, "options": [{"code": "MVE321IA", "title": "Analog IC Design"}]}, {"label": "Physical Design", "credits": 4, "options": [{"code": "MVE322IA", "title": "Physical Design"}]}, {"label": "Program Specific Elective B", "credits": 4, "options": [{"code": "MVE323B1", "title": "SystemVerilog for Design and Verification"}, {"code": "MVE323B2", "title": "RFIC Design"}, {"code": "MVE323B3", "title": "Semiconductor Device Modelling"}, {"code": "MVE323B4", "title": "Automotive Embedded Systems"}]}, {"label": "Professional Cluster Elective C", "credits": 4, "options": [{"code": "MCS324C1", "title": "Computer Vision with DL"}, {"code": "MDC324C2", "title": "Adhoc Networks"}, {"code": "MPE324C3", "title": "Intelligent Control Techniques in Electrical Drives"}, {"code": "MVE324C4", "title": "Semiconductor Manufacturing"}]}, {"label": "Global Elective D", "credits": 3, "options": [{"code": "MBT325DA", "title": "Nature Impelled Engineering"}, {"code": "MBT325DB", "title": "Clinical Data Management"}, {"code": "MCN325DC", "title": "Cyber Forensics and Cyber Laws"}, {"code": "MCV325DD", "title": "Industrial Safety and Health"}, {"code": "MCV325DE", "title": "Advanced Technologies for Transportation Systems"}, {"code": "MEC325DF", "title": "Design & Implementation of Human-Machine Interface"}, {"code": "MEE325DG", "title": "Electric Vehicle Technology - II"}, {"code": "MET325DH", "title": "Electronic Navigation Systems"}, {"code": "MET325DJ", "title": "Vehicular Communication Ecosystem"}, {"code": "MIM325DK", "title": "Essentials of Project Management"}, {"code": "MIS325DM", "title": "User Interface & User Experience"}, {"code": "MMA325DN", "title": "Mathematical Methods for Data Science"}, {"code": "MME325DO", "title": "Industry 4.0: The Smart Manufacturing"}, {"code": "MME325DQ", "title": "Industrial Internet of Things (IIoT)"}]}, {"label": "Research Methodology (NPTEL)", "credits": 2, "options": [{"code": "MIM426RT", "title": "Research Methodology (NPTEL)"}]}, {"label": "Skill Lab (Layout Design Lab)", "credits": 2, "options": [{"code": "MVE427SL", "title": "Skill Lab (Layout Design Lab)"}]}]}, {"n": 3, "slots": [{"label": "Algorithms for VLSI Design Automation", "credits": 4, "options": [{"code": "MVE331TA", "title": "Algorithms for VLSI Design Automation"}]}, {"label": "Professional Elective E (NPTEL)", "credits": 2, "options": [{"code": "MVE232E1", "title": "Digital VLSI Testing"}, {"code": "MVE232E2", "title": "C Based - VLSI Design"}, {"code": "MVE232E3", "title": "VLSI Interconnects"}, {"code": "MVE232E4", "title": "Sensor Technologies: Physics, Fabrication and Circuits"}]}, {"label": "Minor Project", "credits": 6, "options": [{"code": "MVE433P", "title": "Minor Project"}]}, {"label": "Internship", "credits": 6, "options": [{"code": "MVE434N", "title": "Internship"}]}]}, {"n": 4, "slots": [{"label": "Program Specific Elective F (NPTEL)", "credits": 2, "options": [{"code": "MVE341F1", "title": "VLSI Design Flow: RTL to GDS"}, {"code": "MVE341F2", "title": "Phase-Locked Loops"}, {"code": "MVE341F3", "title": "VLSI Data Conversion Circuits"}, {"code": "MVE341F4", "title": "Multi-Core Computer Architecture"}]}, {"label": "Major Project", "credits": 18, "options": [{"code": "MVE442P", "title": "Major Project"}]}]}];</script><script>
+(function(){
+ var D=window.GPA; var KEY='vlsi_gpa_v1';
+ var DEFAULT=[['O',10],['A+',9],['A',8],['B+',7],['B',6],['C',5],['P',4],['F',0]];
+ var st={scale:DEFAULT.map(function(x){return x.slice();}),sel:{},grade:{},direct:{},target:''};
+ try{var raw=localStorage.getItem(KEY);if(raw){var o=JSON.parse(raw);if(o&&o.scale)st=o;}}catch(e){}
+ function save(){try{localStorage.setItem(KEY,JSON.stringify(st));localStorage.setItem('vlsi_medal_v1',JSON.stringify({target:st.target}));}catch(e){}if(window.renderMedal)window.renderMedal();}
+ function pts(g){for(var i=0;i<st.scale.length;i++){if(st.scale[i][0]===g)return Number(st.scale[i][1]);}return null;}
+ function el(t,a,h){var e=document.createElement(t);if(a)for(var k in a)e.setAttribute(k,a[k]);if(h!=null)e.innerHTML=h;return e;}
+ function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+ function f2(x){return (isFinite(x)&&x!==null)?(Math.round(x*100)/100).toFixed(2):'-';}
+ var scaleBox=document.getElementById('scale'),semBox=document.getElementById('sems'),sumBox=document.getElementById('summary');
+ function buildScale(){
+  var h='<table><thead><tr><th>Grade</th><th>Grade points</th></tr></thead><tbody>';
+  st.scale.forEach(function(r,i){h+='<tr><td><b>'+esc(r[0])+'</b></td><td><input type="number" step="0.5" min="0" max="10" value="'+r[1]+'" data-i="'+i+'" class="sp"></td></tr>';});
+  scaleBox.innerHTML=h+'</tbody></table>';
+  scaleBox.querySelectorAll('.sp').forEach(function(inp){inp.addEventListener('input',function(){st.scale[+inp.dataset.i][1]=parseFloat(inp.value)||0;save();recalc();});});
+ }
+ function slotKey(n,i){return n+'-'+i;}
+ function gradeOptions(cur){var h='<option value="">Not graded</option>';st.scale.forEach(function(r){h+='<option value="'+esc(r[0])+'"'+(cur===r[0]?' selected':'')+'>'+esc(r[0])+' ('+r[1]+')</option>';});return h;}
+ function buildSems(){
+  semBox.innerHTML='';
+  D.forEach(function(s){
+   var box=el('section',{'class':'card gcard','id':'gs'+s.n});
+   var dr=st.direct[s.n]||{on:false,sgpa:'',credits:''};
+   box.appendChild(el('h3',null,'Semester '+['','I','II','III','IV'][s.n]+' <span class="meta" id="gsg'+s.n+'"></span>'));
+   var tg=el('label',{'class':'meta'},'<input type="checkbox" id="gd'+s.n+'"'+(dr.on?' checked':'')+'> I already know this semester\'s SGPA (skip course grades)');
+   box.appendChild(tg);
+   var dd=el('div',{'class':'filters','id':'gdd'+s.n,style:'display:'+(dr.on?'flex':'none')},
+     '<label>SGPA <input type="number" step="0.01" min="0" max="10" id="gds'+s.n+'" value="'+esc(dr.sgpa)+'"></label><label>Credits registered <input type="number" step="1" min="0" id="gdc'+s.n+'" value="'+esc(dr.credits)+'"></label>');
+   box.appendChild(dd);
+   var h='<div class="tw" id="gt'+s.n+'" style="display:'+(dr.on?'none':'block')+'"><table><thead><tr><th>Course slot</th><th>Selected option</th><th>Credits</th><th>Grade</th></tr></thead><tbody>';
+   s.slots.forEach(function(sl,i){
+     var k=slotKey(s.n,i),cur=st.sel[k]||sl.options[0].code;
+     var opt=sl.options.map(function(o){return '<option value="'+o.code+'"'+(cur===o.code?' selected':'')+'>'+esc(o.code+' - '+o.title)+'</option>';}).join('');
+     var choose=sl.options.length>1?'<select data-k="'+k+'" class="selc">'+opt+'</select>':esc(sl.options[0].code+' - '+sl.options[0].title);
+     h+='<tr><td>'+esc(sl.label)+'</td><td>'+choose+'</td><td>'+sl.credits+'</td><td><select data-k="'+k+'" class="selg">'+gradeOptions(st.grade[k]||'')+'</select></td></tr>';
+   });
+   box.appendChild(el('div',null,h+'</tbody></table></div>'));
+   semBox.appendChild(box);
+   box.querySelector('#gd'+s.n).addEventListener('change',function(e){var d=st.direct[s.n]||(st.direct[s.n]={});d.on=e.target.checked;save();buildSems();recalc();});
+   ['s','c'].forEach(function(t){var i=box.querySelector('#gd'+t+s.n);if(i)i.addEventListener('input',function(){var d=st.direct[s.n]||(st.direct[s.n]={});d[t==='s'?'sgpa':'credits']=i.value;save();recalc();});});
+  });
+  semBox.querySelectorAll('.selc').forEach(function(x){x.addEventListener('change',function(){st.sel[x.dataset.k]=x.value;save();});});
+  semBox.querySelectorAll('.selg').forEach(function(x){x.addEventListener('change',function(){st.grade[x.dataset.k]=x.value;save();recalc();});});
+ }
+ function recalc(){
+  var totalPts=0,totalCr=0,rows='';var done=0,doneCr=0,allCr=0;
+  D.forEach(function(s){
+   var dr=st.direct[s.n]||{};var p=0,c=0,all=s.slots.reduce(function(a,sl){return a+sl.credits;},0);allCr+=all;var note='';
+   if(dr.on){var sg=parseFloat(dr.sgpa),cr=parseFloat(dr.credits);if(isFinite(sg)&&isFinite(cr)&&cr>0){p=sg*cr;c=cr;}}
+   else{s.slots.forEach(function(sl,i){var g=st.grade[slotKey(s.n,i)];var v=g?pts(g):null;if(v!==null){p+=v*sl.credits;c+=sl.credits;}});}
+   var sg2=c>0?p/c:NaN;
+   var lab=document.getElementById('gsg'+s.n);
+   if(lab)lab.textContent=c>0?('SGPA '+f2(sg2)+' ('+c+' of '+all+' credits counted)'):'';
+   if(c>0){totalPts+=p;totalCr+=c;}
+   rows+='<tr><td>Semester '+['','I','II','III','IV'][s.n]+'</td><td>'+all+'</td><td>'+c+'</td><td>'+(c>0?f2(sg2):'-')+'</td></tr>';
+  });
+  var cg=totalCr>0?totalPts/totalCr:NaN;
+  try{localStorage.setItem('vlsi_cg_v1',JSON.stringify({cg:isFinite(cg)?cg:null,counted:totalCr,all:allCr}));}catch(e){}if(window.renderMedal)window.renderMedal();
+  var maxGP=Math.max.apply(null,st.scale.map(function(r){return Number(r[1]);}));
+  var rem=allCr-totalCr;var tgt=parseFloat(st.target);var plan='';
+  if(isFinite(tgt)&&rem>0){var need=(tgt*allCr-totalPts)/rem;
+    plan='To finish with a CGPA of '+f2(tgt)+' over all '+allCr+' programme credits, you need an average of <b>'+f2(need)+'</b> grade points on the remaining '+rem+' credits'+(need>maxGP?' <span style="color:var(--warn)">(above the maximum of '+maxGP+' on your scale: not reachable)</span>':(need<=0?' (already secured)':''))+'.';}
+  else if(isFinite(tgt)&&rem===0){plan='All credits are counted; your final CGPA is '+f2(cg)+'.';}
+  var mpct=(isFinite(tgt)&&isFinite(cg))?Math.max(0,Math.min(100,cg/tgt*100)):0;
+  var medal=isFinite(tgt)?('<div class="mcard mtrack"><b>&#9733; Gold medal tracker</b><p style="margin:6px 0">'+(isFinite(cg)?('Current CGPA <b>'+f2(cg)+'</b> against target <b>'+f2(tgt)+'</b>: '+(cg>=tgt?'you are at or above the target.':'gap of <b>'+f2(tgt-cg)+'</b>.')):'Enter some grades to see how far you are from the target.')+'</p><div class="mbar" style="max-width:none;height:16px"><i style="width:'+mpct+'%"></i></div></div>'):'<div class="mcard"><b>&#9733; Gold medal tracker</b><p style="margin:6px 0">Enter a target CGPA below to start tracking.</p></div>';
+  sumBox.innerHTML=medal+'<div class="grid"><div class="card"><div class="stat">'+f2(cg)+'</div><div class="meta">CGPA (credit-weighted over '+totalCr+' of '+allCr+' credits)</div></div>'+
+   '<div class="card"><div class="stat">'+totalCr+'</div><div class="meta">credits counted so far</div></div></div>'+
+   '<div class="tw" style="margin-top:12px"><table><thead><tr><th>Semester</th><th>Credits</th><th>Counted</th><th>SGPA</th></tr></thead><tbody>'+rows+'</tbody></table></div>'+
+   (plan?'<p class="note">'+plan+'</p>':'');
+ }
+ document.getElementById('target').value=st.target||'';
+ document.getElementById('target').addEventListener('input',function(e){st.target=e.target.value;save();recalc();});
+ document.getElementById('reset').addEventListener('click',function(){if(confirm('Clear all grades and settings on this device?')){st={scale:DEFAULT.map(function(x){return x.slice();}),sel:{},grade:{},direct:{},target:''};save();document.getElementById('target').value='';buildScale();buildSems();recalc();}});
+ buildScale();buildSems();recalc();
+})();
+</script></body></html>

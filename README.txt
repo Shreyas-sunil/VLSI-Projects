@@ -7,6 +7,8 @@ server code, database or internet connection is required; all pages use relative
 Contents
   index.html                     Home
   semester-1.html .. -4.html     Projects by semester, then by subject
+  syllabus.html                  Syllabus by semester with PDF text
+  gpa.html                       SGPA / CGPA calculator
   explorer.html                  Filter/search all 141 projects
   roadmap.html, shortlists.html  Dependencies, reuse, portfolio shortlists
   guide.html, tools.html         Tracks, rubric, evidence rules, syllabus audit, tool setup

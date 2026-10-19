@@ -2,8 +2,9 @@
 <title>Semester II | VLSI Engineering Project Playbook</title><meta name="description" content="RVCE M.Tech VLSI Design &amp; Embedded Systems 2024 scheme: project library organised by semester and subject.">
 <link rel="stylesheet" href="style.css"></head><body>
 <header class="top"><div class="bar"><a class="brand" href="index.html">VLSI <span>Project Playbook</span></a>
-<nav class="main"><a href="index.html">Home</a><a href="semester-1.html">Sem I</a><a href="semester-2.html" class=on>Sem II</a><a href="semester-3.html">Sem III</a><a href="semester-4.html">Sem IV</a><a href="explorer.html">All projects</a><a href="roadmap.html">Roadmap</a><a href="shortlists.html">Shortlists</a><a href="guide.html">Guide</a><a href="tools.html">Tools</a><a href="glossary.html">Glossary</a><a href="references.html">References</a><a href="coverage.html">Coverage audit</a></nav>
+<nav class="main"><a href="index.html">Home</a><a href="semester-1.html">Sem I</a><a href="semester-2.html" class=on>Sem II</a><a href="semester-3.html">Sem III</a><a href="semester-4.html">Sem IV</a><a href="syllabus.html">Syllabus</a><a href="gpa.html">SGPA/CGPA</a><a href="explorer.html">All projects</a><a href="roadmap.html">Roadmap</a><a href="shortlists.html">Shortlists</a><a href="guide.html">Guide</a><a href="tools.html">Tools</a><a href="glossary.html">Glossary</a><a href="references.html">References</a><a href="coverage.html">Coverage audit</a></nav>
 <form class="search" id="gs"><input id="gq" type="search" placeholder="Search projects" aria-label="Search projects"><button type="button" onclick="toggleTheme()" title="Toggle theme">Theme</button></form></div></header>
+<div id="medal" aria-live="polite"></div>
 <main><h1>Semester II</h1>
 <p class="lead">26 course entries, 78 projects. Total credits in the syllabus: 23.</p>
 <div class="card"><h3>Semester II - core VLSI and measurement discipline</h3><p><b>Build these first:</b> <a class="chip" href="#MVE322IA-P1">MVE322IA-P1</a><a class="chip" href="#MVE322IA-P2">MVE322IA-P2</a><a class="chip" href="#MVE323B1-P2">MVE323B1-P2</a><a class="chip" href="#MVE323B1-P3">MVE323B1-P3</a><a class="chip" href="#MCS324C1-P1">MCS324C1-P1</a><a class="chip" href="#MIS325DM-P3">MIS325DM-P3</a><a class="chip" href="#MVE427SL-P2">MVE427SL-P2</a></p><p>Prerequisites: Semester I assets, a working OpenLane/OpenROAD install, basic SPICE. Reusable outputs: physical-design sweep infrastructure, AXI-Lite VIP, quantised weights and exports, register generator, mini cell library.</p><p>Good coursework: MVE321IA-P1, MVE427SL-P1, MIM426RT-P1. Portfolio pieces: MVE322IA-P2, MVE323B1-P3, MVE427SL-P2. Group D electives: pick the one whose bridge project you will actually finish; the others are optional.</p></div>
@@ -350,14 +351,14 @@
 <h4>Score (21/30)</h4><div class="sc"><div><b>3</b>Relevance</div><div><b>4</b>Depth</div><div><b>4</b>Feasibility</div><div><b>3</b>Evaluation</div><div><b>3</b>Portfolio</div><div><b>4</b>Research</div></div><p class="meta">Strongest on technical depth (4/5); weakest on relevance (3/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
 </div></details></section><section class="course" id="MVE323B4"><header><h2>Automotive Embedded Systems</h2>
 <div class="meta"><span class="pid">MVE323B4</span> &middot; Program Specific Elective B &middot; Credits L:T:P 3:1:0 (4) &middot; Theory</div></header>
-<div class="units"><b>Syllabus units:</b> Automotive controllers, communication, real-time software and functional safety concepts (see syllabus pages 34-35 for unit detail).</div><div class="bridge">Functional safety and real-time scheduling add engineering depth to firmware and SoC projects.</div><details class="proj" id="MVE323B4-P1"><summary>
+<div class="units"><b>Syllabus units:</b> I Automotive systems overview · II Sensors and actuators (incl. radar, lidar, video) · III Digital engine control design · IV Cruise control, ABS, electronic suspension/steering, ADAS, autonomous vehicles, IoT · V Automotive protocols (LIN, MOST, FlexRay), diagnostics and calibration tools, AUTOSAR. Course page title: Automotive Embedded System Design.</div><div class="bridge">Functional safety and real-time scheduling add engineering depth to firmware and SoC projects.</div><details class="proj" id="MVE323B4-P1"><summary>
 <span class="pid">MVE323B4-P1</span><span class="ptitle">CAN Stack and Response-Time Analysis</span>
 <span class="chip tB">Track B</span><span class="chip">Intermediate</span><span class="chip lbl1">Build first</span>
 <span class="chip">4-6 wk</span><span class="score">19/30</span></summary>
 <div class="pbody">
 <h4>Identification</h4>
 <p><b>Automotive Embedded Systems</b> (MVE323B4), Semester 2. Level: Foundational. Primary track B; secondary: C. Estimated effort: 4-6 weeks (about 48-72 focused hours at roughly 12 h/week).</p>
-<p><b>Syllabus mapping:</b> CAN communication and real-time scheduling concepts</p>
+<p><b>Syllabus mapping:</b> Unit V automotive protocols and network simulation (CAN is the common baseline alongside the listed LIN, MOST, FlexRay)</p>
 <h4>Engineering problem</h4><p>Message latency on CAN depends on priorities and load. Analysis predicts worst-case response times.</p>
 <h4>Proposed solution and architecture</h4><p>Implement a CAN driver and message scheduler on Linux vcan or Renode, perform response-time analysis, and compare analytic bounds with measured latencies.</p>
 <div class="flow"><span class="n">CAN driver</span><span class="ar">&rarr;</span><span class="n">Scheduler</span><span class="ar">&rarr;</span><span class="n">Analyser</span><span class="ar">&rarr;</span><span class="n">Measurement</span></div>
@@ -379,7 +380,7 @@
 <div class="pbody">
 <h4>Identification</h4>
 <p><b>Automotive Embedded Systems</b> (MVE323B4), Semester 2. Level: Industry-oriented. Primary track B; secondary: A. Estimated effort: 6-8 weeks (about 72-96 focused hours at roughly 12 h/week).</p>
-<p><b>Syllabus mapping:</b> Software architecture, real-time, coding standards</p>
+<p><b>Syllabus mapping:</b> Unit V AUTOSAR architecture; Unit IV ADAS applications; embedded software design (MISRA-C appears in MVE313IA)</p>
 <h4>Engineering problem</h4><p>Automotive firmware follows layered architectures and coding rules. WCET and deadline analysis matter.</p>
 <h4>Proposed solution and architecture</h4><p>Build an RTOS-based ECU software with layers (MCAL, services, application) running a small lane-detection-like inference task, check MISRA-C compliance with a static analyser, measure deadline misses and WCET.</p>
 <div class="flow"><span class="n">MCAL</span><span class="ar">&rarr;</span><span class="n">RTOS</span><span class="ar">&rarr;</span><span class="n">App task</span><span class="ar">&rarr;</span><span class="n">Static analysis</span><span class="ar">&rarr;</span><span class="n">Timing</span></div>
@@ -401,7 +402,7 @@
 <div class="pbody">
 <h4>Identification</h4>
 <p><b>Automotive Embedded Systems</b> (MVE323B4), Semester 2. Level: Advanced / research. Primary track A; secondary: C. Estimated effort: 8-12 weeks (about 96-144 focused hours at roughly 12 h/week).</p>
-<p><b>Syllabus mapping:</b> Functional safety concepts: fault classes, diagnostic coverage</p>
+<p><b>Syllabus mapping:</b> Units II, IV, V: sensors, ADAS and diagnostics. Note: functional safety is not a listed unit here (it appears in MVE313IA); this project adds depth beyond the syllabus</p>
 <h4>Engineering problem</h4><p>Automotive chips need quantified resilience. Soft errors in MAC arrays can silently corrupt results.</p>
 <h4>Proposed solution and architecture</h4><p>Inject bit flips into registers of the systolic array RTL via simulation; classify outcomes (masked, SDC, DUE); evaluate parity, ECC and selective TMR for area overhead versus coverage.</p>
 <div class="flow"><span class="n">Fault injector</span><span class="ar">&rarr;</span><span class="n">Outcome classifier</span><span class="ar">&rarr;</span><span class="n">Mitigation RTL</span><span class="ar">&rarr;</span><span class="n">Area model</span></div>
@@ -1777,5 +1778,5 @@
 <div class="two"><div><h4>Risks and fallback</h4><p>Scope. Fallback: single ring.</p></div><div><h4>Extensions</h4><ul><li>Counter readout RTL</li><li>Add a counter-based RTL readout and a calibration routine</li></ul></div></div>
 <h4>Score (20/30)</h4><div class="sc"><div><b>3</b>Relevance</div><div><b>3</b>Depth</div><div><b>4</b>Feasibility</div><div><b>4</b>Evaluation</div><div><b>3</b>Portfolio</div><div><b>3</b>Research</div></div><p class="meta">Strongest on feasibility (low cost) (4/5); weakest on relevance (3/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
 </div></details></section></div></div></main>
-<footer>The VLSI Engineering Project Playbook. Generated from the RVCE M.Tech VLSI Design &amp; Embedded Systems 2024 scheme. Project cards are plans: scores, effort and outcomes are estimates or targets until you build and measure them. No job or salary outcome is guaranteed.</footer>
+<footer>VLSI Engineering Project Playbook, built from the RVCE M.Tech VLSI Design &amp; Embedded Systems 2024 scheme. Project cards are plans. Scores, effort and outcomes are estimates until you build and measure. Nothing here promises a job or a salary.</footer>
 <script src="app.js"></script></body></html>

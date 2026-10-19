@@ -2745,7 +2745,7 @@
   "semester": 2,
   "group": "Program Specific Elective B",
   "credits": "3:1:0 (4)",
-  "units": "Automotive controllers, communication, real-time software and functional safety concepts (see syllabus pages 34-35 for unit detail).",
+  "units": "I Automotive systems overview · II Sensors and actuators (incl. radar, lidar, video) · III Digital engine control design · IV Cruise control, ABS, electronic suspension/steering, ADAS, autonomous vehicles, IoT · V Automotive protocols (LIN, MOST, FlexRay), diagnostics and calibration tools, AUTOSAR. Course page title: Automotive Embedded System Design.",
   "projects": [
    {
     "t": "CAN Stack and Response-Time Analysis",
@@ -2754,7 +2754,7 @@
     "s2": "C",
     "diff": "Intermediate",
     "wk": "4-6",
-    "cov": "CAN communication and real-time scheduling concepts",
+    "cov": "Unit V automotive protocols and network simulation (CAN is the common baseline alongside the listed LIN, MOST, FlexRay)",
     "prob": "Message latency on CAN depends on priorities and load. Analysis predicts worst-case response times.",
     "sol": "Implement a CAN driver and message scheduler on Linux vcan or Renode, perform response-time analysis, and compare analytic bounds with measured latencies.",
     "blk": [
@@ -2815,7 +2815,7 @@
     "s2": "A",
     "diff": "Advanced",
     "wk": "6-8",
-    "cov": "Software architecture, real-time, coding standards",
+    "cov": "Unit V AUTOSAR architecture; Unit IV ADAS applications; embedded software design (MISRA-C appears in MVE313IA)",
     "prob": "Automotive firmware follows layered architectures and coding rules. WCET and deadline analysis matter.",
     "sol": "Build an RTOS-based ECU software with layers (MCAL, services, application) running a small lane-detection-like inference task, check MISRA-C compliance with a static analyser, measure deadline misses and WCET.",
     "blk": [
@@ -2877,7 +2877,7 @@
     "s2": "C",
     "diff": "Research-grade",
     "wk": "8-12",
-    "cov": "Functional safety concepts: fault classes, diagnostic coverage",
+    "cov": "Units II, IV, V: sensors, ADAS and diagnostics. Note: functional safety is not a listed unit here (it appears in MVE313IA); this project adds depth beyond the syllabus",
     "prob": "Automotive chips need quantified resilience. Soft errors in MAC arrays can silently corrupt results.",
     "sol": "Inject bit flips into registers of the systolic array RTL via simulation; classify outcomes (masked, SDC, DUE); evaluate parity, ECC and selective TMR for area overhead versus coverage.",
     "blk": [
