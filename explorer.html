@@ -1,0 +1,17 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>All projects | VLSI Engineering Project Playbook</title><meta name="description" content="RVCE M.Tech VLSI Design &amp; Embedded Systems 2024 scheme: project library organised by semester and subject.">
+<link rel="stylesheet" href="style.css"></head><body>
+<header class="top"><div class="bar"><a class="brand" href="index.html">VLSI <span>Project Playbook</span></a>
+<nav class="main"><a href="index.html">Home</a><a href="semester-1.html">Sem I</a><a href="semester-2.html">Sem II</a><a href="semester-3.html">Sem III</a><a href="semester-4.html">Sem IV</a><a href="explorer.html" class=on>All projects</a><a href="roadmap.html">Roadmap</a><a href="shortlists.html">Shortlists</a><a href="guide.html">Guide</a><a href="tools.html">Tools</a><a href="glossary.html">Glossary</a><a href="references.html">References</a><a href="coverage.html">Coverage audit</a></nav>
+<form class="search" id="gs"><input id="gq" type="search" placeholder="Search projects" aria-label="Search projects"><button type="button" onclick="toggleTheme()" title="Toggle theme">Theme</button></form></div></header>
+<main><h1>All projects</h1><p class="lead">Filter, search and sort the full library. Click an ID to jump to its card.</p>
+<div class="filters"><input id="q" type="search" placeholder="Search title, course, keywords" aria-label="Search">
+<select id="ftr"><option value="">Any track</option><option value="A">Track A</option><option value="B">Track B</option><option value="C">Track C</option></select>
+<select id="fdf"><option value="">Any difficulty</option><option value="Beginner">Beginner</option><option value="Intermediate">Intermediate</option><option value="Advanced">Advanced</option><option value="Research-grade">Research-grade</option></select>
+<select id="flb"><option value="">Any priority</option><option value="Build first">Build first</option><option value="Build next">Build next</option><option value="Stretch">Stretch</option></select>
+<select id="fsm"><option value="">Any semester</option><option value="1">Semester I</option><option value="2">Semester II</option><option value="3">Semester III</option><option value="4">Semester IV</option></select>
+<select id="fcu"><option value="">GPU not filtered</option><option value="gpu">Needs NVIDIA GPU (CUDA)</option><option value="nogpu">No CUDA needed</option></select>
+<select id="fso"><option value="ord">Syllabus order</option><option value="score">Score (high first)</option><option value="weeks">Shortest first</option></select></div>
+<p class="meta" id="cnt"></p><div class="tw"><table><thead><tr><th>ID</th><th>Project</th><th>Course</th><th>Sem</th><th>Track</th><th>Difficulty</th><th>Priority</th><th>Effort</th><th>Score</th></tr></thead><tbody id="rows"></tbody></table></div></main>
+<footer>The VLSI Engineering Project Playbook. Generated from the RVCE M.Tech VLSI Design &amp; Embedded Systems 2024 scheme. Project cards are plans: scores, effort and outcomes are estimates or targets until you build and measure them. No job or salary outcome is guaranteed.</footer>
+<script src="data.js"></script><script src="app.js"></script><script src="explorer.js"></script></body></html>
