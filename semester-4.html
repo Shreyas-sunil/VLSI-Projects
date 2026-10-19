@@ -6,282 +6,10 @@
 <form class="search" id="gs"><input id="gq" type="search" placeholder="Search projects" aria-label="Search projects"><button type="button" onclick="toggleTheme()" title="Toggle theme">Theme</button></form></div></header>
 <div id="medal" aria-live="polite"></div>
 <main><h1>Semester IV</h1>
-<p class="lead">5 course entries, 15 projects. Total credits in the syllabus: 20.</p>
+<p class="lead">5 course entries (1 core, 4 elective options in 1 cluster), 15 projects. Total credits in the syllabus: 20.</p>
 <div class="card"><h3>Semester IV - the major project and research</h3><p><b>Build these first:</b> <a class="chip" href="#MVE442P-P1">MVE442P-P1</a><a class="chip" href="#MVE442P-P2">MVE442P-P2</a><a class="chip" href="#MVE442P-P3">MVE442P-P3</a><a class="chip" href="#MVE341F4-P2">MVE341F4-P2</a><a class="chip" href="#MVE341F4-P3">MVE341F4-P3</a></p><p>Prerequisites: the minor-project accelerator, an RV32 core, a literature map and a measurement database. The 18-week major project is individual and requires presenting or publishing the work.</p><p>Choose one major project path and use the F-group NPTEL electives as supporting study and small side results.</p></div>
 <div class="tools"><button onclick="setAll(true)">Expand all projects</button><button onclick="setAll(false)">Collapse all</button></div>
-<div class="layout"><aside class="side"><b>Courses</b><a href="#MVE341F1"><span class="pid">MVE341F1</span><br>VLSI Design Flow: RTL to GDS</a><a href="#MVE341F2"><span class="pid">MVE341F2</span><br>Phase-Locked Loops</a><a href="#MVE341F3"><span class="pid">MVE341F3</span><br>VLSI Data Conversion Circuits</a><a href="#MVE341F4"><span class="pid">MVE341F4</span><br>Multi-Core Computer Architecture</a><a href="#MVE442P"><span class="pid">MVE442P</span><br>Major Project</a></aside><div><section class="course" id="MVE341F1"><header><h2>VLSI Design Flow: RTL to GDS</h2>
-<div class="meta"><span class="pid">MVE341F1</span> &middot; Program Specific Elective F (NPTEL) &middot; Credits L:T:P 2:0:0 (2) &middot; NPTEL</div></header>
-<div class="units"><b>Syllabus units:</b> 12 weeks: design flow, Verilog, synthesis, logic optimisation, formal verification, STA, constraints, power, DFT, physical design (planning, placement, CTS, routing), physical verification and sign-off</div><div class="bridge">The capstone flow for physical-design and implementation roles.</div><details class="proj" id="MVE341F1-P1"><summary>
-<span class="pid">MVE341F1-P1</span><span class="ptitle">One-Command Reproducible RTL-to-GDS Flow with Sign-Off Checklist</span>
-<span class="chip tC">Track C</span><span class="chip">Intermediate</span><span class="chip lbl1">Build first</span>
-<span class="chip">4-6 wk</span><span class="score">22/30</span></summary>
-<div class="pbody">
-<h4>Identification</h4>
-<p><b>VLSI Design Flow: RTL to GDS</b> (MVE341F1), Semester 4. Level: Foundational. Primary track C; secondary: A. Estimated effort: 4-6 weeks (about 48-72 focused hours at roughly 12 h/week).</p>
-<p><b>Syllabus mapping:</b> Weeks 2-12: complete flow</p>
-<h4>Engineering problem</h4><p>Reproducibility is what makes PPA claims credible.</p>
-<h4>Proposed solution and architecture</h4><p>Wrap the open flow in a Makefile or workflow with pinned tool versions, containerisation, automated sign-off checks (DRC, LVS, STA, LEC) and archived reports for two designs.</p>
-<div class="flow"><span class="n">Container</span><span class="ar">&rarr;</span><span class="n">Flow wrapper</span><span class="ar">&rarr;</span><span class="n">Checks</span><span class="ar">&rarr;</span><span class="n">Reports</span></div>
-
-<div class="two"><div><h4>Implementation plan</h4><ol><li>Pin tools.</li><li>Wrapper.</li><li>Checks.</li><li>Two designs.</li><li>Docs.</li></ol></div>
-<div><h4>Tools and resources</h4><p>OpenLane/OpenROAD-flow-scripts, Docker, Yosys.</p>
-<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Manual runs.</li><li><b>Measure:</b> Pass/fail checks, reproducibility.</li><li><b>Success looks like:</b> Same results on second machine.</li></ul>
-<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
-<h4>Final deliverables</h4><p>Repo, reports.</p>
-<h4>Career value</h4><p><b>Competencies:</b> Flow engineering.</p>
-<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Built a containerised reproducible RTL-to-GDS flow with automated sign-off checks.</p>
-<p><b>Likely interview questions:</b></p><ul><li>Why pin versions?</li><li>LEC?</li><li>What does sign-off mean in open flow?</li><li>Seeds?</li></ul>
-<div class="two"><div><h4>Risks and fallback</h4><p>Tool versions. Fallback: single design.</p></div><div><h4>Extensions</h4><ul><li>CI</li><li>Add a nightly run on a CI runner with archived artifacts</li></ul></div></div>
-<h4>Score (22/30)</h4><div class="sc"><div><b>5</b>Relevance</div><div><b>3</b>Depth</div><div><b>5</b>Feasibility</div><div><b>4</b>Evaluation</div><div><b>4</b>Portfolio</div><div><b>1</b>Research</div></div><p class="meta">Strongest on relevance (5/5); weakest on research potential (1/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
-</div></details><details class="proj" id="MVE341F1-P2"><summary>
-<span class="pid">MVE341F1-P2</span><span class="ptitle">Tape-Out Readiness Dashboard and Regression Across Designs</span>
-<span class="chip tC">Track C</span><span class="chip">Intermediate</span><span class="chip lbl2">Build next</span>
-<span class="chip">4-6 wk</span><span class="score">19/30</span></summary>
-<div class="pbody">
-<h4>Identification</h4>
-<p><b>VLSI Design Flow: RTL to GDS</b> (MVE341F1), Semester 4. Level: Industry-oriented. Primary track C; secondary: B. Estimated effort: 4-6 weeks (about 48-72 focused hours at roughly 12 h/week).</p>
-<p><b>Syllabus mapping:</b> Weeks 7-12: STA, constraints, physical verification</p>
-<h4>Engineering problem</h4><p>Teams track dozens of metrics across blocks; automation reveals regressions.</p>
-<h4>Proposed solution and architecture</h4><p>Collect metrics from multiple designs and runs, build a dashboard with thresholds, trends, and failure drill-down.</p>
-<div class="flow"><span class="n">Collectors</span><span class="ar">&rarr;</span><span class="n">DB</span><span class="ar">&rarr;</span><span class="n">Dashboard</span></div>
-
-<div class="two"><div><h4>Implementation plan</h4><ol><li>Define metrics.</li><li>Collectors.</li><li>DB.</li><li>UI.</li><li>Test.</li></ol></div>
-<div><h4>Tools and resources</h4><p>Python, SQLite, static HTML.</p>
-<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Manual log reading.</li><li><b>Measure:</b> Detection of seeded regressions.</li><li><b>Success looks like:</b> Regressions flagged.</li></ul>
-<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
-<h4>Final deliverables</h4><p>Tool, report.</p>
-<h4>Career value</h4><p><b>Competencies:</b> Tooling.</p>
-<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Built a signoff metrics dashboard with regression detection.</p>
-<p><b>Likely interview questions:</b></p><ul><li>Which metrics?</li><li>Thresholds?</li><li>Noise?</li><li>Triage?</li></ul>
-<div class="two"><div><h4>Risks and fallback</h4><p>Scope. Fallback: fewer metrics.</p></div><div><h4>Extensions</h4><ul><li>Integrate MVE323B1 coverage</li><li>Add alerting and a weekly digest of metric trends</li></ul></div></div>
-<h4>Score (19/30)</h4><div class="sc"><div><b>4</b>Relevance</div><div><b>2</b>Depth</div><div><b>5</b>Feasibility</div><div><b>4</b>Evaluation</div><div><b>3</b>Portfolio</div><div><b>1</b>Research</div></div><p class="meta">Strongest on feasibility (low cost) (5/5); weakest on research potential (1/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
-</div></details><details class="proj" id="MVE341F1-P3"><summary>
-<span class="pid">MVE341F1-P3</span><span class="ptitle">Flow Hyperparameter Tuning with Bayesian Optimisation vs DoE</span>
-<span class="chip tC">Track C</span><span class="chip">Research-grade</span><span class="chip lbl3">Stretch</span>
-<span class="chip">8-10 wk</span><span class="score">25/30</span></summary>
-<div class="pbody">
-<h4>Identification</h4>
-<p><b>VLSI Design Flow: RTL to GDS</b> (MVE341F1), Semester 4. Level: Advanced / research. Primary track C; secondary: A. Estimated effort: 8-10 weeks (about 96-120 focused hours at roughly 12 h/week).</p>
-<p><b>Syllabus mapping:</b> Weeks 4-12: optimisation parameters across flow</p>
-<h4>Engineering problem</h4><p>Flow parameters strongly affect PPA; OpenROAD already offers an AutoTuner, so the contribution is a controlled comparison.</p>
-<h4>Proposed solution and architecture</h4><p>Compare random search, DoE (from MIM426RT), OpenROAD AutoTuner and your BO on multiple designs with seeds; report results with statistics.</p>
-<div class="flow"><span class="n">Search space</span><span class="ar">&rarr;</span><span class="n">Runner</span><span class="ar">&rarr;</span><span class="n">Optimisers</span><span class="ar">&rarr;</span><span class="n">Stats</span></div>
-
-<div class="two"><div><h4>Implementation plan</h4><ol><li>Define space.</li><li>Runner.</li><li>Run optimisers.</li><li>Stats.</li><li>Report.</li></ol></div>
-<div><h4>Tools and resources</h4><p>OpenROAD-flow-scripts, Ray Tune/AutoTuner, Python.</p>
-<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Default config.</li><li><b>Measure:</b> PPA improvement, evaluations used.</li><li><b>Success looks like:</b> Supported ranking.</li></ul>
-<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
-<h4>Final deliverables</h4><p>Scripts, report.</p>
-<h4>Career value</h4><p><b>Competencies:</b> EDA optimisation.</p>
-<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Compared flow-tuning strategies with statistical rigour on open designs.</p>
-<p><b>Likely interview questions:</b></p><ul><li>Noise?</li><li>Overfit to design?</li><li>Cost?</li><li>Objective?</li></ul>
-<div class="two"><div><h4>Risks and fallback</h4><p>Compute. Fallback: small designs.</p></div><div><h4>Extensions</h4><ul><li>Transfer learning</li><li>Add multi-objective optimisation of timing, power and area together</li></ul></div></div>
-<h4>Score (25/30)</h4><div class="sc"><div><b>4</b>Relevance</div><div><b>4</b>Depth</div><div><b>4</b>Feasibility</div><div><b>5</b>Evaluation</div><div><b>4</b>Portfolio</div><div><b>4</b>Research</div></div><p class="meta">Strongest on measurable evaluation (5/5); weakest on relevance (4/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
-</div></details></section><section class="course" id="MVE341F2"><header><h2>Phase-Locked Loops</h2>
-<div class="meta"><span class="pid">MVE341F2</span> &middot; Program Specific Elective F (NPTEL) &middot; Credits L:T:P 2:0:0 (2) &middot; NPTEL</div></header>
-<div class="units"><b>Syllabus units:</b> 12 weeks: PLL basics, type I/II/III analysis, acquisition, phase detectors, charge-pump PLL design and noise, oscillators, dividers, wide-range multipliers, digital PLLs</div><div class="bridge">Clocking is a core SoC concern.</div><details class="proj" id="MVE341F2-P1"><summary>
-<span class="pid">MVE341F2-P1</span><span class="ptitle">Type-II Charge-Pump PLL Behavioural Model and Loop-Filter Design</span>
-<span class="chip tA">Track A</span><span class="chip">Intermediate</span><span class="chip lbl1">Build first</span>
-<span class="chip">4-6 wk</span><span class="score">18/30</span></summary>
-<div class="pbody">
-<h4>Identification</h4>
-<p><b>Phase-Locked Loops</b> (MVE341F2), Semester 4. Level: Foundational. Primary track A; secondary: C. Estimated effort: 4-6 weeks (about 48-72 focused hours at roughly 12 h/week).</p>
-<p><b>Syllabus mapping:</b> Weeks 1-5: PLL analysis, design procedure</p>
-<h4>Engineering problem</h4><p>Loop filter design sets bandwidth, phase margin and lock time.</p>
-<h4>Proposed solution and architecture</h4><p>Build a Python/Verilog-AMS-free behavioural model and a discrete-time simulation; design loop filter for phase margin; compare with simulation lock time.</p>
-<div class="flow"><span class="n">Model</span><span class="ar">&rarr;</span><span class="n">Loop filter design</span><span class="ar">&rarr;</span><span class="n">Simulation</span></div>
-
-<div class="two"><div><h4>Implementation plan</h4><ol><li>Study.</li><li>Model.</li><li>Design.</li><li>Simulate.</li><li>Compare.</li></ol></div>
-<div><h4>Tools and resources</h4><p>Python (SciPy), ngspice optional.</p>
-<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Analytic.</li><li><b>Measure:</b> PM, lock time.</li><li><b>Success looks like:</b> Agrees with analysis.</li></ul>
-<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
-<h4>Final deliverables</h4><p>Code, report.</p>
-<h4>Career value</h4><p><b>Competencies:</b> PLL design.</p>
-<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Designed a charge-pump PLL loop filter and validated lock behaviour in simulation.</p>
-<p><b>Likely interview questions:</b></p><ul><li>Why type II?</li><li>Zero?</li><li>Ripple?</li><li>Bandwidth limit?</li></ul>
-<div class="two"><div><h4>Risks and fallback</h4><p>Discrete approximations. State.</p></div><div><h4>Extensions</h4><ul><li>Noise</li><li>Add charge-pump mismatch and quantify the resulting spur</li></ul></div></div>
-<h4>Score (18/30)</h4><div class="sc"><div><b>3</b>Relevance</div><div><b>3</b>Depth</div><div><b>5</b>Feasibility</div><div><b>4</b>Evaluation</div><div><b>2</b>Portfolio</div><div><b>1</b>Research</div></div><p class="meta">Strongest on feasibility (low cost) (5/5); weakest on research potential (1/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
-</div></details><details class="proj" id="MVE341F2-P2"><summary>
-<span class="pid">MVE341F2-P2</span><span class="ptitle">All-Digital PLL in RTL (TDC, Loop Filter, DCO Model)</span>
-<span class="chip tC">Track C</span><span class="chip">Advanced</span><span class="chip lbl2">Build next</span>
-<span class="chip">6-8 wk</span><span class="score">21/30</span></summary>
-<div class="pbody">
-<h4>Identification</h4>
-<p><b>Phase-Locked Loops</b> (MVE341F2), Semester 4. Level: Industry-oriented. Primary track C; secondary: A. Estimated effort: 6-8 weeks (about 72-96 focused hours at roughly 12 h/week).</p>
-<p><b>Syllabus mapping:</b> Weeks 11-12: digital PLLs</p>
-<h4>Engineering problem</h4><p>Digital PLLs are synthesizable and scalable.</p>
-<h4>Proposed solution and architecture</h4><p>Implement TDC, digital loop filter, DCO behavioural model; verify lock, jitter and tracking via simulation.</p>
-<div class="flow"><span class="n">TDC</span><span class="ar">&rarr;</span><span class="n">Filter</span><span class="ar">&rarr;</span><span class="n">DCO model</span><span class="ar">&rarr;</span><span class="n">Jitter analysis</span></div>
-<div class="note"><b>FPGA note:</b> board optional. RTL simulation plus synthesis reports is a valid path; results are then simulation and synthesis estimates, not on-board measurements.</div>
-<div class="two"><div><h4>Implementation plan</h4><ol><li>Study.</li><li>RTL.</li><li>Verify lock.</li><li>Jitter.</li><li>Report.</li></ol></div>
-<div><h4>Tools and resources</h4><p>Verilator, Python.</p>
-<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Analog PLL model.</li><li><b>Measure:</b> Lock time, jitter.</li><li><b>Success looks like:</b> Stable lock.</li></ul>
-<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
-<h4>Final deliverables</h4><p>RTL, report.</p>
-<h4>Career value</h4><p><b>Competencies:</b> Digital clocking.</p>
-<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Implemented an all-digital PLL in RTL with jitter analysis.</p>
-<p><b>Likely interview questions:</b></p><ul><li>TDC resolution?</li><li>Dithering?</li><li>Limit cycles?</li><li>Behavioural vs real DCO?</li></ul>
-<div class="two"><div><h4>Risks and fallback</h4><p>Model idealised. State.</p></div><div><h4>Extensions</h4><ul><li>Hybrid</li><li>Add a bang-bang phase detector variant and compare jitter and lock time</li></ul></div></div>
-<h4>Score (21/30)</h4><div class="sc"><div><b>3</b>Relevance</div><div><b>4</b>Depth</div><div><b>4</b>Feasibility</div><div><b>4</b>Evaluation</div><div><b>3</b>Portfolio</div><div><b>3</b>Research</div></div><p class="meta">Strongest on technical depth (4/5); weakest on relevance (3/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
-</div></details><details class="proj" id="MVE341F2-P3"><summary>
-<span class="pid">MVE341F2-P3</span><span class="ptitle">PLL Jitter Budget and Its Effect on MAC-Array Fmax</span>
-<span class="chip tA">Track A</span><span class="chip">Research-grade</span><span class="chip lbl3">Stretch</span>
-<span class="chip">7-9 wk</span><span class="score">22/30</span></summary>
-<div class="pbody">
-<h4>Identification</h4>
-<p><b>Phase-Locked Loops</b> (MVE341F2), Semester 4. Level: Advanced / research. Primary track A; secondary: C. Estimated effort: 7-9 weeks (about 84-108 focused hours at roughly 12 h/week).</p>
-<p><b>Syllabus mapping:</b> Weeks 5-9: noise analysis, ring oscillators, phase noise</p>
-<h4>Engineering problem</h4><p>Jitter consumes timing margin; the question is how much frequency is lost.</p>
-<h4>Proposed solution and architecture</h4><p>Characterise ring-oscillator jitter in SPICE, convert to uncertainty, apply in STA constraints for the MAC array, and quantify Fmax loss vs jitter.</p>
-<div class="flow"><span class="n">Jitter extraction</span><span class="ar">&rarr;</span><span class="n">STA constraint link</span><span class="ar">&rarr;</span><span class="n">Fmax study</span></div>
-
-<div class="two"><div><h4>Implementation plan</h4><ol><li>Study.</li><li>Jitter.</li><li>STA.</li><li>Sweep.</li><li>Analyse.</li></ol></div>
-<div><h4>Tools and resources</h4><p>ngspice, OpenSTA, Python.</p>
-<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Zero jitter.</li><li><b>Measure:</b> Fmax vs jitter.</li><li><b>Success looks like:</b> Quantified.</li></ul>
-<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
-<h4>Final deliverables</h4><p>Report.</p>
-<h4>Career value</h4><p><b>Competencies:</b> Cross-domain analysis.</p>
-<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Linked PLL jitter to STA margin for an accelerator.</p>
-<p><b>Likely interview questions:</b></p><ul><li>Period vs cycle jitter?</li><li>Uncertainty?</li><li>Margins?</li><li>Model?</li></ul>
-<div class="two"><div><h4>Risks and fallback</h4><p>Simplifications. State.</p></div><div><h4>Extensions</h4><ul><li>Adaptive clocking</li><li>Add supply-noise-induced jitter from the PDN study</li></ul></div></div>
-<h4>Score (22/30)</h4><div class="sc"><div><b>4</b>Relevance</div><div><b>4</b>Depth</div><div><b>4</b>Feasibility</div><div><b>4</b>Evaluation</div><div><b>3</b>Portfolio</div><div><b>3</b>Research</div></div><p class="meta">Strongest on relevance (4/5); weakest on portfolio distinctiveness (3/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
-</div></details></section><section class="course" id="MVE341F3"><header><h2>VLSI Data Conversion Circuits</h2>
-<div class="meta"><span class="pid">MVE341F3</span> &middot; Program Specific Elective F (NPTEL) &middot; Credits L:T:P 2:0:0 (2) &middot; NPTEL</div></header>
-<div class="units"><b>Syllabus units:</b> 8 weeks: sampling, quantisation noise, ADC/DAC metrics (INL, DNL, SNR, SFDR), flash, oversampling, SAR converters, DAC design, current-steering DACs</div><div class="bridge">Converters connect sensors and compute-in-memory to digital systems.</div><details class="proj" id="MVE341F3-P1"><summary>
-<span class="pid">MVE341F3-P1</span><span class="ptitle">SAR ADC Behavioural Model with Capacitor Mismatch and ENOB Analysis</span>
-<span class="chip tA">Track A</span><span class="chip">Intermediate</span><span class="chip lbl1">Build first</span>
-<span class="chip">4-6 wk</span><span class="score">20/30</span></summary>
-<div class="pbody">
-<h4>Identification</h4>
-<p><b>VLSI Data Conversion Circuits</b> (MVE341F3), Semester 4. Level: Foundational. Primary track A; secondary: C. Estimated effort: 4-6 weeks (about 48-72 focused hours at roughly 12 h/week).</p>
-<p><b>Syllabus mapping:</b> Weeks 3-6: metrics, SAR converters</p>
-<h4>Engineering problem</h4><p>ENOB depends on mismatch, noise and comparator offset.</p>
-<h4>Proposed solution and architecture</h4><p>Model a SAR ADC in Python with capacitor mismatch and comparator noise, compute INL/DNL/ENOB, and implement the SAR logic in RTL.</p>
-<div class="flow"><span class="n">Behavioural model</span><span class="ar">&rarr;</span><span class="n">Metrics</span><span class="ar">&rarr;</span><span class="n">SAR RTL</span></div>
-
-<div class="two"><div><h4>Implementation plan</h4><ol><li>Study.</li><li>Model.</li><li>Metrics.</li><li>RTL.</li><li>Verify.</li></ol></div>
-<div><h4>Tools and resources</h4><p>Python, Verilator.</p>
-<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Ideal.</li><li><b>Measure:</b> INL, DNL, ENOB.</li><li><b>Success looks like:</b> Consistent with theory.</li></ul>
-<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
-<h4>Final deliverables</h4><p>Code, RTL.</p>
-<h4>Career value</h4><p><b>Competencies:</b> Data converters.</p>
-<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Modelled SAR ADC non-idealities and implemented control logic in RTL.</p>
-<p><b>Likely interview questions:</b></p><ul><li>Binary search?</li><li>Mismatch?</li><li>Calibration?</li><li>Noise?</li></ul>
-<div class="two"><div><h4>Risks and fallback</h4><p>Behavioural only. State.</p></div><div><h4>Extensions</h4><ul><li>Redundancy</li><li>Add background calibration of capacitor weights and measure the ENOB gain</li></ul></div></div>
-<h4>Score (20/30)</h4><div class="sc"><div><b>3</b>Relevance</div><div><b>3</b>Depth</div><div><b>5</b>Feasibility</div><div><b>4</b>Evaluation</div><div><b>3</b>Portfolio</div><div><b>2</b>Research</div></div><p class="meta">Strongest on feasibility (low cost) (5/5); weakest on research potential (2/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
-</div></details><details class="proj" id="MVE341F3-P2"><summary>
-<span class="pid">MVE341F3-P2</span><span class="ptitle">Sigma-Delta Modulator Study with CIC Decimator in RTL</span>
-<span class="chip tA">Track A</span><span class="chip">Advanced</span><span class="chip lbl2">Build next</span>
-<span class="chip">5-7 wk</span><span class="score">20/30</span></summary>
-<div class="pbody">
-<h4>Identification</h4>
-<p><b>VLSI Data Conversion Circuits</b> (MVE341F3), Semester 4. Level: Industry-oriented. Primary track A; secondary: C. Estimated effort: 5-7 weeks (about 60-84 focused hours at roughly 12 h/week).</p>
-<p><b>Syllabus mapping:</b> Weeks 2-5: sampling, oversampling converters</p>
-<h4>Engineering problem</h4><p>Oversampling trades speed for resolution; noise shaping needs decimation hardware.</p>
-<h4>Proposed solution and architecture</h4><p>Simulate first/second-order modulators, compute SNR vs OSR, implement CIC decimation in RTL and validate end-to-end.</p>
-<div class="flow"><span class="n">Modulator model</span><span class="ar">&rarr;</span><span class="n">CIC</span><span class="ar">&rarr;</span><span class="n">SNR analysis</span></div>
-<div class="note"><b>FPGA note:</b> board optional. RTL simulation plus synthesis reports is a valid path; results are then simulation and synthesis estimates, not on-board measurements.</div>
-<div class="two"><div><h4>Implementation plan</h4><ol><li>Study.</li><li>Model.</li><li>CIC RTL.</li><li>End-to-end.</li><li>Report.</li></ol></div>
-<div><h4>Tools and resources</h4><p>Python, Verilator.</p>
-<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Nyquist ADC.</li><li><b>Measure:</b> SNR vs OSR.</li><li><b>Success looks like:</b> Matches theory.</li></ul>
-<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
-<h4>Final deliverables</h4><p>Code, RTL.</p>
-<h4>Career value</h4><p><b>Competencies:</b> Mixed-signal DSP.</p>
-<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Implemented sigma-delta simulation and RTL decimation validated against SNR theory.</p>
-<p><b>Likely interview questions:</b></p><ul><li>Noise shaping?</li><li>Stability?</li><li>CIC order?</li><li>Droop?</li></ul>
-<div class="two"><div><h4>Risks and fallback</h4><p>Stability issues. Fallback: first order.</p></div><div><h4>Extensions</h4><ul><li>Higher order</li><li>Add a compensation FIR and measure passband droop correction</li></ul></div></div>
-<h4>Score (20/30)</h4><div class="sc"><div><b>3</b>Relevance</div><div><b>4</b>Depth</div><div><b>4</b>Feasibility</div><div><b>4</b>Evaluation</div><div><b>3</b>Portfolio</div><div><b>2</b>Research</div></div><p class="meta">Strongest on technical depth (4/5); weakest on research potential (2/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
-</div></details><details class="proj" id="MVE341F3-P3"><summary>
-<span class="pid">MVE341F3-P3</span><span class="ptitle">ADC Resolution vs Accuracy and Energy in Compute-in-Memory Readout (System Study)</span>
-<span class="chip tA">Track A</span><span class="chip">Research-grade</span><span class="chip lbl3">Stretch</span>
-<span class="chip">8-10 wk</span><span class="score">22/30</span></summary>
-<div class="pbody">
-<h4>Identification</h4>
-<p><b>VLSI Data Conversion Circuits</b> (MVE341F3), Semester 4. Level: Advanced / research. Primary track A; secondary: C. Estimated effort: 8-10 weeks (about 96-120 focused hours at roughly 12 h/week).</p>
-<p><b>Syllabus mapping:</b> Weeks 1-7: ADC metrics and architectures applied to analog dot-product readout</p>
-<h4>Engineering problem</h4><p>Analog compute-in-memory moves cost to ADCs. The question is how ADC bits trade accuracy, energy and throughput.</p>
-<h4>Proposed solution and architecture</h4><p>Model crossbar column sums with noise and variation, quantise with ADC models of various resolutions, evaluate network accuracy and ADC energy using published figure-of-merit assumptions (for example Murmann&#x27;s ADC survey as a labelled source); simulation-only.</p>
-<div class="flow"><span class="n">Crossbar model</span><span class="ar">&rarr;</span><span class="n">ADC model</span><span class="ar">&rarr;</span><span class="n">Accuracy evaluation</span><span class="ar">&rarr;</span><span class="n">Energy model</span></div>
-
-<div class="two"><div><h4>Implementation plan</h4><ol><li>Study CIM.</li><li>Model.</li><li>Accuracy.</li><li>Energy.</li><li>Trade-off.</li></ol></div>
-<div><h4>Tools and resources</h4><p>PyTorch CPU, Python.</p>
-<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Digital MAC baseline.</li><li><b>Measure:</b> Accuracy, ADC energy, throughput.</li><li><b>Success looks like:</b> Pareto with stated assumptions.</li></ul>
-<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
-<h4>Final deliverables</h4><p>Code, report.</p>
-<h4>Career value</h4><p><b>Competencies:</b> Analog-digital system analysis.</p>
-<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Evaluated ADC resolution trade-offs for compute-in-memory in simulation.</p>
-<p><b>Likely interview questions:</b></p><ul><li>Why ADC dominates?</li><li>Bit slicing?</li><li>Noise?</li><li>Assumptions?</li></ul>
-<div class="two"><div><h4>Risks and fallback</h4><p>Models idealised. State.</p></div><div><h4>Extensions</h4><ul><li>Calibration</li><li>Add a bit-slicing scheme and compare to a single high-resolution ADC</li></ul></div></div>
-<h4>Score (22/30)</h4><div class="sc"><div><b>4</b>Relevance</div><div><b>4</b>Depth</div><div><b>4</b>Feasibility</div><div><b>3</b>Evaluation</div><div><b>3</b>Portfolio</div><div><b>4</b>Research</div></div><p class="meta">Strongest on relevance (4/5); weakest on measurable evaluation (3/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
-</div></details></section><section class="course" id="MVE341F4"><header><h2>Multi-Core Computer Architecture</h2>
-<div class="meta"><span class="pid">MVE341F4</span> &middot; Program Specific Elective F (NPTEL) &middot; Credits L:T:P 2:0:0 (2) &middot; NPTEL</div></header>
-<div class="units"><b>Syllabus units:</b> 12 weeks: pipelines, hazards, branch prediction, speculative execution, superscalar and GPU architectures, caches, optimisations, coherence protocols, primary storage, tiled multi-core and Network-on-Chip, energy-efficient NoCs, QoS</div><div class="bridge">The architecture capstone: GPUs, coherence and NoC are directly relevant to the three career tracks.</div><details class="proj" id="MVE341F4-P1"><summary>
-<span class="pid">MVE341F4-P1</span><span class="ptitle">Cache and MESI Coherence Simulator with Litmus Tests</span>
-<span class="chip tC">Track C</span><span class="chip">Intermediate</span><span class="chip lbl1">Build first</span>
-<span class="chip">5-7 wk</span><span class="score">22/30</span></summary>
-<div class="pbody">
-<h4>Identification</h4>
-<p><b>Multi-Core Computer Architecture</b> (MVE341F4), Semester 4. Level: Foundational. Primary track C; secondary: A. Estimated effort: 5-7 weeks (about 60-84 focused hours at roughly 12 h/week).</p>
-<p><b>Syllabus mapping:</b> Weeks 6-8: caches, optimisations, coherence</p>
-<h4>Engineering problem</h4><p>Coherence bugs are subtle; a simulator with litmus tests builds protocol understanding.</p>
-<h4>Proposed solution and architecture</h4><p>Implement a multicore cache hierarchy with MESI in Python/C++, run synthetic and trace workloads, verify invariants and litmus tests.</p>
-<div class="flow"><span class="n">Cache model</span><span class="ar">&rarr;</span><span class="n">MESI FSM</span><span class="ar">&rarr;</span><span class="n">Bus/directory</span><span class="ar">&rarr;</span><span class="n">Invariant checker</span></div>
-
-<div class="two"><div><h4>Implementation plan</h4><ol><li>Study MESI.</li><li>Cache.</li><li>Protocol.</li><li>Invariants.</li><li>Workloads.</li></ol></div>
-<div><h4>Tools and resources</h4><p>Python/C++.</p>
-<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> No coherence.</li><li><b>Measure:</b> Misses, traffic, invariant violations.</li><li><b>Success looks like:</b> Invariants hold.</li></ul>
-<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
-<h4>Final deliverables</h4><p>Simulator, report.</p>
-<h4>Career value</h4><p><b>Competencies:</b> Coherence.</p>
-<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Implemented a MESI simulator with invariant checking.</p>
-<p><b>Likely interview questions:</b></p><ul><li>MESI states?</li><li>False sharing?</li><li>Directory vs snooping?</li><li>Races?</li></ul>
-<div class="two"><div><h4>Risks and fallback</h4><p>Corner cases. Fallback: MSI.</p></div><div><h4>Extensions</h4><ul><li>Directory</li><li>Add MOESI and compare coherence traffic on shared workloads</li></ul></div></div>
-<h4>Score (22/30)</h4><div class="sc"><div><b>4</b>Relevance</div><div><b>4</b>Depth</div><div><b>5</b>Feasibility</div><div><b>4</b>Evaluation</div><div><b>3</b>Portfolio</div><div><b>2</b>Research</div></div><p class="meta">Strongest on feasibility (low cost) (5/5); weakest on research potential (2/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
-</div></details><details class="proj" id="MVE341F4-P2"><summary>
-<span class="pid">MVE341F4-P2</span><span class="ptitle">Wormhole Mesh NoC Router RTL with Virtual Channels and Traffic Generators</span>
-<span class="chip tC">Track C</span><span class="chip">Advanced</span><span class="chip lbl2">Build next</span>
-<span class="chip">7-10 wk</span><span class="score">28/30</span></summary>
-<div class="pbody">
-<h4>Identification</h4>
-<p><b>Multi-Core Computer Architecture</b> (MVE341F4), Semester 4. Level: Industry-oriented. Primary track C; secondary: A. Estimated effort: 7-10 weeks (about 84-120 focused hours at roughly 12 h/week).</p>
-<p><b>Syllabus mapping:</b> Weeks 10-12: tiled multicore and NoC, energy efficiency, QoS</p>
-<h4>Engineering problem</h4><p>NoC routers determine on-chip bandwidth and latency in multi-core and accelerator SoCs.</p>
-<h4>Proposed solution and architecture</h4><p>Implement a 5-port wormhole router (XY routing, credit flow control, virtual channels), build a 4x4 mesh, drive with traffic patterns, verify no deadlock, and measure latency-throughput curves vs the algorithm-level study from MDC324C2.</p>
-<div class="flow"><span class="n">Input buffers</span><span class="ar">&rarr;</span><span class="n">Routing</span><span class="ar">&rarr;</span><span class="n">VC allocator</span><span class="ar">&rarr;</span><span class="n">Switch allocator</span><span class="ar">&rarr;</span><span class="n">Traffic generators</span></div>
-<div class="note"><b>FPGA note:</b> board optional. RTL simulation plus synthesis reports is a valid path; results are then simulation and synthesis estimates, not on-board measurements.</div>
-<div class="two"><div><h4>Implementation plan</h4><ol><li>Study.</li><li>Router.</li><li>Mesh.</li><li>Verify.</li><li>Measure.</li></ol></div>
-<div><h4>Tools and resources</h4><p>Verilator/cocotb, Python; BookSim for cross-check.</p>
-<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> BookSim results.</li><li><b>Measure:</b> Latency, throughput, area estimate.</li><li><b>Success looks like:</b> RTL matches model trends.</li></ul>
-<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
-<h4>Final deliverables</h4><p>RTL, TB, plots.</p>
-<h4>Career value</h4><p><b>Competencies:</b> NoC hardware.</p>
-<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Designed and verified a VC wormhole mesh router and compared with simulator trends.</p>
-<p><b>Likely interview questions:</b></p><ul><li>Credit flow?</li><li>Deadlock?</li><li>VC allocation?</li><li>Pipeline stages?</li></ul>
-<div class="two"><div><h4>Risks and fallback</h4><p>Debug difficulty. Fallback: no VC.</p></div><div><h4>Extensions</h4><ul><li>Integrate accelerator tiles</li><li>Add a simple QoS priority scheme and measure latency isolation</li></ul></div></div>
-<h4>Score (28/30)</h4><div class="sc"><div><b>5</b>Relevance</div><div><b>5</b>Depth</div><div><b>4</b>Feasibility</div><div><b>5</b>Evaluation</div><div><b>5</b>Portfolio</div><div><b>4</b>Research</div></div><p class="meta">Strongest on relevance (5/5); weakest on feasibility (low cost) (4/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
-</div></details><details class="proj" id="MVE341F4-P3"><summary>
-<span class="pid">MVE341F4-P3</span><span class="ptitle">Mini SIMT GPU from Scratch: ISA, Warp Scheduler, Divergence Stack and Kernels</span>
-<span class="chip tA">Track A</span><span class="chip">Research-grade</span><span class="chip lbl3">Stretch</span>
-<span class="chip">12-18 wk</span><span class="score">28/30</span></summary>
-<div class="pbody">
-<h4>Identification</h4>
-<p><b>Multi-Core Computer Architecture</b> (MVE341F4), Semester 4. Level: Advanced / research. Primary track A; secondary: B. Estimated effort: 12-18 weeks (about 144-216 focused hours at roughly 12 h/week).</p>
-<p><b>Syllabus mapping:</b> Week 5: superscalar and GPU architectures; Weeks 1-4 pipelines</p>
-<h4>Engineering problem</h4><p>Understanding GPUs at microarchitecture level is rare. Open projects exist (for example Vortex, Tine et al., MICRO 2021), so the value is the learning and the measured study, not novelty.</p>
-<h4>Proposed solution and architecture</h4><p>Design a small SIMT core: ISA, assembler, warps, scoreboard, divergence handling, shared memory, simple memory coalescing; run vector-add, reduction and tiled matmul kernels; add performance counters and compare scaling trends qualitatively with CUDA experiments from MVE433P.</p>
-<div class="flow"><span class="n">ISA + assembler</span><span class="ar">&rarr;</span><span class="n">Fetch/decode</span><span class="ar">&rarr;</span><span class="n">Warp scheduler</span><span class="ar">&rarr;</span><span class="n">Lanes/ALU</span><span class="ar">&rarr;</span><span class="n">Divergence stack</span><span class="ar">&rarr;</span><span class="n">Memory unit</span><span class="ar">&rarr;</span><span class="n">Counters</span></div>
-<div class="note"><b>FPGA note:</b> board optional. RTL simulation plus synthesis reports is a valid path; results are then simulation and synthesis estimates, not on-board measurements.</div>
-<div class="two"><div><h4>Implementation plan</h4><ol><li>Study SIMT and Vortex-like designs.</li><li>ISA and assembler.</li><li>Core RTL.</li><li>Divergence and memory.</li><li>Kernels and counters.</li><li>Analysis.</li></ol></div>
-<div><h4>Tools and resources</h4><p>Verilator, Python assembler, optional FPGA. CUDA hardware is optional for the comparison section.</p>
-<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Scalar core running same kernels.</li><li><b>Measure:</b> IPC, lane utilisation, divergence cost, area estimate.</li><li><b>Success looks like:</b> Kernels run correctly; counter-based analysis.</li></ul>
-<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
-<h4>Final deliverables</h4><p>RTL, assembler, kernels, report.</p>
-<h4>Career value</h4><p><b>Competencies:</b> GPU microarchitecture.</p>
-<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Designed a small SIMT GPU core with assembler and kernels and analysed divergence and memory behaviour.</p>
-<p><b>Likely interview questions:</b></p><ul><li>How is divergence handled?</li><li>Warp scheduling?</li><li>Coalescing?</li><li>Occupancy equivalent?</li><li>Limits vs real GPUs?</li></ul>
-<div class="two"><div><h4>Risks and fallback</h4><p>Scope very large. Fallback: single warp.</p></div><div><h4>Extensions</h4><ul><li>Tensor-like unit</li><li>Compiler front-end</li></ul></div></div>
-<h4>Score (28/30)</h4><div class="sc"><div><b>5</b>Relevance</div><div><b>5</b>Depth</div><div><b>3</b>Feasibility</div><div><b>5</b>Evaluation</div><div><b>5</b>Portfolio</div><div><b>5</b>Research</div></div><p class="meta">Strongest on relevance (5/5); weakest on feasibility (low cost) (3/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
-</div></details></section><section class="course" id="MVE442P"><header><h2>Major Project</h2>
+<div class="layout"><aside class="side"><b>Core courses</b><a href="#MVE442P"><span class="pid">MVE442P</span><br>Major Project</a><b class="elb">Elective: Program Specific Elective F (NPTEL)</b><a href="#MVE341F1"><span class="pid">MVE341F1</span><br>VLSI Design Flow: RTL to GDS</a><a href="#MVE341F2"><span class="pid">MVE341F2</span><br>Phase-Locked Loops</a><a href="#MVE341F3"><span class="pid">MVE341F3</span><br>VLSI Data Conversion Circuits</a><a href="#MVE341F4"><span class="pid">MVE341F4</span><br>Multi-Core Computer Architecture</a></aside><div><div class="band core"><h2>Core courses</h2><p class="meta">Everyone takes these. 1 entries, 18 credits.</p></div><section class="course" id="MVE442P"><header><h2>Major Project</h2>
 <div class="meta"><span class="pid">MVE442P</span> &middot; Project &middot; Credits L:T:P 0:0:18 (18) &middot; Project</div></header>
 <div class="units"><b>Syllabus units:</b> 18-week individual project; literature survey and gap analysis; guide assigned; may be industry or in-house; mandatory presentation/publication in conference or journal; committee approval; report formatting rules.</div><div class="bridge">Select one and expand it into the main thesis; the shortlist page explains prerequisites.</div><details class="proj" id="MVE442P-P1"><summary>
 <span class="pid">MVE442P-P1</span><span class="ptitle">Quantised Inference SoC: RISC-V Host + INT8 Systolic Engine + DMA, FPGA and PPA</span>
@@ -349,6 +77,278 @@
 <p><b>Likely interview questions:</b></p><ul><li>How are kernels launched?</li><li>Memory model?</li><li>Compiler limits?</li><li>Divergence cost?</li><li>Scaling?</li></ul>
 <div class="two"><div><h4>Risks and fallback</h4><p>Largest scope. Fallback: assembler only.</p></div><div><h4>Extensions</h4><ul><li>Tensor unit</li><li>More kernels</li></ul></div></div>
 <h4>Score (26/30)</h4><div class="sc"><div><b>5</b>Relevance</div><div><b>5</b>Depth</div><div><b>3</b>Feasibility</div><div><b>4</b>Evaluation</div><div><b>5</b>Portfolio</div><div><b>4</b>Research</div></div><p class="meta">Strongest on relevance (5/5); weakest on feasibility (low cost) (3/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details></section><div class="band elective"><span class="ebadge">ELECTIVE</span><h2>Program Specific Elective F (NPTEL)</h2><p class="meta">Choose one of these 4 options. You do not take all of them, so build the projects only for the option you pick. Credits per option: 2:0:0 (2).</p><p><a class="chip" href="#MVE341F1">MVE341F1</a><a class="chip" href="#MVE341F2">MVE341F2</a><a class="chip" href="#MVE341F3">MVE341F3</a><a class="chip" href="#MVE341F4">MVE341F4</a></p></div><section class="course elec" id="MVE341F1"><header><h2><span class="ebadge sm">ELECTIVE</span> VLSI Design Flow: RTL to GDS</h2>
+<div class="meta"><span class="pid">MVE341F1</span> &middot; Program Specific Elective F (NPTEL) &middot; Credits L:T:P 2:0:0 (2) &middot; NPTEL</div></header>
+<div class="units"><b>Syllabus units:</b> 12 weeks: design flow, Verilog, synthesis, logic optimisation, formal verification, STA, constraints, power, DFT, physical design (planning, placement, CTS, routing), physical verification and sign-off</div><div class="bridge">The capstone flow for physical-design and implementation roles.</div><details class="proj" id="MVE341F1-P1"><summary>
+<span class="pid">MVE341F1-P1</span><span class="ptitle">One-Command Reproducible RTL-to-GDS Flow with Sign-Off Checklist</span>
+<span class="chip tC">Track C</span><span class="chip">Intermediate</span><span class="chip lbl1">Build first</span>
+<span class="chip">4-6 wk</span><span class="score">22/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>VLSI Design Flow: RTL to GDS</b> (MVE341F1), Semester 4. Level: Foundational. Primary track C; secondary: A. Estimated effort: 4-6 weeks (about 48-72 focused hours at roughly 12 h/week).</p>
+<p><b>Syllabus mapping:</b> Weeks 2-12: complete flow</p>
+<h4>Engineering problem</h4><p>Reproducibility is what makes PPA claims credible.</p>
+<h4>Proposed solution and architecture</h4><p>Wrap the open flow in a Makefile or workflow with pinned tool versions, containerisation, automated sign-off checks (DRC, LVS, STA, LEC) and archived reports for two designs.</p>
+<div class="flow"><span class="n">Container</span><span class="ar">&rarr;</span><span class="n">Flow wrapper</span><span class="ar">&rarr;</span><span class="n">Checks</span><span class="ar">&rarr;</span><span class="n">Reports</span></div>
+
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Pin tools.</li><li>Wrapper.</li><li>Checks.</li><li>Two designs.</li><li>Docs.</li></ol></div>
+<div><h4>Tools and resources</h4><p>OpenLane/OpenROAD-flow-scripts, Docker, Yosys.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Manual runs.</li><li><b>Measure:</b> Pass/fail checks, reproducibility.</li><li><b>Success looks like:</b> Same results on second machine.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>Repo, reports.</p>
+<h4>Career value</h4><p><b>Competencies:</b> Flow engineering.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Built a containerised reproducible RTL-to-GDS flow with automated sign-off checks.</p>
+<p><b>Likely interview questions:</b></p><ul><li>Why pin versions?</li><li>LEC?</li><li>What does sign-off mean in open flow?</li><li>Seeds?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Tool versions. Fallback: single design.</p></div><div><h4>Extensions</h4><ul><li>CI</li><li>Add a nightly run on a CI runner with archived artifacts</li></ul></div></div>
+<h4>Score (22/30)</h4><div class="sc"><div><b>5</b>Relevance</div><div><b>3</b>Depth</div><div><b>5</b>Feasibility</div><div><b>4</b>Evaluation</div><div><b>4</b>Portfolio</div><div><b>1</b>Research</div></div><p class="meta">Strongest on relevance (5/5); weakest on research potential (1/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details><details class="proj" id="MVE341F1-P2"><summary>
+<span class="pid">MVE341F1-P2</span><span class="ptitle">Tape-Out Readiness Dashboard and Regression Across Designs</span>
+<span class="chip tC">Track C</span><span class="chip">Intermediate</span><span class="chip lbl2">Build next</span>
+<span class="chip">4-6 wk</span><span class="score">19/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>VLSI Design Flow: RTL to GDS</b> (MVE341F1), Semester 4. Level: Industry-oriented. Primary track C; secondary: B. Estimated effort: 4-6 weeks (about 48-72 focused hours at roughly 12 h/week).</p>
+<p><b>Syllabus mapping:</b> Weeks 7-12: STA, constraints, physical verification</p>
+<h4>Engineering problem</h4><p>Teams track dozens of metrics across blocks; automation reveals regressions.</p>
+<h4>Proposed solution and architecture</h4><p>Collect metrics from multiple designs and runs, build a dashboard with thresholds, trends, and failure drill-down.</p>
+<div class="flow"><span class="n">Collectors</span><span class="ar">&rarr;</span><span class="n">DB</span><span class="ar">&rarr;</span><span class="n">Dashboard</span></div>
+
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Define metrics.</li><li>Collectors.</li><li>DB.</li><li>UI.</li><li>Test.</li></ol></div>
+<div><h4>Tools and resources</h4><p>Python, SQLite, static HTML.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Manual log reading.</li><li><b>Measure:</b> Detection of seeded regressions.</li><li><b>Success looks like:</b> Regressions flagged.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>Tool, report.</p>
+<h4>Career value</h4><p><b>Competencies:</b> Tooling.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Built a signoff metrics dashboard with regression detection.</p>
+<p><b>Likely interview questions:</b></p><ul><li>Which metrics?</li><li>Thresholds?</li><li>Noise?</li><li>Triage?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Scope. Fallback: fewer metrics.</p></div><div><h4>Extensions</h4><ul><li>Integrate MVE323B1 coverage</li><li>Add alerting and a weekly digest of metric trends</li></ul></div></div>
+<h4>Score (19/30)</h4><div class="sc"><div><b>4</b>Relevance</div><div><b>2</b>Depth</div><div><b>5</b>Feasibility</div><div><b>4</b>Evaluation</div><div><b>3</b>Portfolio</div><div><b>1</b>Research</div></div><p class="meta">Strongest on feasibility (low cost) (5/5); weakest on research potential (1/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details><details class="proj" id="MVE341F1-P3"><summary>
+<span class="pid">MVE341F1-P3</span><span class="ptitle">Flow Hyperparameter Tuning with Bayesian Optimisation vs DoE</span>
+<span class="chip tC">Track C</span><span class="chip">Research-grade</span><span class="chip lbl3">Stretch</span>
+<span class="chip">8-10 wk</span><span class="score">25/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>VLSI Design Flow: RTL to GDS</b> (MVE341F1), Semester 4. Level: Advanced / research. Primary track C; secondary: A. Estimated effort: 8-10 weeks (about 96-120 focused hours at roughly 12 h/week).</p>
+<p><b>Syllabus mapping:</b> Weeks 4-12: optimisation parameters across flow</p>
+<h4>Engineering problem</h4><p>Flow parameters strongly affect PPA; OpenROAD already offers an AutoTuner, so the contribution is a controlled comparison.</p>
+<h4>Proposed solution and architecture</h4><p>Compare random search, DoE (from MIM426RT), OpenROAD AutoTuner and your BO on multiple designs with seeds; report results with statistics.</p>
+<div class="flow"><span class="n">Search space</span><span class="ar">&rarr;</span><span class="n">Runner</span><span class="ar">&rarr;</span><span class="n">Optimisers</span><span class="ar">&rarr;</span><span class="n">Stats</span></div>
+
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Define space.</li><li>Runner.</li><li>Run optimisers.</li><li>Stats.</li><li>Report.</li></ol></div>
+<div><h4>Tools and resources</h4><p>OpenROAD-flow-scripts, Ray Tune/AutoTuner, Python.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Default config.</li><li><b>Measure:</b> PPA improvement, evaluations used.</li><li><b>Success looks like:</b> Supported ranking.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>Scripts, report.</p>
+<h4>Career value</h4><p><b>Competencies:</b> EDA optimisation.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Compared flow-tuning strategies with statistical rigour on open designs.</p>
+<p><b>Likely interview questions:</b></p><ul><li>Noise?</li><li>Overfit to design?</li><li>Cost?</li><li>Objective?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Compute. Fallback: small designs.</p></div><div><h4>Extensions</h4><ul><li>Transfer learning</li><li>Add multi-objective optimisation of timing, power and area together</li></ul></div></div>
+<h4>Score (25/30)</h4><div class="sc"><div><b>4</b>Relevance</div><div><b>4</b>Depth</div><div><b>4</b>Feasibility</div><div><b>5</b>Evaluation</div><div><b>4</b>Portfolio</div><div><b>4</b>Research</div></div><p class="meta">Strongest on measurable evaluation (5/5); weakest on relevance (4/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details></section><section class="course elec" id="MVE341F2"><header><h2><span class="ebadge sm">ELECTIVE</span> Phase-Locked Loops</h2>
+<div class="meta"><span class="pid">MVE341F2</span> &middot; Program Specific Elective F (NPTEL) &middot; Credits L:T:P 2:0:0 (2) &middot; NPTEL</div></header>
+<div class="units"><b>Syllabus units:</b> 12 weeks: PLL basics, type I/II/III analysis, acquisition, phase detectors, charge-pump PLL design and noise, oscillators, dividers, wide-range multipliers, digital PLLs</div><div class="bridge">Clocking is a core SoC concern.</div><details class="proj" id="MVE341F2-P1"><summary>
+<span class="pid">MVE341F2-P1</span><span class="ptitle">Type-II Charge-Pump PLL Behavioural Model and Loop-Filter Design</span>
+<span class="chip tA">Track A</span><span class="chip">Intermediate</span><span class="chip lbl1">Build first</span>
+<span class="chip">4-6 wk</span><span class="score">18/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>Phase-Locked Loops</b> (MVE341F2), Semester 4. Level: Foundational. Primary track A; secondary: C. Estimated effort: 4-6 weeks (about 48-72 focused hours at roughly 12 h/week).</p>
+<p><b>Syllabus mapping:</b> Weeks 1-5: PLL analysis, design procedure</p>
+<h4>Engineering problem</h4><p>Loop filter design sets bandwidth, phase margin and lock time.</p>
+<h4>Proposed solution and architecture</h4><p>Build a Python/Verilog-AMS-free behavioural model and a discrete-time simulation; design loop filter for phase margin; compare with simulation lock time.</p>
+<div class="flow"><span class="n">Model</span><span class="ar">&rarr;</span><span class="n">Loop filter design</span><span class="ar">&rarr;</span><span class="n">Simulation</span></div>
+
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Study.</li><li>Model.</li><li>Design.</li><li>Simulate.</li><li>Compare.</li></ol></div>
+<div><h4>Tools and resources</h4><p>Python (SciPy), ngspice optional.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Analytic.</li><li><b>Measure:</b> PM, lock time.</li><li><b>Success looks like:</b> Agrees with analysis.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>Code, report.</p>
+<h4>Career value</h4><p><b>Competencies:</b> PLL design.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Designed a charge-pump PLL loop filter and validated lock behaviour in simulation.</p>
+<p><b>Likely interview questions:</b></p><ul><li>Why type II?</li><li>Zero?</li><li>Ripple?</li><li>Bandwidth limit?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Discrete approximations. State.</p></div><div><h4>Extensions</h4><ul><li>Noise</li><li>Add charge-pump mismatch and quantify the resulting spur</li></ul></div></div>
+<h4>Score (18/30)</h4><div class="sc"><div><b>3</b>Relevance</div><div><b>3</b>Depth</div><div><b>5</b>Feasibility</div><div><b>4</b>Evaluation</div><div><b>2</b>Portfolio</div><div><b>1</b>Research</div></div><p class="meta">Strongest on feasibility (low cost) (5/5); weakest on research potential (1/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details><details class="proj" id="MVE341F2-P2"><summary>
+<span class="pid">MVE341F2-P2</span><span class="ptitle">All-Digital PLL in RTL (TDC, Loop Filter, DCO Model)</span>
+<span class="chip tC">Track C</span><span class="chip">Advanced</span><span class="chip lbl2">Build next</span>
+<span class="chip">6-8 wk</span><span class="score">21/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>Phase-Locked Loops</b> (MVE341F2), Semester 4. Level: Industry-oriented. Primary track C; secondary: A. Estimated effort: 6-8 weeks (about 72-96 focused hours at roughly 12 h/week).</p>
+<p><b>Syllabus mapping:</b> Weeks 11-12: digital PLLs</p>
+<h4>Engineering problem</h4><p>Digital PLLs are synthesizable and scalable.</p>
+<h4>Proposed solution and architecture</h4><p>Implement TDC, digital loop filter, DCO behavioural model; verify lock, jitter and tracking via simulation.</p>
+<div class="flow"><span class="n">TDC</span><span class="ar">&rarr;</span><span class="n">Filter</span><span class="ar">&rarr;</span><span class="n">DCO model</span><span class="ar">&rarr;</span><span class="n">Jitter analysis</span></div>
+<div class="note"><b>FPGA note:</b> board optional. RTL simulation plus synthesis reports is a valid path; results are then simulation and synthesis estimates, not on-board measurements.</div>
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Study.</li><li>RTL.</li><li>Verify lock.</li><li>Jitter.</li><li>Report.</li></ol></div>
+<div><h4>Tools and resources</h4><p>Verilator, Python.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Analog PLL model.</li><li><b>Measure:</b> Lock time, jitter.</li><li><b>Success looks like:</b> Stable lock.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>RTL, report.</p>
+<h4>Career value</h4><p><b>Competencies:</b> Digital clocking.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Implemented an all-digital PLL in RTL with jitter analysis.</p>
+<p><b>Likely interview questions:</b></p><ul><li>TDC resolution?</li><li>Dithering?</li><li>Limit cycles?</li><li>Behavioural vs real DCO?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Model idealised. State.</p></div><div><h4>Extensions</h4><ul><li>Hybrid</li><li>Add a bang-bang phase detector variant and compare jitter and lock time</li></ul></div></div>
+<h4>Score (21/30)</h4><div class="sc"><div><b>3</b>Relevance</div><div><b>4</b>Depth</div><div><b>4</b>Feasibility</div><div><b>4</b>Evaluation</div><div><b>3</b>Portfolio</div><div><b>3</b>Research</div></div><p class="meta">Strongest on technical depth (4/5); weakest on relevance (3/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details><details class="proj" id="MVE341F2-P3"><summary>
+<span class="pid">MVE341F2-P3</span><span class="ptitle">PLL Jitter Budget and Its Effect on MAC-Array Fmax</span>
+<span class="chip tA">Track A</span><span class="chip">Research-grade</span><span class="chip lbl3">Stretch</span>
+<span class="chip">7-9 wk</span><span class="score">22/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>Phase-Locked Loops</b> (MVE341F2), Semester 4. Level: Advanced / research. Primary track A; secondary: C. Estimated effort: 7-9 weeks (about 84-108 focused hours at roughly 12 h/week).</p>
+<p><b>Syllabus mapping:</b> Weeks 5-9: noise analysis, ring oscillators, phase noise</p>
+<h4>Engineering problem</h4><p>Jitter consumes timing margin; the question is how much frequency is lost.</p>
+<h4>Proposed solution and architecture</h4><p>Characterise ring-oscillator jitter in SPICE, convert to uncertainty, apply in STA constraints for the MAC array, and quantify Fmax loss vs jitter.</p>
+<div class="flow"><span class="n">Jitter extraction</span><span class="ar">&rarr;</span><span class="n">STA constraint link</span><span class="ar">&rarr;</span><span class="n">Fmax study</span></div>
+
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Study.</li><li>Jitter.</li><li>STA.</li><li>Sweep.</li><li>Analyse.</li></ol></div>
+<div><h4>Tools and resources</h4><p>ngspice, OpenSTA, Python.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Zero jitter.</li><li><b>Measure:</b> Fmax vs jitter.</li><li><b>Success looks like:</b> Quantified.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>Report.</p>
+<h4>Career value</h4><p><b>Competencies:</b> Cross-domain analysis.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Linked PLL jitter to STA margin for an accelerator.</p>
+<p><b>Likely interview questions:</b></p><ul><li>Period vs cycle jitter?</li><li>Uncertainty?</li><li>Margins?</li><li>Model?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Simplifications. State.</p></div><div><h4>Extensions</h4><ul><li>Adaptive clocking</li><li>Add supply-noise-induced jitter from the PDN study</li></ul></div></div>
+<h4>Score (22/30)</h4><div class="sc"><div><b>4</b>Relevance</div><div><b>4</b>Depth</div><div><b>4</b>Feasibility</div><div><b>4</b>Evaluation</div><div><b>3</b>Portfolio</div><div><b>3</b>Research</div></div><p class="meta">Strongest on relevance (4/5); weakest on portfolio distinctiveness (3/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details></section><section class="course elec" id="MVE341F3"><header><h2><span class="ebadge sm">ELECTIVE</span> VLSI Data Conversion Circuits</h2>
+<div class="meta"><span class="pid">MVE341F3</span> &middot; Program Specific Elective F (NPTEL) &middot; Credits L:T:P 2:0:0 (2) &middot; NPTEL</div></header>
+<div class="units"><b>Syllabus units:</b> 8 weeks: sampling, quantisation noise, ADC/DAC metrics (INL, DNL, SNR, SFDR), flash, oversampling, SAR converters, DAC design, current-steering DACs</div><div class="bridge">Converters connect sensors and compute-in-memory to digital systems.</div><details class="proj" id="MVE341F3-P1"><summary>
+<span class="pid">MVE341F3-P1</span><span class="ptitle">SAR ADC Behavioural Model with Capacitor Mismatch and ENOB Analysis</span>
+<span class="chip tA">Track A</span><span class="chip">Intermediate</span><span class="chip lbl1">Build first</span>
+<span class="chip">4-6 wk</span><span class="score">20/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>VLSI Data Conversion Circuits</b> (MVE341F3), Semester 4. Level: Foundational. Primary track A; secondary: C. Estimated effort: 4-6 weeks (about 48-72 focused hours at roughly 12 h/week).</p>
+<p><b>Syllabus mapping:</b> Weeks 3-6: metrics, SAR converters</p>
+<h4>Engineering problem</h4><p>ENOB depends on mismatch, noise and comparator offset.</p>
+<h4>Proposed solution and architecture</h4><p>Model a SAR ADC in Python with capacitor mismatch and comparator noise, compute INL/DNL/ENOB, and implement the SAR logic in RTL.</p>
+<div class="flow"><span class="n">Behavioural model</span><span class="ar">&rarr;</span><span class="n">Metrics</span><span class="ar">&rarr;</span><span class="n">SAR RTL</span></div>
+
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Study.</li><li>Model.</li><li>Metrics.</li><li>RTL.</li><li>Verify.</li></ol></div>
+<div><h4>Tools and resources</h4><p>Python, Verilator.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Ideal.</li><li><b>Measure:</b> INL, DNL, ENOB.</li><li><b>Success looks like:</b> Consistent with theory.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>Code, RTL.</p>
+<h4>Career value</h4><p><b>Competencies:</b> Data converters.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Modelled SAR ADC non-idealities and implemented control logic in RTL.</p>
+<p><b>Likely interview questions:</b></p><ul><li>Binary search?</li><li>Mismatch?</li><li>Calibration?</li><li>Noise?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Behavioural only. State.</p></div><div><h4>Extensions</h4><ul><li>Redundancy</li><li>Add background calibration of capacitor weights and measure the ENOB gain</li></ul></div></div>
+<h4>Score (20/30)</h4><div class="sc"><div><b>3</b>Relevance</div><div><b>3</b>Depth</div><div><b>5</b>Feasibility</div><div><b>4</b>Evaluation</div><div><b>3</b>Portfolio</div><div><b>2</b>Research</div></div><p class="meta">Strongest on feasibility (low cost) (5/5); weakest on research potential (2/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details><details class="proj" id="MVE341F3-P2"><summary>
+<span class="pid">MVE341F3-P2</span><span class="ptitle">Sigma-Delta Modulator Study with CIC Decimator in RTL</span>
+<span class="chip tA">Track A</span><span class="chip">Advanced</span><span class="chip lbl2">Build next</span>
+<span class="chip">5-7 wk</span><span class="score">20/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>VLSI Data Conversion Circuits</b> (MVE341F3), Semester 4. Level: Industry-oriented. Primary track A; secondary: C. Estimated effort: 5-7 weeks (about 60-84 focused hours at roughly 12 h/week).</p>
+<p><b>Syllabus mapping:</b> Weeks 2-5: sampling, oversampling converters</p>
+<h4>Engineering problem</h4><p>Oversampling trades speed for resolution; noise shaping needs decimation hardware.</p>
+<h4>Proposed solution and architecture</h4><p>Simulate first/second-order modulators, compute SNR vs OSR, implement CIC decimation in RTL and validate end-to-end.</p>
+<div class="flow"><span class="n">Modulator model</span><span class="ar">&rarr;</span><span class="n">CIC</span><span class="ar">&rarr;</span><span class="n">SNR analysis</span></div>
+<div class="note"><b>FPGA note:</b> board optional. RTL simulation plus synthesis reports is a valid path; results are then simulation and synthesis estimates, not on-board measurements.</div>
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Study.</li><li>Model.</li><li>CIC RTL.</li><li>End-to-end.</li><li>Report.</li></ol></div>
+<div><h4>Tools and resources</h4><p>Python, Verilator.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Nyquist ADC.</li><li><b>Measure:</b> SNR vs OSR.</li><li><b>Success looks like:</b> Matches theory.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>Code, RTL.</p>
+<h4>Career value</h4><p><b>Competencies:</b> Mixed-signal DSP.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Implemented sigma-delta simulation and RTL decimation validated against SNR theory.</p>
+<p><b>Likely interview questions:</b></p><ul><li>Noise shaping?</li><li>Stability?</li><li>CIC order?</li><li>Droop?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Stability issues. Fallback: first order.</p></div><div><h4>Extensions</h4><ul><li>Higher order</li><li>Add a compensation FIR and measure passband droop correction</li></ul></div></div>
+<h4>Score (20/30)</h4><div class="sc"><div><b>3</b>Relevance</div><div><b>4</b>Depth</div><div><b>4</b>Feasibility</div><div><b>4</b>Evaluation</div><div><b>3</b>Portfolio</div><div><b>2</b>Research</div></div><p class="meta">Strongest on technical depth (4/5); weakest on research potential (2/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details><details class="proj" id="MVE341F3-P3"><summary>
+<span class="pid">MVE341F3-P3</span><span class="ptitle">ADC Resolution vs Accuracy and Energy in Compute-in-Memory Readout (System Study)</span>
+<span class="chip tA">Track A</span><span class="chip">Research-grade</span><span class="chip lbl3">Stretch</span>
+<span class="chip">8-10 wk</span><span class="score">22/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>VLSI Data Conversion Circuits</b> (MVE341F3), Semester 4. Level: Advanced / research. Primary track A; secondary: C. Estimated effort: 8-10 weeks (about 96-120 focused hours at roughly 12 h/week).</p>
+<p><b>Syllabus mapping:</b> Weeks 1-7: ADC metrics and architectures applied to analog dot-product readout</p>
+<h4>Engineering problem</h4><p>Analog compute-in-memory moves cost to ADCs. The question is how ADC bits trade accuracy, energy and throughput.</p>
+<h4>Proposed solution and architecture</h4><p>Model crossbar column sums with noise and variation, quantise with ADC models of various resolutions, evaluate network accuracy and ADC energy using published figure-of-merit assumptions (for example Murmann&#x27;s ADC survey as a labelled source); simulation-only.</p>
+<div class="flow"><span class="n">Crossbar model</span><span class="ar">&rarr;</span><span class="n">ADC model</span><span class="ar">&rarr;</span><span class="n">Accuracy evaluation</span><span class="ar">&rarr;</span><span class="n">Energy model</span></div>
+
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Study CIM.</li><li>Model.</li><li>Accuracy.</li><li>Energy.</li><li>Trade-off.</li></ol></div>
+<div><h4>Tools and resources</h4><p>PyTorch CPU, Python.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Digital MAC baseline.</li><li><b>Measure:</b> Accuracy, ADC energy, throughput.</li><li><b>Success looks like:</b> Pareto with stated assumptions.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>Code, report.</p>
+<h4>Career value</h4><p><b>Competencies:</b> Analog-digital system analysis.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Evaluated ADC resolution trade-offs for compute-in-memory in simulation.</p>
+<p><b>Likely interview questions:</b></p><ul><li>Why ADC dominates?</li><li>Bit slicing?</li><li>Noise?</li><li>Assumptions?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Models idealised. State.</p></div><div><h4>Extensions</h4><ul><li>Calibration</li><li>Add a bit-slicing scheme and compare to a single high-resolution ADC</li></ul></div></div>
+<h4>Score (22/30)</h4><div class="sc"><div><b>4</b>Relevance</div><div><b>4</b>Depth</div><div><b>4</b>Feasibility</div><div><b>3</b>Evaluation</div><div><b>3</b>Portfolio</div><div><b>4</b>Research</div></div><p class="meta">Strongest on relevance (4/5); weakest on measurable evaluation (3/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details></section><section class="course elec" id="MVE341F4"><header><h2><span class="ebadge sm">ELECTIVE</span> Multi-Core Computer Architecture</h2>
+<div class="meta"><span class="pid">MVE341F4</span> &middot; Program Specific Elective F (NPTEL) &middot; Credits L:T:P 2:0:0 (2) &middot; NPTEL</div></header>
+<div class="units"><b>Syllabus units:</b> 12 weeks: pipelines, hazards, branch prediction, speculative execution, superscalar and GPU architectures, caches, optimisations, coherence protocols, primary storage, tiled multi-core and Network-on-Chip, energy-efficient NoCs, QoS</div><div class="bridge">The architecture capstone: GPUs, coherence and NoC are directly relevant to the three career tracks.</div><details class="proj" id="MVE341F4-P1"><summary>
+<span class="pid">MVE341F4-P1</span><span class="ptitle">Cache and MESI Coherence Simulator with Litmus Tests</span>
+<span class="chip tC">Track C</span><span class="chip">Intermediate</span><span class="chip lbl1">Build first</span>
+<span class="chip">5-7 wk</span><span class="score">22/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>Multi-Core Computer Architecture</b> (MVE341F4), Semester 4. Level: Foundational. Primary track C; secondary: A. Estimated effort: 5-7 weeks (about 60-84 focused hours at roughly 12 h/week).</p>
+<p><b>Syllabus mapping:</b> Weeks 6-8: caches, optimisations, coherence</p>
+<h4>Engineering problem</h4><p>Coherence bugs are subtle; a simulator with litmus tests builds protocol understanding.</p>
+<h4>Proposed solution and architecture</h4><p>Implement a multicore cache hierarchy with MESI in Python/C++, run synthetic and trace workloads, verify invariants and litmus tests.</p>
+<div class="flow"><span class="n">Cache model</span><span class="ar">&rarr;</span><span class="n">MESI FSM</span><span class="ar">&rarr;</span><span class="n">Bus/directory</span><span class="ar">&rarr;</span><span class="n">Invariant checker</span></div>
+
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Study MESI.</li><li>Cache.</li><li>Protocol.</li><li>Invariants.</li><li>Workloads.</li></ol></div>
+<div><h4>Tools and resources</h4><p>Python/C++.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> No coherence.</li><li><b>Measure:</b> Misses, traffic, invariant violations.</li><li><b>Success looks like:</b> Invariants hold.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>Simulator, report.</p>
+<h4>Career value</h4><p><b>Competencies:</b> Coherence.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Implemented a MESI simulator with invariant checking.</p>
+<p><b>Likely interview questions:</b></p><ul><li>MESI states?</li><li>False sharing?</li><li>Directory vs snooping?</li><li>Races?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Corner cases. Fallback: MSI.</p></div><div><h4>Extensions</h4><ul><li>Directory</li><li>Add MOESI and compare coherence traffic on shared workloads</li></ul></div></div>
+<h4>Score (22/30)</h4><div class="sc"><div><b>4</b>Relevance</div><div><b>4</b>Depth</div><div><b>5</b>Feasibility</div><div><b>4</b>Evaluation</div><div><b>3</b>Portfolio</div><div><b>2</b>Research</div></div><p class="meta">Strongest on feasibility (low cost) (5/5); weakest on research potential (2/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details><details class="proj" id="MVE341F4-P2"><summary>
+<span class="pid">MVE341F4-P2</span><span class="ptitle">Wormhole Mesh NoC Router RTL with Virtual Channels and Traffic Generators</span>
+<span class="chip tC">Track C</span><span class="chip">Advanced</span><span class="chip lbl2">Build next</span>
+<span class="chip">7-10 wk</span><span class="score">28/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>Multi-Core Computer Architecture</b> (MVE341F4), Semester 4. Level: Industry-oriented. Primary track C; secondary: A. Estimated effort: 7-10 weeks (about 84-120 focused hours at roughly 12 h/week).</p>
+<p><b>Syllabus mapping:</b> Weeks 10-12: tiled multicore and NoC, energy efficiency, QoS</p>
+<h4>Engineering problem</h4><p>NoC routers determine on-chip bandwidth and latency in multi-core and accelerator SoCs.</p>
+<h4>Proposed solution and architecture</h4><p>Implement a 5-port wormhole router (XY routing, credit flow control, virtual channels), build a 4x4 mesh, drive with traffic patterns, verify no deadlock, and measure latency-throughput curves vs the algorithm-level study from MDC324C2.</p>
+<div class="flow"><span class="n">Input buffers</span><span class="ar">&rarr;</span><span class="n">Routing</span><span class="ar">&rarr;</span><span class="n">VC allocator</span><span class="ar">&rarr;</span><span class="n">Switch allocator</span><span class="ar">&rarr;</span><span class="n">Traffic generators</span></div>
+<div class="note"><b>FPGA note:</b> board optional. RTL simulation plus synthesis reports is a valid path; results are then simulation and synthesis estimates, not on-board measurements.</div>
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Study.</li><li>Router.</li><li>Mesh.</li><li>Verify.</li><li>Measure.</li></ol></div>
+<div><h4>Tools and resources</h4><p>Verilator/cocotb, Python; BookSim for cross-check.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> BookSim results.</li><li><b>Measure:</b> Latency, throughput, area estimate.</li><li><b>Success looks like:</b> RTL matches model trends.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>RTL, TB, plots.</p>
+<h4>Career value</h4><p><b>Competencies:</b> NoC hardware.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Designed and verified a VC wormhole mesh router and compared with simulator trends.</p>
+<p><b>Likely interview questions:</b></p><ul><li>Credit flow?</li><li>Deadlock?</li><li>VC allocation?</li><li>Pipeline stages?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Debug difficulty. Fallback: no VC.</p></div><div><h4>Extensions</h4><ul><li>Integrate accelerator tiles</li><li>Add a simple QoS priority scheme and measure latency isolation</li></ul></div></div>
+<h4>Score (28/30)</h4><div class="sc"><div><b>5</b>Relevance</div><div><b>5</b>Depth</div><div><b>4</b>Feasibility</div><div><b>5</b>Evaluation</div><div><b>5</b>Portfolio</div><div><b>4</b>Research</div></div><p class="meta">Strongest on relevance (5/5); weakest on feasibility (low cost) (4/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details><details class="proj" id="MVE341F4-P3"><summary>
+<span class="pid">MVE341F4-P3</span><span class="ptitle">Mini SIMT GPU from Scratch: ISA, Warp Scheduler, Divergence Stack and Kernels</span>
+<span class="chip tA">Track A</span><span class="chip">Research-grade</span><span class="chip lbl3">Stretch</span>
+<span class="chip">12-18 wk</span><span class="score">28/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>Multi-Core Computer Architecture</b> (MVE341F4), Semester 4. Level: Advanced / research. Primary track A; secondary: B. Estimated effort: 12-18 weeks (about 144-216 focused hours at roughly 12 h/week).</p>
+<p><b>Syllabus mapping:</b> Week 5: superscalar and GPU architectures; Weeks 1-4 pipelines</p>
+<h4>Engineering problem</h4><p>Understanding GPUs at microarchitecture level is rare. Open projects exist (for example Vortex, Tine et al., MICRO 2021), so the value is the learning and the measured study, not novelty.</p>
+<h4>Proposed solution and architecture</h4><p>Design a small SIMT core: ISA, assembler, warps, scoreboard, divergence handling, shared memory, simple memory coalescing; run vector-add, reduction and tiled matmul kernels; add performance counters and compare scaling trends qualitatively with CUDA experiments from MVE433P.</p>
+<div class="flow"><span class="n">ISA + assembler</span><span class="ar">&rarr;</span><span class="n">Fetch/decode</span><span class="ar">&rarr;</span><span class="n">Warp scheduler</span><span class="ar">&rarr;</span><span class="n">Lanes/ALU</span><span class="ar">&rarr;</span><span class="n">Divergence stack</span><span class="ar">&rarr;</span><span class="n">Memory unit</span><span class="ar">&rarr;</span><span class="n">Counters</span></div>
+<div class="note"><b>FPGA note:</b> board optional. RTL simulation plus synthesis reports is a valid path; results are then simulation and synthesis estimates, not on-board measurements.</div>
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Study SIMT and Vortex-like designs.</li><li>ISA and assembler.</li><li>Core RTL.</li><li>Divergence and memory.</li><li>Kernels and counters.</li><li>Analysis.</li></ol></div>
+<div><h4>Tools and resources</h4><p>Verilator, Python assembler, optional FPGA. CUDA hardware is optional for the comparison section.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Scalar core running same kernels.</li><li><b>Measure:</b> IPC, lane utilisation, divergence cost, area estimate.</li><li><b>Success looks like:</b> Kernels run correctly; counter-based analysis.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>RTL, assembler, kernels, report.</p>
+<h4>Career value</h4><p><b>Competencies:</b> GPU microarchitecture.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Designed a small SIMT GPU core with assembler and kernels and analysed divergence and memory behaviour.</p>
+<p><b>Likely interview questions:</b></p><ul><li>How is divergence handled?</li><li>Warp scheduling?</li><li>Coalescing?</li><li>Occupancy equivalent?</li><li>Limits vs real GPUs?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Scope very large. Fallback: single warp.</p></div><div><h4>Extensions</h4><ul><li>Tensor-like unit</li><li>Compiler front-end</li></ul></div></div>
+<h4>Score (28/30)</h4><div class="sc"><div><b>5</b>Relevance</div><div><b>5</b>Depth</div><div><b>3</b>Feasibility</div><div><b>5</b>Evaluation</div><div><b>5</b>Portfolio</div><div><b>5</b>Research</div></div><p class="meta">Strongest on relevance (5/5); weakest on feasibility (low cost) (3/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
 </div></details></section></div></div></main>
 <footer>VLSI Engineering Project Playbook, built from the RVCE M.Tech VLSI Design &amp; Embedded Systems 2024 scheme. Project cards are plans. Scores, effort and outcomes are estimates until you build and measure. Nothing here promises a job or a salary.</footer>
 <script src="app.js"></script></body></html>
