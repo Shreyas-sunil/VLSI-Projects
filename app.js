@@ -6,6 +6,24 @@
     var dark=cur?cur==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;
     var n=dark?'light':'dark';root.setAttribute('data-theme',n);try{localStorage.setItem('theme',n);}catch(e){}};
 
+  // header: primary links + "More" menu on desktop, collapsible panel on small screens
+  (function(){var hdr=document.querySelector('header.top'),nav=hdr&&hdr.querySelector('nav.main');if(!nav)return;
+    var links=[].slice.call(nav.querySelectorAll(':scope > a'));if(links.length<9)return;
+    var more=document.createElement('details');more.className='more';
+    var sum=document.createElement('summary');sum.textContent='More';more.appendChild(sum);
+    var box=document.createElement('div');box.className='more-menu';more.appendChild(box);
+    links.slice(8).forEach(function(a){if(a.classList.contains('on'))more.classList.add('on');box.appendChild(a);});
+    nav.appendChild(more);
+    document.addEventListener('click',function(e){if(more.open&&!hdr.classList.contains('open')&&!more.contains(e.target))more.open=false;});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'){more.open=false;hdr.classList.remove('open');}});
+    var tb=hdr.querySelector('.search button');
+    if(tb){tb.className='icon-btn';tb.setAttribute('aria-label','Toggle light or dark theme');tb.innerHTML='<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg>';}
+    var mb=document.createElement('button');mb.type='button';mb.className='icon-btn menu-btn';mb.setAttribute('aria-label','Open menu');mb.setAttribute('aria-expanded','false');
+    mb.innerHTML='<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
+    mb.addEventListener('click',function(){var o=hdr.classList.toggle('open');more.open=o;mb.setAttribute('aria-expanded',o?'true':'false');mb.setAttribute('aria-label',o?'Close menu':'Open menu');});
+    hdr.querySelector('.bar').insertBefore(mb,nav);
+    hdr.classList.add('js');})();
+
   (function(){var box=document.getElementById('medal');if(!box)return;
     function rd(k){try{return JSON.parse(localStorage.getItem(k)||'null');}catch(e){return null;}}
     window.renderMedal=function(){var m=rd('vlsi_medal_v1')||{},cg=rd('vlsi_cg_v1')||{};

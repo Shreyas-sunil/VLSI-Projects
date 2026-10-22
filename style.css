@@ -90,3 +90,53 @@ aside.side b.elb{color:var(--goldd)}
 @media print{#medal,header.top,aside.side,.tools,.filters,footer{display:none}details.proj{break-inside:avoid}details.proj>*{display:block}.layout{display:block}}
 
 .booksec h2{margin-top:1.2em}.book h3{font-size:16.5px;line-height:1.35}.book h3 a{color:var(--ink);text-decoration:none}.book h3 a:hover{color:var(--goldd)}.book p{margin:.35em 0}.bact{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px!important}.bact .btn{text-decoration:none}.booksline{margin:6px 0 10px}
+
+/* ---- Header v2: one clean row, "More" menu, collapsible on small screens ---- */
+header.top{border-bottom:1px solid var(--line);box-shadow:inset 0 -2px 0 var(--gold)}
+header.top .bar{flex-wrap:nowrap;gap:18px;padding:10px 16px;min-height:60px}
+.brand{font-size:17px;white-space:nowrap;flex:0 0 auto}
+nav.main{flex-wrap:nowrap;gap:2px;align-items:center;flex:1 1 auto;min-width:0;font-size:14.5px}
+nav.main a{padding:6px 10px;border-radius:8px}
+header.top:not(.js) nav.main>a:nth-of-type(n+9){display:none}
+nav.main details.more{position:relative}
+nav.main details.more>summary{list-style:none;cursor:pointer;color:var(--mut);padding:6px 10px;border-radius:8px;display:flex;align-items:center;gap:6px;white-space:nowrap;user-select:none}
+nav.main details.more>summary::-webkit-details-marker{display:none}
+nav.main details.more>summary::after{content:"";width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-2px) rotate(45deg);transition:transform .15s}
+nav.main details.more[open]>summary::after{transform:translateY(1px) rotate(-135deg)}
+nav.main details.more>summary:hover,nav.main details.more[open]>summary,nav.main details.more.on>summary{background:var(--chip);color:var(--ink)}
+nav.main .more-menu{position:absolute;top:calc(100% + 8px);left:0;min-width:200px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:6px;box-shadow:0 10px 30px rgba(0,0,0,.12);z-index:20;display:grid}
+nav.main .more-menu a{padding:8px 12px}
+.search{gap:8px;align-items:center;flex:0 0 auto}
+.search input{width:180px;height:36px;padding:0 12px}
+.icon-btn{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;padding:0;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);cursor:pointer;flex:0 0 auto}
+.icon-btn:hover{background:var(--goldbg);border-color:var(--gold)}
+.icon-btn:focus-visible,nav.main a:focus-visible,nav.main summary:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.menu-btn{display:none}
+aside.side{top:84px;max-height:calc(100vh - 104px)}
+#medal .in{padding:7px 16px;font-size:13.5px;flex-wrap:nowrap}
+#medal .in>span:not(.star):not(.mbar){flex:0 1 auto;min-width:0}
+#medal .star{font-size:15px;line-height:1}
+#medal .in>a{margin-left:auto;white-space:nowrap}
+
+@media (max-width:1099px){
+  header.top .bar{flex-wrap:wrap;gap:10px 10px}
+  .brand{flex:1 1 auto;order:1}
+  .search{order:2}
+  .menu-btn{display:inline-flex;order:3}
+  nav.main{display:none;order:10;flex:1 0 100%;flex-wrap:wrap;overflow:visible;padding:6px 0 4px;border-top:1px solid var(--line);margin-top:2px;display:none}
+  header.top.open nav.main{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:2px}
+  nav.main>a,nav.main .more-menu a{display:block;padding:9px 10px;white-space:normal}
+  nav.main details.more{grid-column:1/-1}
+  nav.main details.more>summary{display:none}
+  nav.main .more-menu{position:static;display:grid;grid-template-columns:inherit;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:2px;min-width:0;padding:6px 0 0;margin-top:4px;border:0;border-top:1px dashed var(--line);border-radius:0;box-shadow:none;background:transparent}
+}
+@media (max-width:900px){aside.side{top:auto;max-height:none}}
+@media (max-width:620px){
+  header.top .bar{padding:8px 16px;min-height:56px}
+  .search input{display:none}
+  header.top.open .search{order:9;flex:1 0 100%}
+  header.top.open .search input{display:block;flex:1;width:auto}
+  header.top.open nav.main,header.top.open nav.main .more-menu{grid-template-columns:1fr 1fr}
+  #medal .in{gap:8px;font-size:13px;padding:6px 16px}
+  #medal .mbar{min-width:50px;flex:0 1 80px}
+}
