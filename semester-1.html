@@ -1,0 +1,629 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Semester I | VLSI Engineering Project Playbook</title><meta name="description" content="RVCE M.Tech VLSI Design &amp; Embedded Systems 2024 scheme: project library organised by semester and subject.">
+<link rel="stylesheet" href="style.css?v=1792434062"></head><body>
+<header class="top"><div class="bar"><a class="brand" href="index.html">VLSI <span>Project Playbook</span></a>
+<nav class="main"><a href="index.html">Home</a><a href="semester-1.html" class=on>Sem I</a><a href="semester-2.html">Sem II</a><a href="semester-3.html">Sem III</a><a href="semester-4.html">Sem IV</a><a href="syllabus.html">Syllabus</a><a href="gpa.html">SGPA/CGPA</a><a href="explorer.html">All projects</a><a href="roadmap.html">Roadmap</a><a href="shortlists.html">Shortlists</a><a href="guide.html">Guide</a><a href="tools.html">Tools</a><a href="glossary.html">Glossary</a><a href="references.html">References</a><a href="coverage.html">Coverage audit</a></nav>
+<form class="search" id="gs"><input id="gq" type="search" placeholder="Search projects" aria-label="Search projects"><button type="button" onclick="toggleTheme()" title="Toggle theme">Theme</button></form></div></header>
+<div id="medal" aria-live="polite"></div>
+<main><h1>Semester I</h1>
+<p class="lead">You take <b>6 subjects</b> this semester: 5 core plus 1 elective (one option from the cluster). 19 credits in total.</p>
+<p class="meta">The page lists 9 entries because every elective option is shown, so you can compare them before choosing. Each entry has 3 project cards (27 cards in all). You only need the cards for the subjects you take.</p>
+<div class="card"><h3>Semester I - foundations and first assets</h3><p><b>Build these first:</b> <a class="chip" href="#MVE214A4-P1">MVE214A4-P1</a><a class="chip" href="#MVE214A4-P3">MVE214A4-P3</a><a class="chip" href="#MVE311TA-P2">MVE311TA-P2</a><a class="chip" href="#MVE212IA-P1">MVE212IA-P1</a><a class="chip" href="#MVE313IA-P1">MVE313IA-P1</a><a class="chip" href="#MCS214A1-P1">MCS214A1-P1</a><a class="chip" href="#HSS116EL-P1">HSS116EL-P1</a></p><p>Prerequisites: basic Verilog, C, Python, digital logic. Reusable outputs: MAC array RTL with a golden model, timing scripts, tile scheduler, boot/driver code, accelerator spec document.</p><p>Good coursework submissions: MVE311TA-P1, MVE313IA-P1, MCS214A1-P2. Worth expanding into portfolio pieces: MVE214A4-P3 (RV32I core), MVE311TA-P2, MVE212IA-P2.</p></div>
+<section id="books" class="booksec"><h2>Books for this semester</h2><p class="meta">PDFs are stored in the <code>books/semester-1/</code> folder and open in a new tab. Each course section below also links the books that cover it.</p><div class="grid"><div class="card book"><h3><a href="books/semester-1/Bhasker-Chadha_Static-Timing-Analysis-for-Nanometer-Designs.pdf" target="_blank" rel="noopener">Static Timing Analysis for Nanometer Designs: A Practical Approach</a></h3><p class="meta">J. Bhasker, R. Chadha. Springer, 2009.</p><p class="meta">PDF, 3.4 MB, 515 pages. Chapters 1-10, Appendix A (SDC), Appendix C (SPEF), index.</p><p><b>Use for:</b> <a href="#MVE311TA">MVE311TA Static Timing Analysis</a> (main text, all five units).</p><p class="meta"><b>Start with:</b> Ch. 1-2 and 7 STA basics and environment (Unit I), Ch. 3-5 libraries, parasitics and delay models (Unit II), Ch. 6 crosstalk and noise (Unit III), Ch. 7 and Appendix A constraints and exceptions (Unit IV), Ch. 8-10 violations, checks, time borrowing and fixes (Unit V).</p><p class="bact"><a class="btn gold" href="books/semester-1/Bhasker-Chadha_Static-Timing-Analysis-for-Nanometer-Designs.pdf" target="_blank" rel="noopener">Open PDF</a><a class="btn" href="books/semester-1/Bhasker-Chadha_Static-Timing-Analysis-for-Nanometer-Designs.pdf" download>Download</a></p></div><div class="card book"><h3><a href="books/semester-1/Rabaey-Chandrakasan-Nikolic_Digital-Integrated-Circuits.pdf" target="_blank" rel="noopener">Digital Integrated Circuits: A Design Perspective (2nd ed.)</a></h3><p class="meta">J. M. Rabaey, A. Chandrakasan, B. Nikolić. Prentice Hall, 2003.</p><p class="meta">PDF, 6.3 MB, 370 pages. Chapters 3-7 and 10.</p><p><b>Use for:</b> <a href="#MVE212IA">MVE212IA Low Power Digital IC Design</a> (main text); delay and interconnect background for <a href="#MVE311TA">MVE311TA</a>.</p><p class="meta"><b>Start with:</b> Ch. 3 MOSFET and Ch. 5 CMOS inverter, energy and power (Unit I), Ch. 6 combinational logic and logical effort (Units I-II), Ch. 7 sequential circuits and pipelining (Unit III), Ch. 4 interconnect parasitics and Ch. 10 clock skew and jitter (Unit IV). This PDF has no adder (Ch. 11) or memory (Ch. 12) chapters.</p><p class="bact"><a class="btn gold" href="books/semester-1/Rabaey-Chandrakasan-Nikolic_Digital-Integrated-Circuits.pdf" target="_blank" rel="noopener">Open PDF</a><a class="btn" href="books/semester-1/Rabaey-Chandrakasan-Nikolic_Digital-Integrated-Circuits.pdf" download>Download</a></p></div><div class="card book"><h3><a href="books/semester-1/Maheshwari-Sapatnekar_Timing-Analysis-and-Optimization-of-Sequential-Circuits.pdf" target="_blank" rel="noopener">Timing Analysis and Optimization of Sequential Circuits</a></h3><p class="meta">N. Maheshwari, S. S. Sapatnekar. Kluwer/Springer, 1999.</p><p class="meta">PDF, 2.0 MB, 62 pages. Chapters 2-3.</p><p><b>Use for:</b> Advanced reference for <a href="#MVE311TA">MVE311TA</a> (clocking, setup/hold, skew) and clock-skew topics in <a href="#MVE212IA">MVE212IA</a>.</p><p class="meta"><b>Start with:</b> Ch. 2 timing analysis of edge-triggered and level-clocked circuits, Ch. 3 clock skew scheduling and clock tree construction (Unit II, clock network optimisation).</p><p class="bact"><a class="btn gold" href="books/semester-1/Maheshwari-Sapatnekar_Timing-Analysis-and-Optimization-of-Sequential-Circuits.pdf" target="_blank" rel="noopener">Open PDF</a><a class="btn" href="books/semester-1/Maheshwari-Sapatnekar_Timing-Analysis-and-Optimization-of-Sequential-Circuits.pdf" download>Download</a></p></div><div class="card book"><h3><a href="books/semester-1/Wang_Embedded-and-Real-Time-Operating-Systems.pdf" target="_blank" rel="noopener">Embedded and Real-Time Operating Systems</a></h3><p class="meta">K. C. Wang. Springer, 2017.</p><p class="meta">PDF, 5.6 MB, 210 pages. Chapters 3-5 and 10.</p><p><b>Use for:</b> <a href="#MVE313IA">MVE313IA Advanced Embedded System Design</a>, Unit V (OS-based design, real-time kernel) and interrupt topics in Unit II. Supplementary: not on the syllabus reference list.</p><p class="meta"><b>Start with:</b> Ch. 3 interrupts and exception processing (Unit II), Ch. 4 models of embedded systems, Ch. 5 processes, scheduling, semaphores and IPC (Unit V), Ch. 10 real-time OS concepts, scheduling and RTOS survey (Unit V).</p><p class="bact"><a class="btn gold" href="books/semester-1/Wang_Embedded-and-Real-Time-Operating-Systems.pdf" target="_blank" rel="noopener">Open PDF</a><a class="btn" href="books/semester-1/Wang_Embedded-and-Real-Time-Operating-Systems.pdf" download>Download</a></p></div></div></section>
+<h2>This semester at a glance</h2><div class="glance"><div class="gcol core"><h3>Core courses <small>compulsory</small></h3><ul><li><a href="#MVE311TA"><span class="pid">MVE311TA</span> Static Timing Analysis</a></li><li><a href="#MVE212IA"><span class="pid">MVE212IA</span> Low Power Digital IC Design</a></li><li><a href="#MVE313IA"><span class="pid">MVE313IA</span> Advanced Embedded System Design</a></li><li><a href="#MVE415DL"><span class="pid">MVE415DL</span> Design Thinking Lab</a></li><li><a href="#HSS116EL"><span class="pid">HSS116EL</span> Technical English</a></li></ul></div><div class="gcol elective"><span class="ebadge">ELECTIVE: PICK 1 OF 4</span><h3>Professional Cluster Elective A</h3><ul><li><a href="#MCS214A1"><span class="pid">MCS214A1</span> Programming, Data Structures and Algorithms using Python</a></li><li><a href="#MDC214A2"><span class="pid">MDC214A2</span> Multimedia Communications</a></li><li><a href="#MPE214A3"><span class="pid">MPE214A3</span> Electric and Hybrid Vehicles</a></li><li><a href="#MVE214A4"><span class="pid">MVE214A4</span> Digital System Design with FPGA</a></li></ul></div></div>
+<div class="tools"><button onclick="setAll(true)">Expand all projects</button><button onclick="setAll(false)">Collapse all</button></div>
+<div class="layout"><aside class="side"><b>Books</b><a href="#books">Semester I books (4)</a><b>Core courses</b><a href="#MVE311TA"><span class="pid">MVE311TA</span><br>Static Timing Analysis</a><a href="#MVE212IA"><span class="pid">MVE212IA</span><br>Low Power Digital IC Design</a><a href="#MVE313IA"><span class="pid">MVE313IA</span><br>Advanced Embedded System Design</a><a href="#MVE415DL"><span class="pid">MVE415DL</span><br>Design Thinking Lab</a><a href="#HSS116EL"><span class="pid">HSS116EL</span><br>Technical English</a><b class="elb">Elective: Professional Cluster Elective A</b><a href="#MCS214A1"><span class="pid">MCS214A1</span><br>Programming, Data Structures and Algorithms using Python</a><a href="#MDC214A2"><span class="pid">MDC214A2</span><br>Multimedia Communications</a><a href="#MPE214A3"><span class="pid">MPE214A3</span><br>Electric and Hybrid Vehicles</a><a href="#MVE214A4"><span class="pid">MVE214A4</span><br>Digital System Design with FPGA</a></aside><div><div class="band core"><h2>Core courses</h2><p class="meta">Everyone takes these. 5 entries, 15 credits.</p></div><section class="course" id="MVE311TA"><header><h2>Static Timing Analysis</h2>
+<div class="meta"><span class="pid">MVE311TA</span> &middot; Core &middot; Credits L:T:P 3:1:0 (4) &middot; Theory</div></header>
+<div class="units"><b>Syllabus units:</b> I Timing basics, delay, slew, clock concepts, STA environment · II Libraries, parasitics, delay models, clock optimisation, post-silicon timing · III Noise and crosstalk · IV SDC constraints and exceptions · V Violations, slack, checks and fixing techniques</div><p class="meta booksline"><b>Books:</b> <a href="books/semester-1/Bhasker-Chadha_Static-Timing-Analysis-for-Nanometer-Designs.pdf" target="_blank" rel="noopener">Bhasker &amp; Chadha, Static Timing Analysis for Nanometer Designs</a> · <a href="books/semester-1/Maheshwari-Sapatnekar_Timing-Analysis-and-Optimization-of-Sequential-Circuits.pdf" target="_blank" rel="noopener">Maheshwari &amp; Sapatnekar, Timing Analysis and Optimization of Sequential Circuits</a> · <a href="books/semester-1/Rabaey-Chandrakasan-Nikolic_Digital-Integrated-Circuits.pdf" target="_blank" rel="noopener">Rabaey et al., Digital Integrated Circuits</a></p><div class="bridge">Timing closure is the gate between RTL and a working accelerator or SoC; every later physical-design and architecture project reuses these skills.</div><details class="proj" id="MVE311TA-P1"><summary>
+<span class="pid">MVE311TA-P1</span><span class="ptitle">Mini Graph-Based STA Engine Validated Against OpenSTA</span>
+<span class="chip tC">Track C</span><span class="chip">Intermediate</span><span class="chip lbl1">Build first</span>
+<span class="chip">4-6 wk</span><span class="score">22/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>Static Timing Analysis</b> (MVE311TA), Semester 1. Level: Foundational. Primary track C; secondary: A. Estimated effort: 4-6 weeks (about 48-72 focused hours at roughly 12 h/week).</p>
+<p><b>Syllabus mapping:</b> Units I, II, IV, V: arcs, NLDM delay tables, slew propagation, setup/hold, slack, a subset of SDC</p>
+<h4>Engineering problem</h4><p>Students use STA as a black box, so slack numbers are never questioned. Writing a small engine exposes how arrival times, required times and slew degradation are computed and where tool results can differ.</p>
+<h4>Proposed solution and architecture</h4><p>Parse a gate-level Verilog netlist and a Liberty subset (NLDM tables with interpolation), build a timing graph, propagate arrival and slew in topological order, run backward required-time propagation, then report setup and hold slack. Support create_clock, set_input_delay, set_output_delay. Correlate every endpoint against OpenSTA on the same netlist and library.</p>
+<div class="flow"><span class="n">Netlist + Liberty parser</span><span class="ar">&rarr;</span><span class="n">Timing graph builder</span><span class="ar">&rarr;</span><span class="n">Arrival/slew propagation</span><span class="ar">&rarr;</span><span class="n">Required-time propagation</span><span class="ar">&rarr;</span><span class="n">Slack report</span><span class="ar">&rarr;</span><span class="n">OpenSTA correlation script</span></div>
+
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Study: Bhasker/Chadha ch. 1-4 and the Liberty NLDM format. Build: parser and graph for a 20-gate netlist. Artifact: graph dump. Gate: hand-checked arrival times match.</li><li>Build: slew-aware delay lookup with bilinear interpolation. Test: compare a single cell delay with the Liberty table by hand. Gate: error below table interpolation tolerance.</li><li>Build: setup/hold checks for flip-flops using library constraint tables plus clock skew. Artifact: report with slack per endpoint. Gate: matches a hand calculation on a 3-stage pipeline.</li><li>Verify: run on 5 netlists synthesised by Yosys with the sky130 library and compare to OpenSTA. Artifact: correlation CSV. Gate: all endpoints reported, error statistics documented.</li><li>Document: list the features not supported (wire models, CRPR, derates) and where your results diverge from OpenSTA, with reasons.</li></ol></div>
+<div><h4>Tools and resources</h4><p>Python or C++, OpenSTA (open source), Yosys, SkyWater sky130 Liberty files. No commercial EDA needed. No hardware needed.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> OpenSTA run with ideal wires on the same netlists and library.</li><li><b>Measure:</b> Per-endpoint arrival and slack difference in ps; fraction of endpoints within 1 percent; runtime.</li><li><b>Success looks like:</b> Documented agreement on a stated set of netlists, with each residual difference explained. Do not claim equivalence with a signoff tool.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>Source, 5 test netlists, correlation CSV, short design note, README.</p>
+<h4>Career value</h4><p><b>Competencies:</b> Timing graph algorithms, Liberty modelling, delay calculation, tool correlation.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Implemented a graph-based static timing analyzer with NLDM delay and slew propagation and correlated endpoint slack against OpenSTA on N netlists (report the measured error).</p>
+<p><b>Likely interview questions:</b></p><ul><li>Why does slew degrade along a wire and how does it change the next gate delay?</li><li>What is the difference between graph-based and path-based analysis?</li><li>How are hold checks affected by clock skew?</li><li>Where would your engine diverge from signoff STA?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Liberty parsing is fiddly; start with one library and one corner. Do not attempt crosstalk or OCV here.</p></div><div><h4>Extensions</h4><ul><li>Add a simple Elmore wire-delay model</li><li>Add multicycle and false path support</li></ul></div></div>
+<h4>Score (22/30)</h4><div class="sc"><div><b>5</b>Relevance</div><div><b>3</b>Depth</div><div><b>5</b>Feasibility</div><div><b>4</b>Evaluation</div><div><b>3</b>Portfolio</div><div><b>2</b>Research</div></div><p class="meta">Strongest on relevance (5/5); weakest on research potential (2/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details><details class="proj" id="MVE311TA-P2"><summary>
+<span class="pid">MVE311TA-P2</span><span class="ptitle">SDC-Driven Timing Closure of an INT8 MAC Array</span>
+<span class="chip tA">Track A</span><span class="chip">Intermediate</span><span class="chip lbl2">Build next</span>
+<span class="chip">5-7 wk</span><span class="score">24/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>Static Timing Analysis</b> (MVE311TA), Semester 1. Level: Industry-oriented. Primary track A; secondary: C. Estimated effort: 5-7 weeks (about 60-84 focused hours at roughly 12 h/week).</p>
+<p><b>Syllabus mapping:</b> Units IV, V: constraints, exceptions, violation fixing; also practical 10 (SDC/SDF generation) of MVE212IA</p>
+<h4>Engineering problem</h4><p>A systolic MAC array is the core of every AI accelerator, and its critical path decides the clock. The question is how far constraints, pipelining and retiming can push frequency before area and power rise unacceptably.</p>
+<h4>Proposed solution and architecture</h4><p>Build a parameterised INT8 MAC array in Verilog, write clock and I/O constraints, synthesise and place it with OpenROAD, then iterate: inspect the worst paths, add pipeline stages, and apply multicycle or false-path exceptions only where they are architecturally justified. Document each change and its slack effect.</p>
+<div class="flow"><span class="n">MAC array RTL (parametric)</span><span class="ar">&rarr;</span><span class="n">SDC constraints</span><span class="ar">&rarr;</span><span class="n">Yosys synthesis</span><span class="ar">&rarr;</span><span class="n">OpenROAD place + STA</span><span class="ar">&rarr;</span><span class="n">Violation triage</span><span class="ar">&rarr;</span><span class="n">Pipeline/retime changes</span></div>
+
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Study: setup/hold, clock uncertainty, SDC semantics. Build: 4x4 and 8x8 array RTL. Artifact: RTL + testbench. Gate: array matches a NumPy matmul reference.</li><li>Build: SDC with clocks, uncertainty, input and output delays. Gate: no unconstrained endpoints in the report.</li><li>Baseline: synthesise and run STA at a stressed clock. Artifact: baseline WNS/TNS and top 20 paths. Gate: reproducible via one script.</li><li>Optimise: apply pipeline insertion and operand registering. For each change record WNS, TNS, area. Gate: documented monotonic improvement or an explanation.</li><li>Check: show every exception is legitimate (no hidden bugs). Benchmark: frequency vs area Pareto. Document.</li></ol></div>
+<div><h4>Tools and resources</h4><p>Yosys, OpenROAD/OpenSTA or OpenLane, sky130 or NanGate45 PDK, Verilator for functional check. Optional: commercial PrimeTime/Genus (not needed).</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Unpipelined 8x8 array at a fixed target clock.</li><li><b>Measure:</b> WNS, TNS, number of failing endpoints, area, achieved frequency, power estimate.</li><li><b>Success looks like:</b> A documented Pareto of frequency vs area with explanations for each step. Results are post-synthesis or post-placement, not silicon.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>RTL, SDC, scripts, reports for each iteration, Pareto plot, 2-page note.</p>
+<h4>Career value</h4><p><b>Competencies:</b> Timing closure workflow, constraint writing, microarchitecture timing trade-offs.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Closed timing on a parameterised INT8 MAC array in OpenROAD, improving WNS from X to Y with pipelining while tracking area (use your measured numbers).</p>
+<p><b>Likely interview questions:</b></p><ul><li>Why did you choose this pipeline cut?</li><li>When is a multicycle path legitimate?</li><li>How does clock uncertainty change the result?</li><li>What would change at a faster corner?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Over-constraining or using false paths to hide failures. Fallback: reduce array size and clock target.</p></div><div><h4>Extensions</h4><ul><li>Sweep array sizes 4,8,16</li><li>Compare ripple vs carry-save accumulation</li></ul></div></div>
+<h4>Score (24/30)</h4><div class="sc"><div><b>5</b>Relevance</div><div><b>4</b>Depth</div><div><b>4</b>Feasibility</div><div><b>5</b>Evaluation</div><div><b>4</b>Portfolio</div><div><b>2</b>Research</div></div><p class="meta">Strongest on relevance (5/5); weakest on research potential (2/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details><details class="proj" id="MVE311TA-P3"><summary>
+<span class="pid">MVE311TA-P3</span><span class="ptitle">Slack Prediction from Pre-Route Features: A Variation-Aware Timing Study</span>
+<span class="chip tC">Track C</span><span class="chip">Research-grade</span><span class="chip lbl3">Stretch</span>
+<span class="chip">8-12 wk</span><span class="score">25/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>Static Timing Analysis</b> (MVE311TA), Semester 1. Level: Advanced / research. Primary track C; secondary: A. Estimated effort: 8-12 weeks (about 96-144 focused hours at roughly 12 h/week).</p>
+<p><b>Syllabus mapping:</b> Units II, III, V: parasitics, crosstalk, variability, post-route timing vs earlier estimates</p>
+<h4>Engineering problem</h4><p>Late timing surprises cost design iterations. The hypothesis to test is whether features available before routing (fanout, estimated wire length, cell type, logic depth) can predict post-route slack well enough to guide early optimisation.</p>
+<h4>Proposed solution and architecture</h4><p>Generate a dataset by running many OpenROAD flows over several open designs with varied constraints and utilisation. Extract endpoint features pre-route and slack post-route. Train simple models (linear, gradient-boosted trees) and compare to the estimate OpenROAD already gives pre-route. Report where models fail (crosstalk, long wires).</p>
+<div class="flow"><span class="n">Design/constraint sweeper</span><span class="ar">&rarr;</span><span class="n">OpenROAD flow runner</span><span class="ar">&rarr;</span><span class="n">Feature extractor</span><span class="ar">&rarr;</span><span class="n">Dataset store</span><span class="ar">&rarr;</span><span class="n">Model training + eval</span><span class="ar">&rarr;</span><span class="n">Error analysis</span></div>
+
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Study: parasitics, crosstalk delta delay, existing pre-route slack prediction literature. Gate: you can state what is already known.</li><li>Build: automated flow runner producing reports for 5+ designs and 20+ configurations. Artifact: raw reports. Gate: runs unattended.</li><li>Build: feature extraction and a leakage-free train/test split by design. Gate: test designs unseen in training.</li><li>Train: baseline linear and tree models; compare with OpenROAD pre-route estimate. Gate: metrics table with confidence intervals.</li><li>Analyse: failure cases; ablate features. Document honestly, including negative results.</li></ol></div>
+<div><h4>Tools and resources</h4><p>OpenROAD-flow-scripts, Python, scikit-learn, sky130/NanGate45. CPU only. Related work exists (for example Guo et al., DAC 2022 on pre-routing slack prediction), so novelty is student-level unless you add a new angle.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> OpenROAD pre-route slack estimate.</li><li><b>Measure:</b> MAE and R2 of endpoint slack in ps; rank correlation; error on worst 5 percent endpoints.</li><li><b>Success looks like:</b> Any honest, reproducible comparison; a publishable angle exists only if you add a distinct contribution (new feature class or cross-design generalisation).</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>Dataset generator, trained models, report, paper-style draft, reproducible repo.</p>
+<h4>Career value</h4><p><b>Competencies:</b> Data pipeline for EDA, ML evaluation discipline, timing physics intuition.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Built an automated OpenROAD dataset pipeline and evaluated pre-route slack predictors on unseen designs (state measured error).</p>
+<p><b>Likely interview questions:</b></p><ul><li>How did you avoid train/test leakage?</li><li>Which features mattered most and why physically?</li><li>Why does crosstalk hurt prediction?</li><li>What would you need to deploy this in a flow?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Few designs cause overfitting; keep scope modest. Fallback: study a single design family and report limits.</p></div><div><h4>Extensions</h4><ul><li>Graph neural network variant</li><li>Predict congestion alongside slack</li></ul></div></div>
+<h4>Score (25/30)</h4><div class="sc"><div><b>4</b>Relevance</div><div><b>4</b>Depth</div><div><b>4</b>Feasibility</div><div><b>5</b>Evaluation</div><div><b>4</b>Portfolio</div><div><b>4</b>Research</div></div><p class="meta">Strongest on measurable evaluation (5/5); weakest on relevance (4/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details></section><section class="course" id="MVE212IA"><header><h2>Low Power Digital IC Design</h2>
+<div class="meta"><span class="pid">MVE212IA</span> &middot; Core &middot; Credits L:T:P 3:0:1 (4) &middot; Theory + Lab</div></header>
+<div class="units"><b>Syllabus units:</b> I CMOS logic, logical effort, power sources · II Adders and circuit/logic-level low power · III Sequential design, encoding · IV Memory, interconnect, clock skew · V Architecture-level low power, clock distribution</div><p class="meta booksline"><b>Books:</b> <a href="books/semester-1/Rabaey-Chandrakasan-Nikolic_Digital-Integrated-Circuits.pdf" target="_blank" rel="noopener">Rabaey et al., Digital Integrated Circuits</a> · <a href="books/semester-1/Maheshwari-Sapatnekar_Timing-Analysis-and-Optimization-of-Sequential-Circuits.pdf" target="_blank" rel="noopener">Maheshwari &amp; Sapatnekar (clock skew)</a></p><p class="meta"><b>Practicals / components:</b> Practicals: CMOS inverter characteristics, full adder, process corners, pre/post-layout INVX2 and NAND2X2, DFF with TG, Modified Booth multiplier synthesis, 16-bit adder pre/post synthesis, LEC, SDF/SDC generation</p><div class="bridge">Power per operation is the primary metric for accelerator competitiveness; these projects build measurement habits that transfer directly.</div><details class="proj" id="MVE212IA-P1"><summary>
+<span class="pid">MVE212IA-P1</span><span class="ptitle">Multiplier Architecture Shootout for INT8 MAC Energy</span>
+<span class="chip tA">Track A</span><span class="chip">Intermediate</span><span class="chip lbl1">Build first</span>
+<span class="chip">4-6 wk</span><span class="score">22/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>Low Power Digital IC Design</b> (MVE212IA), Semester 1. Level: Foundational. Primary track A; secondary: C. Estimated effort: 4-6 weeks (about 48-72 focused hours at roughly 12 h/week).</p>
+<p><b>Syllabus mapping:</b> Unit II arithmetic blocks; Practical 7 (Modified Booth), Practical 8 (adder pre/post synthesis)</p>
+<h4>Engineering problem</h4><p>The multiplier dominates MAC energy. Which INT8 multiplier (array, Baugh-Wooley, radix-4 Booth) is actually lowest energy per operation on realistic data, rather than random inputs?</p>
+<h4>Proposed solution and architecture</h4><p>Implement array, Baugh-Wooley and radix-4 Booth multipliers with a shared accumulate stage. Drive them with random data and with real quantised CNN activations and weights. Estimate dynamic power from gate-level switching activity (VCD/SAIF) with OpenSTA power analysis.</p>
+<div class="flow"><span class="n">Three multiplier RTLs</span><span class="ar">&rarr;</span><span class="n">Common MAC wrapper</span><span class="ar">&rarr;</span><span class="n">Data generators (random, CNN)</span><span class="ar">&rarr;</span><span class="n">Gate-level sim</span><span class="ar">&rarr;</span><span class="n">Switching-activity power estimate</span><span class="ar">&rarr;</span><span class="n">Comparison report</span></div>
+
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Study: Booth encoding, partial product reduction. Build: three multipliers. Gate: exhaustive 8x8 test passes.</li><li>Build: MAC wrapper and test vectors from a quantised CNN. Gate: vectors reproducible from a script.</li><li>Synthesise with Yosys to sky130; record area and delay. Gate: no timing violations at the chosen clock.</li><li>Simulate gate-level with real activity; extract VCD; run OpenSTA power. Gate: power numbers repeatable.</li><li>Analyse: energy per MAC under both data sets; document that estimates are pre-layout activity-based, not silicon.</li></ol></div>
+<div><h4>Tools and resources</h4><p>Icarus/Verilator, Yosys, OpenSTA, sky130 Liberty, Python/NumPy, PyTorch for activation capture (CPU is enough).</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Plain synthesised `*` operator from Yosys.</li><li><b>Measure:</b> Area, critical delay, estimated dynamic power, energy per MAC for random vs CNN data.</li><li><b>Success looks like:</b> A table with clear caveats showing which multiplier wins at which clock and data distribution.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>RTL, testbenches, scripts, result tables, short report.</p>
+<h4>Career value</h4><p><b>Competencies:</b> Arithmetic architecture, switching-activity power estimation.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Compared three INT8 multiplier architectures on gate-level switching activity from real CNN data (report measured energy/MAC).</p>
+<p><b>Likely interview questions:</b></p><ul><li>Why is power data-dependent?</li><li>What does Booth recoding save and cost?</li><li>Why can random data mislead?</li><li>How accurate is vectorless power estimation?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Synthesis may flatten differences; check netlist structure. Fallback: use post-synthesis counts of cells only.</p></div><div><h4>Extensions</h4><ul><li>Add approximate multipliers and measure accuracy loss</li><li>Add INT4 variants</li></ul></div></div>
+<h4>Score (22/30)</h4><div class="sc"><div><b>5</b>Relevance</div><div><b>3</b>Depth</div><div><b>5</b>Feasibility</div><div><b>4</b>Evaluation</div><div><b>3</b>Portfolio</div><div><b>2</b>Research</div></div><p class="meta">Strongest on relevance (5/5); weakest on research potential (2/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details><details class="proj" id="MVE212IA-P2"><summary>
+<span class="pid">MVE212IA-P2</span><span class="ptitle">Zero-Skipping and Clock-Gated PE Array: Measured Energy on Sparse Activations</span>
+<span class="chip tA">Track A</span><span class="chip">Advanced</span><span class="chip lbl2">Build next</span>
+<span class="chip">6-8 wk</span><span class="score">25/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>Low Power Digital IC Design</b> (MVE212IA), Semester 1. Level: Industry-oriented. Primary track A; secondary: C. Estimated effort: 6-8 weeks (about 72-96 focused hours at roughly 12 h/week).</p>
+<p><b>Syllabus mapping:</b> Units III, V: clock gating, switching-activity reduction, architecture-level power; Practical 6 (flip-flops)</p>
+<h4>Engineering problem</h4><p>Post-ReLU activations are often sparse. Gating idle processing elements should save dynamic power, but gating logic itself costs area and can hurt timing.</p>
+<h4>Proposed solution and architecture</h4><p>Build a baseline PE array and a variant with operand isolation, enable-based clock gating (using library ICG cells) and zero detection. Quantify energy per inference layer using real sparse feature maps from a small quantised CNN.</p>
+<div class="flow"><span class="n">PE (baseline)</span><span class="ar">&rarr;</span><span class="n">PE (gated)</span><span class="ar">&rarr;</span><span class="n">Zero detector</span><span class="ar">&rarr;</span><span class="n">Array controller</span><span class="ar">&rarr;</span><span class="n">Activity-based power flow</span><span class="ar">&rarr;</span><span class="n">Sparsity sweep</span></div>
+
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Study: clock gating, glitch power, ICG cells. Gate: you can draw a safe gating enable timing diagram.</li><li>Build baseline array and verify against reference. Gate: bit-exact.</li><li>Build gated variant; add assertions that gating never drops valid data. Gate: random + directed tests pass.</li><li>Measure: power vs sparsity (0 to 90 percent) using VCD activity. Gate: curves reproducible.</li><li>Check: area and timing cost of gating; compute break-even sparsity. Document.</li></ol></div>
+<div><h4>Tools and resources</h4><p>Verilator, Yosys, OpenSTA/OpenROAD (CTS handles gated clocks), sky130, SymbiYosys optional for the gating assertion.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Baseline array without gating on the same data.</li><li><b>Measure:</b> Dynamic power, energy per layer, break-even sparsity, area overhead, WNS impact.</li><li><b>Success looks like:</b> Break-even sparsity identified with the measurement conditions stated; no claim beyond the tested networks.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>RTL, assertions, scripts, plots, report.</p>
+<h4>Career value</h4><p><b>Competencies:</b> Power-aware microarchitecture, clock gating, power measurement discipline.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Implemented zero-skipping/clock-gated PE array and measured energy vs activation sparsity on real CNN feature maps.</p>
+<p><b>Likely interview questions:</b></p><ul><li>How do you avoid clock glitches with gating?</li><li>Why does gating affect CTS?</li><li>What breaks the savings?</li><li>How does sparsity vary by layer?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Gated clocks complicate STA and CTS; keep enables registered. Fallback: use operand isolation only.</p></div><div><h4>Extensions</h4><ul><li>Structured sparsity (N:M)</li><li>Compare with data-gating of multiplier inputs only</li></ul></div></div>
+<h4>Score (25/30)</h4><div class="sc"><div><b>5</b>Relevance</div><div><b>4</b>Depth</div><div><b>4</b>Feasibility</div><div><b>5</b>Evaluation</div><div><b>4</b>Portfolio</div><div><b>3</b>Research</div></div><p class="meta">Strongest on relevance (5/5); weakest on research potential (3/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details><details class="proj" id="MVE212IA-P3"><summary>
+<span class="pid">MVE212IA-P3</span><span class="ptitle">Voltage-Parallelism-Frequency Trade-offs for an Accelerator: Calibrated Energy Model</span>
+<span class="chip tA">Track A</span><span class="chip">Research-grade</span><span class="chip lbl3">Stretch</span>
+<span class="chip">8-10 wk</span><span class="score">23/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>Low Power Digital IC Design</b> (MVE212IA), Semester 1. Level: Advanced / research. Primary track A; secondary: C. Estimated effort: 8-10 weeks (about 96-120 focused hours at roughly 12 h/week).</p>
+<p><b>Syllabus mapping:</b> Unit V: parallel architecture with voltage reduction, power and performance management; Unit I power components; Practical 3 (process corners)</p>
+<h4>Engineering problem</h4><p>Doubling parallelism and lowering voltage can cut energy per operation, but leakage, memory and interconnect limit the gain. Where is the optimum for a MAC array under realistic constraints?</p>
+<h4>Proposed solution and architecture</h4><p>Characterise a MAC cell across sky130 corners and supply voltages in ngspice, calibrate an analytical energy/delay model, and combine with a cycle-accurate array simulator to find energy-delay-optimal parallelism per layer. Include a power-gating overhead model; state clearly that UPF-driven power-gating verification is not fully supported by the open flow.</p>
+<div class="flow"><span class="n">SPICE characterisation</span><span class="ar">&rarr;</span><span class="n">Calibrated energy/delay model</span><span class="ar">&rarr;</span><span class="n">Array simulator</span><span class="ar">&rarr;</span><span class="n">Optimiser</span><span class="ar">&rarr;</span><span class="n">Sensitivity analysis</span></div>
+
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Study: alpha-power law, leakage, DVFS theory. Gate: you can derive E ~ CV^2 scaling.</li><li>Build: ngspice testbenches for a representative critical path across corners. Artifact: delay/energy tables.</li><li>Fit: model vs SPICE with error bars. Gate: error documented.</li><li>Build: array simulator and optimiser over parallelism and voltage. Gate: reproduces model for a single configuration.</li><li>Validate: sensitivity to leakage and memory energy assumptions; document limits.</li></ol></div>
+<div><h4>Tools and resources</h4><p>ngspice, sky130 models, Python. Fully software; no hardware needed. Related prior work on voltage/parallelism trade-offs is classical, so the novelty is the calibrated accelerator case study.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Fixed-voltage, fixed-parallelism design.</li><li><b>Measure:</b> Energy per MAC, throughput, energy-delay product across (V, parallelism).</li><li><b>Success looks like:</b> A calibrated model with stated validity range, plus recommendations. Intended targets, not silicon measurements.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>Model code, SPICE decks, plots, paper-style write-up.</p>
+<h4>Career value</h4><p><b>Competencies:</b> Quantitative power modelling, SPICE characterisation, design-space optimisation.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Built a SPICE-calibrated energy-delay model for a MAC array and optimised voltage/parallelism (report fit error).</p>
+<p><b>Likely interview questions:</b></p><ul><li>Where does the model break near threshold?</li><li>How is leakage modelled?</li><li>Why is memory not scaled the same way?</li><li>How would DVFS granularity change the result?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>SPICE characterisation scope can explode; limit to one critical path. Fallback: use published scaling laws as stated assumptions.</p></div><div><h4>Extensions</h4><ul><li>Add SRAM retention voltage limits</li><li>Per-layer DVFS schedule</li></ul></div></div>
+<h4>Score (23/30)</h4><div class="sc"><div><b>4</b>Relevance</div><div><b>4</b>Depth</div><div><b>4</b>Feasibility</div><div><b>4</b>Evaluation</div><div><b>3</b>Portfolio</div><div><b>4</b>Research</div></div><p class="meta">Strongest on relevance (4/5); weakest on portfolio distinctiveness (3/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details></section><section class="course" id="MVE313IA"><header><h2>Advanced Embedded System Design</h2>
+<div class="meta"><span class="pid">MVE313IA</span> &middot; Core &middot; Credits L:T:P 3:0:1 (4) &middot; Theory + Lab</div></header>
+<div class="units"><b>Syllabus units:</b> I Design process, ISA, memory, accelerators, benchmarking · II CPU bus, memory, I/O devices · III Interfaces, SoCs · IV Software stack, linking, secure boot, MISRA C, AUTOSAR · V RTOS, performance evaluation, PID</div><p class="meta booksline"><b>Books:</b> <a href="books/semester-1/Wang_Embedded-and-Real-Time-Operating-Systems.pdf" target="_blank" rel="noopener">K. C. Wang, Embedded and Real-Time Operating Systems</a></p><p class="meta"><b>Practicals / components:</b> Practicals: bare-metal GPIO/SysTick/ADC/I2C drivers on LPC1857, LM75A, FIR on STM32F4, RTOS tasks, mutex, event flags, mailbox</p><div class="bridge">This is the firmware foundation for GPU and SoC software roles: boot, linker scripts, drivers, interrupts and RTOS timing.</div><details class="proj" id="MVE313IA-P1"><summary>
+<span class="pid">MVE313IA-P1</span><span class="ptitle">Boot-to-Driver Firmware Stack from Reset Vector</span>
+<span class="chip tB">Track B</span><span class="chip">Intermediate</span><span class="chip lbl1">Build first</span>
+<span class="chip">4-6 wk</span><span class="score">19/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>Advanced Embedded System Design</b> (MVE313IA), Semester 1. Level: Foundational. Primary track B; secondary: C. Estimated effort: 4-6 weeks (about 48-72 focused hours at roughly 12 h/week).</p>
+<p><b>Syllabus mapping:</b> Unit IV linker scripts and boot; Unit III memory-mapped I/O; Practicals 1-5</p>
+<h4>Engineering problem</h4><p>Most students call vendor HAL functions without understanding startup code, linker scripts and register-level drivers. Firmware and driver roles require exactly that understanding.</p>
+<h4>Proposed solution and architecture</h4><p>On a Cortex-M or RISC-V target (hardware or QEMU/Renode), write the reset handler, vector table, linker script, .data/.bss init, and register-level GPIO, UART, SysTick and I2C drivers with unit tests that run on the emulator.</p>
+<div class="flow"><span class="n">Startup + vector table</span><span class="ar">&rarr;</span><span class="n">Linker script</span><span class="ar">&rarr;</span><span class="n">Register-level drivers</span><span class="ar">&rarr;</span><span class="n">Test harness (emulated)</span><span class="ar">&rarr;</span><span class="n">Application</span></div>
+
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Study: ARM Cortex-M or RISC-V boot sequence, ELF, linker script syntax. Gate: can explain every section.</li><li>Build: startup code and linker script for a blinky. Artifact: map file. Gate: runs on emulator.</li><li>Build: GPIO/UART/SysTick drivers from the reference manual. Gate: each register access commented with the manual page.</li><li>Build: I2C driver and a sensor read (LM75A in the syllabus, or an emulated device). Gate: logic-analyzer trace or emulator trace matches the protocol.</li><li>Document: memory map, ISR latency measurement.</li></ol></div>
+<div><h4>Tools and resources</h4><p>arm-none-eabi-gcc or riscv-gcc, QEMU or Renode (free), OpenOCD/GDB. LPC1857/STM32F4 boards if available; the emulator is a valid alternative for learning but does not replace real timing.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Vendor HAL version of the same drivers.</li><li><b>Measure:</b> Code size, interrupt latency (cycles), driver correctness tests passed.</li><li><b>Success looks like:</b> Drivers pass tests and boot without a vendor HAL.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>Repo with linker script, drivers, tests, map files, README.</p>
+<h4>Career value</h4><p><b>Competencies:</b> Bare-metal programming, linker scripts, driver development.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Wrote a register-level boot and driver stack from the reset vector with emulator-based tests (state target).</p>
+<p><b>Likely interview questions:</b></p><ul><li>What happens between reset and main()?</li><li>What does the linker script place where?</li><li>How do you measure interrupt latency?</li><li>Why volatile for registers?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Emulator peripheral models differ from silicon. Fallback: test only protocol logic in host-side unit tests.</p></div><div><h4>Extensions</h4><ul><li>Add DMA-driven UART</li><li>Add a bootloader stage</li></ul></div></div>
+<h4>Score (19/30)</h4><div class="sc"><div><b>4</b>Relevance</div><div><b>3</b>Depth</div><div><b>5</b>Feasibility</div><div><b>3</b>Evaluation</div><div><b>3</b>Portfolio</div><div><b>1</b>Research</div></div><p class="meta">Strongest on feasibility (low cost) (5/5); weakest on research potential (1/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details><details class="proj" id="MVE313IA-P2"><summary>
+<span class="pid">MVE313IA-P2</span><span class="ptitle">RTOS INT8 Inference Runtime with DMA Double-Buffering</span>
+<span class="chip tA">Track A</span><span class="chip">Advanced</span><span class="chip lbl2">Build next</span>
+<span class="chip">6-8 wk</span><span class="score">25/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>Advanced Embedded System Design</b> (MVE313IA), Semester 1. Level: Industry-oriented. Primary track A; secondary: B. Estimated effort: 6-8 weeks (about 72-96 focused hours at roughly 12 h/week).</p>
+<p><b>Syllabus mapping:</b> Unit V RTOS, response-time and interrupt-latency evaluation; Unit I accelerators/benchmarking; Practical RTOS 1-4</p>
+<h4>Engineering problem</h4><p>Running neural-network inference on a microcontroller is a scheduling, memory and data-movement problem. The question is how much latency and CPU load a naive implementation wastes compared with a DMA-overlapped design.</p>
+<h4>Proposed solution and architecture</h4><p>Run a small INT8 CNN (keyword spotting or tiny image classifier) under FreeRTOS: sensor-capture task, DMA double-buffer, inference task. Compare naive C kernels with CMSIS-NN style kernels and measure latency, CPU load, and deadline misses.</p>
+<div class="flow"><span class="n">Sensor ISR + DMA</span><span class="ar">&rarr;</span><span class="n">Double buffer</span><span class="ar">&rarr;</span><span class="n">Inference task</span><span class="ar">&rarr;</span><span class="n">Kernel library</span><span class="ar">&rarr;</span><span class="n">Profiler (cycle counter)</span></div>
+
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Study: FreeRTOS tasks, queues, ISR-safe APIs, CMSIS-NN. Gate: blinky with queues.</li><li>Build: capture pipeline with DMA ping-pong into buffers. Gate: no dropped frames at the target rate.</li><li>Integrate: INT8 model inference with naive kernels. Gate: matches the Python reference output.</li><li>Optimise: kernel tiling and optimised library; overlap DMA and compute. Gate: documented speedup.</li><li>Measure: latency distribution, CPU load, WCET margin; document.</li></ol></div>
+<div><h4>Tools and resources</h4><p>FreeRTOS, CMSIS-NN or own kernels, TensorFlow Lite Micro or PyTorch export, Renode/QEMU (cycle accuracy is limited, so state this) or an actual Cortex-M4/M7 board.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Single-threaded blocking implementation.</li><li><b>Measure:</b> End-to-end latency, p99 latency, CPU utilisation, deadline misses, flash/RAM.</li><li><b>Success looks like:</b> Deadline met with measured margin on stated hardware.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>Firmware, model export script, profiling traces, report.</p>
+<h4>Career value</h4><p><b>Competencies:</b> RTOS design, DMA, quantised inference runtime, profiling.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Built a DMA-overlapped FreeRTOS INT8 inference pipeline and measured latency/CPU load against a blocking baseline.</p>
+<p><b>Likely interview questions:</b></p><ul><li>How did you size buffers?</li><li>What is the priority inversion risk?</li><li>What dominated latency?</li><li>How would an accelerator change the design?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Emulator timing is not real timing. Fallback: report cycle counts from instruction counting and mark them as estimates.</p></div><div><h4>Extensions</h4><ul><li>Offload kernels to a custom accelerator model</li><li>Dynamic voltage/frequency policy</li></ul></div></div>
+<h4>Score (25/30)</h4><div class="sc"><div><b>5</b>Relevance</div><div><b>4</b>Depth</div><div><b>4</b>Feasibility</div><div><b>5</b>Evaluation</div><div><b>4</b>Portfolio</div><div><b>3</b>Research</div></div><p class="meta">Strongest on relevance (5/5); weakest on research potential (3/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details><details class="proj" id="MVE313IA-P3"><summary>
+<span class="pid">MVE313IA-P3</span><span class="ptitle">Secure Boot Chain and Accelerator Driver for a RISC-V Platform</span>
+<span class="chip tB">Track B</span><span class="chip">Research-grade</span><span class="chip lbl3">Stretch</span>
+<span class="chip">8-10 wk</span><span class="score">22/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>Advanced Embedded System Design</b> (MVE313IA), Semester 1. Level: Advanced / research. Primary track B; secondary: C. Estimated effort: 8-10 weeks (about 96-120 focused hours at roughly 12 h/week).</p>
+<p><b>Syllabus mapping:</b> Unit IV secure boot, ELF loading, linker files; Unit I co-processors; Unit III memory-mapped I/O</p>
+<h4>Engineering problem</h4><p>Firmware roles at accelerator and SoC companies deal with trusted boot and device bring-up. The project asks how a minimal verified boot chain and a memory-mapped accelerator driver can be built and tested.</p>
+<h4>Proposed solution and architecture</h4><p>Implement stage-0 ROM (hash + signature verification of stage-1), stage-1 loader, and an MPU/PMP configuration that protects accelerator registers. Provide a driver for a simulated accelerator exposing CSRs, DMA descriptors and an interrupt. Evaluate boot time and attack scenarios (corrupt image, rollback).</p>
+<div class="flow"><span class="n">ROM stage 0</span><span class="ar">&rarr;</span><span class="n">Signature verification</span><span class="ar">&rarr;</span><span class="n">Stage 1 loader</span><span class="ar">&rarr;</span><span class="n">PMP/MPU config</span><span class="ar">&rarr;</span><span class="n">Accelerator driver</span><span class="ar">&rarr;</span><span class="n">Fault/attack tests</span></div>
+
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Study: chain of trust, ECDSA/Ed25519, PMP. Gate: threat model written.</li><li>Build: verification using a vetted open-source crypto library (do not invent crypto). Gate: known-answer tests pass.</li><li>Build: loader and PMP setup on Renode or QEMU RISC-V. Gate: unprivileged access to CSRs faults.</li><li>Build: driver for a simple memory-mapped accelerator model (can be a C++ model). Gate: kernels run and interrupts handled.</li><li>Test: tampered images rejected; measure boot time. Document limitations.</li></ol></div>
+<div><h4>Tools and resources</h4><p>RISC-V toolchain, QEMU/Renode, a vetted crypto library (for example from a mainstream open-source project), Python test scripts. Software-only.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Boot without verification.</li><li><b>Measure:</b> Boot time, code size, tests passed for tamper/rollback scenarios.</li><li><b>Success looks like:</b> All defined attack cases rejected; limits of the threat model stated. No security claims beyond the model.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>Firmware, tests, threat model, report.</p>
+<h4>Career value</h4><p><b>Competencies:</b> Trusted boot concepts, PMP, driver design.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Implemented a verified boot chain and PMP-protected accelerator driver on emulated RISC-V with tamper tests.</p>
+<p><b>Likely interview questions:</b></p><ul><li>What is rooted in hardware here?</li><li>How do you prevent rollback?</li><li>What does PMP protect?</li><li>What are the limits of emulation for this?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Scope creep into secure hardware. Fallback: implement only stage-1 verification.</p></div><div><h4>Extensions</h4><ul><li>Measured boot with hash log</li><li>Interrupt-driven DMA driver</li></ul></div></div>
+<h4>Score (22/30)</h4><div class="sc"><div><b>4</b>Relevance</div><div><b>4</b>Depth</div><div><b>4</b>Feasibility</div><div><b>3</b>Evaluation</div><div><b>4</b>Portfolio</div><div><b>3</b>Research</div></div><p class="meta">Strongest on relevance (4/5); weakest on measurable evaluation (3/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details></section><section class="course" id="MVE415DL"><header><h2>Design Thinking Lab</h2>
+<div class="meta"><span class="pid">MVE415DL</span> &middot; Core lab &middot; Credits L:T:P 0:0:2 (2) &middot; Lab</div></header>
+<div class="units"><b>Syllabus units:</b> Five stages: Empathize, Define, Ideate, Prototype, Test. Theme: System Design and On-chip variation analysis. Evaluation: 3 phases + exhibition (posters, prototype, viva).</div><p class="meta"><b>Practicals / components:</b> Case studies under the theme; report and exhibition-mode examination</p><div class="bridge">Apply the five stages to real user problems of chip designers and system architects, within the on-chip variation theme.</div><details class="proj" id="MVE415DL-P1"><summary>
+<span class="pid">MVE415DL-P1</span><span class="ptitle">On-Chip Variation Monte-Carlo Study: Guardband Advisor for Designers</span>
+<span class="chip tC">Track C</span><span class="chip">Intermediate</span><span class="chip lbl1">Build first</span>
+<span class="chip">4-6 wk</span><span class="score">20/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>Design Thinking Lab</b> (MVE415DL), Semester 1. Level: Foundational. Primary track C; secondary: A. Estimated effort: 4-6 weeks (about 48-72 focused hours at roughly 12 h/week).</p>
+<p><b>Syllabus mapping:</b> Theme: on-chip variation analysis; stages Empathize through Test</p>
+<h4>Engineering problem</h4><p>Designers guardband timing for variation but often without quantitative feedback. The user need: understand how much margin a path needs.</p>
+<h4>Proposed solution and architecture</h4><p>Interview 5+ designers/peers, define the problem, then prototype a Monte-Carlo ring-oscillator and critical-path study in ngspice (sky130 mismatch models) and a small tool that recommends margin vs path depth.</p>
+<div class="flow"><span class="n">User research</span><span class="ar">&rarr;</span><span class="n">Problem statement</span><span class="ar">&rarr;</span><span class="n">ngspice Monte-Carlo</span><span class="ar">&rarr;</span><span class="n">Advisor script</span><span class="ar">&rarr;</span><span class="n">User test</span></div>
+
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Empathize: interviews and notes. Gate: needs list.</li><li>Define: problem statement and success metric.</li><li>Ideate: 3 candidate solutions; choose by matrix.</li><li>Prototype: Monte-Carlo + advisor. Gate: result reproducible.</li><li>Test: with users; iterate; poster/report.</li></ol></div>
+<div><h4>Tools and resources</h4><p>ngspice, sky130 models, Python.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Fixed 10% margin heuristic.</li><li><b>Measure:</b> Spread (sigma/mean) vs path depth; user rating.</li><li><b>Success looks like:</b> Documented user feedback and numerical result.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>Poster, prototype, report, interview notes.</p>
+<h4>Career value</h4><p><b>Competencies:</b> Variation physics, user-centred process.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Applied design thinking to build a variation-margin advisor backed by Monte-Carlo SPICE.</p>
+<p><b>Likely interview questions:</b></p><ul><li>Why does sigma shrink with depth?</li><li>Which models do you trust?</li><li>How did user feedback change the tool?</li><li>Limits of mismatch models?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Small interview sample. Fallback: peer proxies.</p></div><div><h4>Extensions</h4><ul><li>Extend to SRAM</li><li>Add systematic variation</li></ul></div></div>
+<h4>Score (20/30)</h4><div class="sc"><div><b>3</b>Relevance</div><div><b>3</b>Depth</div><div><b>5</b>Feasibility</div><div><b>4</b>Evaluation</div><div><b>3</b>Portfolio</div><div><b>2</b>Research</div></div><p class="meta">Strongest on feasibility (low cost) (5/5); weakest on research potential (2/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details><details class="proj" id="MVE415DL-P2"><summary>
+<span class="pid">MVE415DL-P2</span><span class="ptitle">Designer-Experience Dashboard for OpenROAD Run Reports</span>
+<span class="chip tC">Track C</span><span class="chip">Intermediate</span><span class="chip lbl2">Build next</span>
+<span class="chip">4-6 wk</span><span class="score">18/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>Design Thinking Lab</b> (MVE415DL), Semester 1. Level: Industry-oriented. Primary track C; secondary: B. Estimated effort: 4-6 weeks (about 48-72 focused hours at roughly 12 h/week).</p>
+<p><b>Syllabus mapping:</b> Theme: system design; stages Prototype and Test</p>
+<h4>Engineering problem</h4><p>Reading flow logs is slow. A better view of timing, power and area across runs speeds iteration.</p>
+<h4>Proposed solution and architecture</h4><p>Parse OpenROAD reports from many runs, build a web dashboard comparing PPA over runs, and run usability tests measuring time-to-find-answer versus raw logs.</p>
+<div class="flow"><span class="n">Parser</span><span class="ar">&rarr;</span><span class="n">Data store</span><span class="ar">&rarr;</span><span class="n">Web UI</span><span class="ar">&rarr;</span><span class="n">Usability protocol</span></div>
+
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Empathize: list pain points.</li><li>Define tasks (find worst path, compare runs).</li><li>Prototype UI.</li><li>Test: timed tasks with users.</li><li>Iterate; document.</li></ol></div>
+<div><h4>Tools and resources</h4><p>Python, JavaScript, SQLite; static site compatible.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Raw logs.</li><li><b>Measure:</b> Task completion time, error rate, SUS score.</li><li><b>Success looks like:</b> Measured improvement vs logs.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>Tool, study data, report.</p>
+<h4>Career value</h4><p><b>Competencies:</b> Tooling, UX evaluation.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Built and user-tested a run-comparison dashboard for OpenROAD flows.</p>
+<p><b>Likely interview questions:</b></p><ul><li>How did you choose tasks?</li><li>SUS meaning?</li><li>Parsing robustness?</li><li>Next feature?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Few users. Fallback: heuristics evaluation.</p></div><div><h4>Extensions</h4><ul><li>Integrate CI</li><li>Add regressions alerts</li></ul></div></div>
+<h4>Score (18/30)</h4><div class="sc"><div><b>3</b>Relevance</div><div><b>2</b>Depth</div><div><b>5</b>Feasibility</div><div><b>4</b>Evaluation</div><div><b>3</b>Portfolio</div><div><b>1</b>Research</div></div><p class="meta">Strongest on feasibility (low cost) (5/5); weakest on research potential (1/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details><details class="proj" id="MVE415DL-P3"><summary>
+<span class="pid">MVE415DL-P3</span><span class="ptitle">Timing-Speculation (Razor-Style) Resilience Study for a MAC Array</span>
+<span class="chip tA">Track A</span><span class="chip">Research-grade</span><span class="chip lbl3">Stretch</span>
+<span class="chip">8-10 wk</span><span class="score">23/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>Design Thinking Lab</b> (MVE415DL), Semester 1. Level: Advanced / research. Primary track A; secondary: C. Estimated effort: 8-10 weeks (about 96-120 focused hours at roughly 12 h/week).</p>
+<p><b>Syllabus mapping:</b> Theme: variation; stage Ideate/Prototype; ties to MVE311TA and MVE212IA</p>
+<h4>Engineering problem</h4><p>Variation forces guardbands. Timing speculation with error detection can run closer to the edge, but errors affect neural-network accuracy.</p>
+<h4>Proposed solution and architecture</h4><p>Model timing errors in a MAC array using a variation-aware delay distribution; inject bit errors into a quantised network and measure accuracy vs frequency; compare detect-and-replay vs ignore. The idea is based on published Razor work (Ernst et al., MICRO 2003); your contribution is the accelerator-level study.</p>
+<div class="flow"><span class="n">Delay distribution</span><span class="ar">&rarr;</span><span class="n">Error injector</span><span class="ar">&rarr;</span><span class="n">NN evaluation</span><span class="ar">&rarr;</span><span class="n">Replay cost model</span></div>
+
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Study: Razor and approximate computing. Gate: summarise.</li><li>Build: delay model from SPICE/STA.</li><li>Build: error injection in PyTorch.</li><li>Evaluate accuracy vs frequency.</li><li>Model replay overhead; document.</li></ol></div>
+<div><h4>Tools and resources</h4><p>PyTorch, ngspice/STA, Python.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Guardbanded fixed frequency.</li><li><b>Measure:</b> Accuracy vs error rate, effective throughput.</li><li><b>Success looks like:</b> Quantified Pareto; clearly simulation-only.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>Models, plots, paper-style report.</p>
+<h4>Career value</h4><p><b>Competencies:</b> Cross-layer modelling.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Evaluated timing speculation at accelerator level via error injection (state measured accuracy trade-off).</p>
+<p><b>Likely interview questions:</b></p><ul><li>Why does DNN tolerate errors?</li><li>Which bits matter?</li><li>Replay cost?</li><li>How realistic is the model?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Assumed error distribution. Fallback: sweep.</p></div><div><h4>Extensions</h4><ul><li>Selective protection of MSBs</li><li>Hardware detect circuit RTL</li></ul></div></div>
+<h4>Score (23/30)</h4><div class="sc"><div><b>4</b>Relevance</div><div><b>4</b>Depth</div><div><b>4</b>Feasibility</div><div><b>4</b>Evaluation</div><div><b>3</b>Portfolio</div><div><b>4</b>Research</div></div><p class="meta">Strongest on relevance (4/5); weakest on portfolio distinctiveness (3/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details></section><section class="course" id="HSS116EL"><header><h2>Technical English</h2>
+<div class="meta"><span class="pid">HSS116EL</span> &middot; HSS (online lab) &middot; Credits L:T:P 0:0:1 (1) &middot; Lab</div></header>
+<div class="units"><b>Syllabus units:</b> Unit I business documents, white papers · II recommendations, data interpretation, ethical persuasion, proposals · III audience needs, negotiation, trustworthy sources</div><div class="bridge">Communication is part of the career target: architecture specs, design reviews and papers decide how your work is judged.</div><details class="proj" id="HSS116EL-P1"><summary>
+<span class="pid">HSS116EL-P1</span><span class="ptitle">Architecture Specification for an Accelerator (Design-Spec Document)</span>
+<span class="chip tA">Track A</span><span class="chip">Beginner</span><span class="chip lbl1">Build first</span>
+<span class="chip">2-3 wk</span><span class="score">17/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>Technical English</b> (HSS116EL), Semester 1. Level: Foundational. Primary track A; secondary: C. Estimated effort: 2-3 weeks (about 24-36 focused hours at roughly 12 h/week).</p>
+<p><b>Syllabus mapping:</b> Unit I business/technical documents; Unit II recommendations; Unit III audience needs</p>
+<h4>Engineering problem</h4><p>Weak specifications cause rework. The project writes the kind of spec used inside chip teams.</p>
+<h4>Proposed solution and architecture</h4><p>Write a 12-15 page architecture spec for the MAC-array accelerator: goals, interfaces, register map, timing diagrams, verification plan. Peer review with a checklist.</p>
+<div class="flow"><span class="n">Template</span><span class="ar">&rarr;</span><span class="n">Draft</span><span class="ar">&rarr;</span><span class="n">Peer review</span><span class="ar">&rarr;</span><span class="n">Revision</span></div>
+
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Study sample public specs.</li><li>Outline and audience analysis.</li><li>Draft with diagrams.</li><li>Peer review with checklist.</li><li>Revise and finalise.</li></ol></div>
+<div><h4>Tools and resources</h4><p>Markdown/LaTeX, draw.io.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Your first draft.</li><li><b>Measure:</b> Review defects found, readability scores.</li><li><b>Success looks like:</b> Checklist passed.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>PDF spec, review log.</p>
+<h4>Career value</h4><p><b>Competencies:</b> Technical writing.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Authored and peer-reviewed a design specification for a MAC-array accelerator.</p>
+<p><b>Likely interview questions:</b></p><ul><li>Who reads a spec?</li><li>What goes in a register map?</li><li>How do you version specs?</li><li>What is unspecified?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Over-detail. Fallback: shorter.</p></div><div><h4>Extensions</h4><ul><li>Reuse in MVE433P</li><li>Add test plan</li></ul></div></div>
+<h4>Score (17/30)</h4><div class="sc"><div><b>3</b>Relevance</div><div><b>2</b>Depth</div><div><b>5</b>Feasibility</div><div><b>3</b>Evaluation</div><div><b>3</b>Portfolio</div><div><b>1</b>Research</div></div><p class="meta">Strongest on feasibility (low cost) (5/5); weakest on research potential (1/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details><details class="proj" id="HSS116EL-P2"><summary>
+<span class="pid">HSS116EL-P2</span><span class="ptitle">Evidence-Based White Paper: INT8 vs FP16 Inference Trade-offs</span>
+<span class="chip tA">Track A</span><span class="chip">Intermediate</span><span class="chip lbl2">Build next</span>
+<span class="chip">3-4 wk</span><span class="score">19/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>Technical English</b> (HSS116EL), Semester 1. Level: Industry-oriented. Primary track A; secondary: B. Estimated effort: 3-4 weeks (about 36-48 focused hours at roughly 12 h/week).</p>
+<p><b>Syllabus mapping:</b> Unit II interpreting data, ethical persuasion, recommendations; Unit III trustworthy sources</p>
+<h4>Engineering problem</h4><p>Marketing claims about precision are often misleading. A white paper must use sources and data honestly.</p>
+<h4>Proposed solution and architecture</h4><p>Using your own measurements (quantisation experiments) and vetted sources, write a 10-page white paper with recommendations and limits; include a source-quality table.</p>
+<div class="flow"><span class="n">Literature</span><span class="ar">&rarr;</span><span class="n">Data analysis</span><span class="ar">&rarr;</span><span class="n">Draft</span><span class="ar">&rarr;</span><span class="n">Review</span></div>
+
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Collect sources and grade them.</li><li>Run experiments.</li><li>Draft argument.</li><li>Critique bias.</li><li>Finalise.</li></ol></div>
+<div><h4>Tools and resources</h4><p>Python, LaTeX/Markdown.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Opinion article.</li><li><b>Measure:</b> Citation quality, reproducibility of numbers.</li><li><b>Success looks like:</b> Every number traceable.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>White paper, data, code.</p>
+<h4>Career value</h4><p><b>Competencies:</b> Evidence-based communication.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Wrote a data-backed white paper comparing INT8 and FP16 inference.</p>
+<p><b>Likely interview questions:</b></p><ul><li>How do you detect bias?</li><li>What are the limits?</li><li>What would change your recommendation?</li><li>Which sources?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Weak data. Fallback: narrower claim.</p></div><div><h4>Extensions</h4><ul><li>Add hardware cost section</li><li>Present as a talk</li></ul></div></div>
+<h4>Score (19/30)</h4><div class="sc"><div><b>3</b>Relevance</div><div><b>2</b>Depth</div><div><b>5</b>Feasibility</div><div><b>4</b>Evaluation</div><div><b>3</b>Portfolio</div><div><b>2</b>Research</div></div><p class="meta">Strongest on feasibility (low cost) (5/5); weakest on technical depth (2/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details><details class="proj" id="HSS116EL-P3"><summary>
+<span class="pid">HSS116EL-P3</span><span class="ptitle">Conference-Style Paper and Talk Replicating a Published Roofline Study</span>
+<span class="chip tB">Track B</span><span class="chip">Intermediate</span><span class="chip lbl3">Stretch</span>
+<span class="chip">5-6 wk</span><span class="score">21/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>Technical English</b> (HSS116EL), Semester 1. Level: Advanced / research. Primary track B; secondary: A. Estimated effort: 5-6 weeks (about 60-72 focused hours at roughly 12 h/week).</p>
+<p><b>Syllabus mapping:</b> Unit III genres, standards vs white papers; Unit II proposals; presentation skills</p>
+<h4>Engineering problem</h4><p>Reproducing a published analysis teaches research communication and honest comparison.</p>
+<h4>Proposed solution and architecture</h4><p>Replicate a roofline analysis (Williams et al., CACM 2009) for GEMM on your CPU/GPU, write an IEEE-format 4-page paper with reproducibility artefacts, and give a 10-minute talk; also peer-review two papers.</p>
+<div class="flow"><span class="n">Replication</span><span class="ar">&rarr;</span><span class="n">Paper</span><span class="ar">&rarr;</span><span class="n">Talk</span><span class="ar">&rarr;</span><span class="n">Peer review</span></div>
+
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Read the original.</li><li>Measure.</li><li>Write.</li><li>Present.</li><li>Review others.</li></ol></div>
+<div><h4>Tools and resources</h4><p>Python, perf or Nsight, LaTeX.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Published curves.</li><li><b>Measure:</b> Agreement with theory, reproducibility.</li><li><b>Success looks like:</b> Artefact runs on a clean machine.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>Paper, talk, artefact.</p>
+<h4>Career value</h4><p><b>Competencies:</b> Research communication.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Reproduced a roofline performance study and presented it in IEEE format.</p>
+<p><b>Likely interview questions:</b></p><ul><li>What is operational intensity?</li><li>Where does measurement deviate?</li><li>How reproducible?</li><li>What did peer review find?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Hardware differences. Fallback: CPU only.</p></div><div><h4>Extensions</h4><ul><li>Add GPU</li><li>Submit to student venue</li></ul></div></div>
+<h4>Score (21/30)</h4><div class="sc"><div><b>3</b>Relevance</div><div><b>3</b>Depth</div><div><b>5</b>Feasibility</div><div><b>4</b>Evaluation</div><div><b>3</b>Portfolio</div><div><b>3</b>Research</div></div><p class="meta">Strongest on feasibility (low cost) (5/5); weakest on relevance (3/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details></section><div class="band elective"><span class="ebadge">ELECTIVE</span><h2>Professional Cluster Elective A</h2><p class="meta">Choose one of these 4 options. You do not take all of them, so build the projects only for the option you pick. Credits per option: 3:1:0 (4).</p><p><a class="chip" href="#MCS214A1">MCS214A1</a><a class="chip" href="#MDC214A2">MDC214A2</a><a class="chip" href="#MPE214A3">MPE214A3</a><a class="chip" href="#MVE214A4">MVE214A4</a></p></div><section class="course elec" id="MCS214A1"><header><h2><span class="ebadge sm">ELECTIVE</span> Programming, Data Structures and Algorithms using Python</h2>
+<div class="meta"><span class="pid">MCS214A1</span> &middot; Professional Cluster Elective A &middot; Credits L:T:P 3:1:0 (4) &middot; Theory</div></header>
+<div class="units"><b>Syllabus units:</b> I Data structures, algorithm analysis · II Stack, queue, hashing · III Trees, BST · IV Heaps, graph algorithms · V Sorting, searching, design techniques (greedy, D&amp;C, DP)</div><div class="bridge">Used as the algorithmic toolkit for EDA and accelerator tooling: graphs for netlists, DP for tiling, heaps and hashing for simulators.</div><details class="proj" id="MCS214A1-P1"><summary>
+<span class="pid">MCS214A1-P1</span><span class="ptitle">GEMM Tiling Scheduler: DP and Search for Minimum DRAM Traffic</span>
+<span class="chip tA">Track A</span><span class="chip">Intermediate</span><span class="chip lbl1">Build first</span>
+<span class="chip">3-5 wk</span><span class="score">21/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>Programming, Data Structures and Algorithms using Python</b> (MCS214A1), Semester 1. Level: Foundational. Primary track A; secondary: C. Estimated effort: 3-5 weeks (about 36-60 focused hours at roughly 12 h/week).</p>
+<p><b>Syllabus mapping:</b> Unit V dynamic programming/greedy; Unit I algorithm analysis</p>
+<h4>Engineering problem</h4><p>Mapping a matrix multiply onto an accelerator with limited scratchpad is a combinatorial problem. Naive tiling wastes DRAM bandwidth.</p>
+<h4>Proposed solution and architecture</h4><p>Write a Python tool that, given M,N,K, scratchpad size and loop order options, searches tile sizes and loop orders to minimise modelled DRAM traffic, and outputs a schedule consumable by later accelerator simulators. Compare exhaustive search, greedy and DP/branch-and-bound.</p>
+<div class="flow"><span class="n">Traffic model</span><span class="ar">&rarr;</span><span class="n">Search engines</span><span class="ar">&rarr;</span><span class="n">Schedule exporter</span><span class="ar">&rarr;</span><span class="n">Validator</span></div>
+
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Study: tiling, reuse, loop orders. Gate: derive traffic formula for one order by hand.</li><li>Build: analytical traffic model; unit test against a brute-force loop simulation. Gate: exact match on small cases.</li><li>Build: exhaustive and greedy search. Gate: greedy gap vs optimum measured.</li><li>Build: DP or pruned search; complexity analysis. Gate: speedup measured.</li><li>Document: schedule format reused later.</li></ol></div>
+<div><h4>Tools and resources</h4><p>Python, NumPy, pytest. No special hardware.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Untiled and fixed square-tile schedules.</li><li><b>Measure:</b> Modelled DRAM bytes, runtime of the search, gap of heuristic to optimum.</li><li><b>Success looks like:</b> Optimal schedule matches the brute-force traffic count on test cases.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>Python package, tests, plots, README.</p>
+<h4>Career value</h4><p><b>Competencies:</b> Algorithm design, reuse analysis, tooling.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Built a tile-schedule optimiser reducing modelled DRAM traffic vs baseline tiling (report measured reduction).</p>
+<p><b>Likely interview questions:</b></p><ul><li>How do you prove your traffic formula?</li><li>Why does loop order matter?</li><li>What is the search complexity?</li><li>What assumptions break on real caches?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Model-vs-hardware gap. Fallback: state it is a model.</p></div><div><h4>Extensions</h4><ul><li>Add convolution loop nests</li><li>Add double-buffering constraint</li></ul></div></div>
+<h4>Score (21/30)</h4><div class="sc"><div><b>4</b>Relevance</div><div><b>3</b>Depth</div><div><b>5</b>Feasibility</div><div><b>4</b>Evaluation</div><div><b>3</b>Portfolio</div><div><b>2</b>Research</div></div><p class="meta">Strongest on feasibility (low cost) (5/5); weakest on research potential (2/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details><details class="proj" id="MCS214A1-P2"><summary>
+<span class="pid">MCS214A1-P2</span><span class="ptitle">Netlist Graph Toolkit: Levelization, Critical Path and Partitioning</span>
+<span class="chip tC">Track C</span><span class="chip">Intermediate</span><span class="chip lbl2">Build next</span>
+<span class="chip">4-6 wk</span><span class="score">21/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>Programming, Data Structures and Algorithms using Python</b> (MCS214A1), Semester 1. Level: Industry-oriented. Primary track C; secondary: A. Estimated effort: 4-6 weeks (about 48-72 focused hours at roughly 12 h/week).</p>
+<p><b>Syllabus mapping:</b> Unit IV graph algorithms, shortest paths, spanning trees, DFS/BFS; Unit II hashing; Unit IV heaps</p>
+<h4>Engineering problem</h4><p>Netlists are graphs. Engineers who can analyse them programmatically can build custom checks that tools do not provide.</p>
+<h4>Proposed solution and architecture</h4><p>Parse Yosys JSON netlists to a graph, implement levelization, longest-path (critical path) analysis, fanout statistics, loop detection, and a Kernighan-Lin partitioner. Run on real open-source designs and visualise results.</p>
+<div class="flow"><span class="n">Yosys JSON parser</span><span class="ar">&rarr;</span><span class="n">Graph core</span><span class="ar">&rarr;</span><span class="n">Algorithms</span><span class="ar">&rarr;</span><span class="n">Reports and plots</span></div>
+
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Study: DAG longest path, KL algorithm. Gate: hand example.</li><li>Build: parser and graph with hashing for names. Gate: round-trips counts.</li><li>Build: levelization and critical path. Gate: matches Yosys ltp or OpenSTA depth on test designs.</li><li>Build: KL partitioner; measure cut size vs random. Gate: cut improvement reproducible.</li><li>Document and publish as a small library.</li></ol></div>
+<div><h4>Tools and resources</h4><p>Python, networkx for validation only, Yosys, matplotlib.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> networkx implementations and random partition.</li><li><b>Measure:</b> Runtime, cut size, logic depth correctness.</li><li><b>Success looks like:</b> Matches reference tools on test designs.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>Library, tests, plots.</p>
+<h4>Career value</h4><p><b>Competencies:</b> Graph algorithms on EDA data.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Developed a netlist analysis library (levelization, critical path, KL partitioning) validated against Yosys/OpenSTA.</p>
+<p><b>Likely interview questions:</b></p><ul><li>Why is the netlist a DAG only after cutting registers?</li><li>KL complexity?</li><li>How do you handle bidirectional pins?</li><li>How would you scale to millions of cells?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Netlist format quirks. Fallback: use smaller designs.</p></div><div><h4>Extensions</h4><ul><li>Add FM partitioning</li><li>Export to a placement tool</li></ul></div></div>
+<h4>Score (21/30)</h4><div class="sc"><div><b>4</b>Relevance</div><div><b>3</b>Depth</div><div><b>5</b>Feasibility</div><div><b>4</b>Evaluation</div><div><b>3</b>Portfolio</div><div><b>2</b>Research</div></div><p class="meta">Strongest on feasibility (low cost) (5/5); weakest on research potential (2/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details><details class="proj" id="MCS214A1-P3"><summary>
+<span class="pid">MCS214A1-P3</span><span class="ptitle">Memory Trace Cache Simulator with Tile-Aware Replacement Policies</span>
+<span class="chip tC">Track C</span><span class="chip">Advanced</span><span class="chip lbl3">Stretch</span>
+<span class="chip">6-8 wk</span><span class="score">22/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>Programming, Data Structures and Algorithms using Python</b> (MCS214A1), Semester 1. Level: Advanced / research. Primary track C; secondary: A. Estimated effort: 6-8 weeks (about 72-96 focused hours at roughly 12 h/week).</p>
+<p><b>Syllabus mapping:</b> Unit II hashing/queues; Unit IV heaps; Unit V algorithm design; Unit I analysis</p>
+<h4>Engineering problem</h4><p>Cache replacement policies are tuned for general workloads, but accelerator access patterns are loop-nest structured. Can a policy that knows the tile schedule beat LRU?</p>
+<h4>Proposed solution and architecture</h4><p>Build a trace-driven cache simulator with LRU, LFU, FIFO, Belady-OPT and a custom tile-aware policy fed by the schedule from the GEMM scheduler. Generate traces from GEMM and convolution loop nests and evaluate hit rates and DRAM traffic.</p>
+<div class="flow"><span class="n">Trace generator</span><span class="ar">&rarr;</span><span class="n">Cache model</span><span class="ar">&rarr;</span><span class="n">Policies</span><span class="ar">&rarr;</span><span class="n">Evaluator</span></div>
+
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Study: cache organisation, Belady&#x27;s algorithm. Gate: simple cases verified by hand.</li><li>Build: O(1) LRU with hash + linked list. Gate: correctness vs a slow reference.</li><li>Build: OPT using future knowledge via a heap/index. Gate: upper bound property holds.</li><li>Build: tile-aware policy and evaluate. Gate: measured improvement or honest negative result.</li><li>Write up with ablation.</li></ol></div>
+<div><h4>Tools and resources</h4><p>Python (or C++ for speed), pytest.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> LRU and OPT.</li><li><b>Measure:</b> Hit rate, DRAM traffic, sensitivity to cache size and associativity.</li><li><b>Success looks like:</b> A reproducible comparison; novelty is limited as known work on software-managed scratchpads exists.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>Simulator, traces, paper-style report.</p>
+<h4>Career value</h4><p><b>Competencies:</b> Cache architecture, data structures, evaluation methodology.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Built a trace-driven cache simulator and evaluated a tile-aware replacement policy against LRU and Belady OPT.</p>
+<p><b>Likely interview questions:</b></p><ul><li>Why is OPT unrealizable?</li><li>What&#x27;s your policy&#x27;s hardware cost?</li><li>How do scratchpads compare with caches here?</li><li>What did your trace miss?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Traces too small. Fallback: use only structured traces.</p></div><div><h4>Extensions</h4><ul><li>Add prefetcher</li><li>Compare with software-managed scratchpad</li></ul></div></div>
+<h4>Score (22/30)</h4><div class="sc"><div><b>4</b>Relevance</div><div><b>4</b>Depth</div><div><b>4</b>Feasibility</div><div><b>4</b>Evaluation</div><div><b>3</b>Portfolio</div><div><b>3</b>Research</div></div><p class="meta">Strongest on relevance (4/5); weakest on portfolio distinctiveness (3/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details></section><section class="course elec" id="MDC214A2"><header><h2><span class="ebadge sm">ELECTIVE</span> Multimedia Communications</h2>
+<div class="meta"><span class="pid">MDC214A2</span> &middot; Professional Cluster Elective A &middot; Credits L:T:P 3:1:0 (4) &middot; Theory</div></header>
+<div class="units"><b>Syllabus units:</b> I Multimedia representation and QoS · II JPEG, JPEG2000, audio coding, RTP/RTCP/RTSP · III Video compression standards · IV Entertainment networks · V DVB and streaming</div><div class="bridge">Codec kernels (DCT, motion estimation) are classic parallel and systolic workloads; bandwidth saving transfers to AI accelerators.</div><details class="proj" id="MDC214A2-P1"><summary>
+<span class="pid">MDC214A2-P1</span><span class="ptitle">8x8 2D-DCT and Quantiser Core in RTL (JPEG Datapath)</span>
+<span class="chip tA">Track A</span><span class="chip">Intermediate</span><span class="chip lbl1">Build first</span>
+<span class="chip">4-6 wk</span><span class="score">21/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>Multimedia Communications</b> (MDC214A2), Semester 1. Level: Foundational. Primary track A; secondary: C. Estimated effort: 4-6 weeks (about 48-72 focused hours at roughly 12 h/week).</p>
+<p><b>Syllabus mapping:</b> Unit II JPEG compression pipeline; Unit I representation</p>
+<h4>Engineering problem</h4><p>A DCT/quantiser pipeline is a compact example of a fixed-point streaming datapath. The design question is throughput, precision and area with defined PSNR.</p>
+<h4>Proposed solution and architecture</h4><p>Implement row-column 2D DCT with fixed-point coefficients and a transpose buffer, plus quantisation. Verify against a floating-point reference and measure PSNR on standard test images.</p>
+<div class="flow"><span class="n">1D DCT</span><span class="ar">&rarr;</span><span class="n">Transpose buffer</span><span class="ar">&rarr;</span><span class="n">Quantiser</span><span class="ar">&rarr;</span><span class="n">AXI-Stream wrapper</span><span class="ar">&rarr;</span><span class="n">Reference model</span></div>
+<div class="note"><b>FPGA note:</b> board optional. RTL simulation plus synthesis reports is a valid path; results are then simulation and synthesis estimates, not on-board measurements.</div>
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Study: DCT math, JPEG pipeline. Gate: Python reference reproduces JPEG blocks.</li><li>Build: 1D DCT RTL with chosen word length. Gate: error bound met.</li><li>Build: 2D with transpose memory. Gate: matches Python bit-accurately.</li><li>Build: quantiser and streaming interface. Gate: handshake tests.</li><li>Evaluate: PSNR vs word length, FPGA/ASIC resource estimate.</li></ol></div>
+<div><h4>Tools and resources</h4><p>Verilator, cocotb, Python (Pillow/NumPy), Yosys. FPGA optional.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Software DCT in Python/C.</li><li><b>Measure:</b> PSNR, max error, throughput (pixels/cycle), LUT/DSP or cell count.</li><li><b>Success looks like:</b> PSNR above stated threshold with chosen word length.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>RTL, testbench, plots, report.</p>
+<h4>Career value</h4><p><b>Competencies:</b> Fixed-point datapath design, streaming interfaces.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Designed a fixed-point 2D-DCT/quantiser pipeline in RTL verified bit-accurately against a Python model.</p>
+<p><b>Likely interview questions:</b></p><ul><li>How did you choose word length?</li><li>Why the transpose buffer?</li><li>What limits throughput?</li><li>How to handle rounding?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Precision pitfalls. Fallback: reduce to 1D.</p></div><div><h4>Extensions</h4><ul><li>Add Huffman stage</li><li>Compare against HLS version</li></ul></div></div>
+<h4>Score (21/30)</h4><div class="sc"><div><b>4</b>Relevance</div><div><b>3</b>Depth</div><div><b>5</b>Feasibility</div><div><b>4</b>Evaluation</div><div><b>3</b>Portfolio</div><div><b>2</b>Research</div></div><p class="meta">Strongest on feasibility (low cost) (5/5); weakest on research potential (2/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details><details class="proj" id="MDC214A2-P2"><summary>
+<span class="pid">MDC214A2-P2</span><span class="ptitle">CUDA Block-Matching Motion Estimation: Optimisation Ladder</span>
+<span class="chip tB">Track B</span><span class="chip">Advanced</span><span class="chip lbl2">Build next</span>
+<span class="chip">5-7 wk</span><span class="score">23/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>Multimedia Communications</b> (MDC214A2), Semester 1. Level: Industry-oriented. Primary track B; secondary: A. Estimated effort: 5-7 weeks (about 60-84 focused hours at roughly 12 h/week).</p>
+<p><b>Syllabus mapping:</b> Unit III video compression (motion estimation concepts, H.26x/MPEG families)</p>
+<h4>Engineering problem</h4><p>SAD-based motion search is regular but memory-bound. The project shows how tiling, shared memory and coalescing change performance and how to prove it with profiling.</p>
+<h4>Proposed solution and architecture</h4><p>Implement full-search SAD for 16x16 blocks: CPU baseline, naive CUDA, shared-memory tiled, and vectorised versions. Profile with Nsight Compute, build a roofline plot, and compare with OpenCV if available.</p>
+<div class="flow"><span class="n">CPU baseline</span><span class="ar">&rarr;</span><span class="n">Naive kernel</span><span class="ar">&rarr;</span><span class="n">Tiled kernel</span><span class="ar">&rarr;</span><span class="n">Vectorised kernel</span><span class="ar">&rarr;</span><span class="n">Profiler analysis</span></div>
+<div class="note warn"><b>CUDA note:</b> needs a CUDA-capable NVIDIA GPU supported by your installed toolkit, or a hosted GPU notebook. A CPU, OpenMP or OpenCL stand-in is a different programming model: use it to develop the algorithm, but label results as non-CUDA and do not present them as native CUDA performance.</div>
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Study: CUDA execution model, coalescing, shared memory. Gate: vector-add + reduction work.</li><li>Build: CPU reference and naive kernel. Gate: identical motion vectors.</li><li>Optimise: shared-memory tiling. Gate: measurable speedup with counters explaining it.</li><li>Optimise: vectorised loads/occupancy tuning. Gate: documented each step.</li><li>Report: roofline, bottleneck analysis, limits.</li></ol></div>
+<div><h4>Tools and resources</h4><p>NVIDIA GPU + CUDA toolkit (minimum: any card supported by your installed toolkit), Nsight tools. Without NVIDIA hardware: run only the CPU/OpenMP stages locally and the CUDA stages on a cloud GPU notebook if available; OpenCL on CPU is a different programming model and is not a substitute for CUDA results.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Single-thread CPU SAD.</li><li><b>Measure:</b> Kernel time, GB/s, occupancy, speedup vs CPU, % of roofline.</li><li><b>Success looks like:</b> Measured speedups tied to counter evidence.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>Kernels, benchmark scripts, Nsight reports, write-up.</p>
+<h4>Career value</h4><p><b>Competencies:</b> CUDA optimisation, profiling, roofline thinking.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Optimised CUDA block-matching through four stages with profiler-backed analysis (report measured speedup).</p>
+<p><b>Likely interview questions:</b></p><ul><li>Why shared memory here?</li><li>How did you detect the bottleneck?</li><li>What is coalescing?</li><li>Occupancy vs ILP?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>No GPU access. Fallback: CPU SIMD/OpenMP optimisation ladder, clearly labelled as such.</p></div><div><h4>Extensions</h4><ul><li>Hierarchical search</li><li>Compare with a fixed-function-like RTL SAD array</li></ul></div></div>
+<h4>Score (23/30)</h4><div class="sc"><div><b>5</b>Relevance</div><div><b>4</b>Depth</div><div><b>3</b>Feasibility</div><div><b>5</b>Evaluation</div><div><b>4</b>Portfolio</div><div><b>2</b>Research</div></div><p class="meta">Strongest on relevance (5/5); weakest on research potential (2/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details><details class="proj" id="MDC214A2-P3"><summary>
+<span class="pid">MDC214A2-P3</span><span class="ptitle">Feature-Map Compression to Cut Accelerator DRAM Bandwidth</span>
+<span class="chip tA">Track A</span><span class="chip">Research-grade</span><span class="chip lbl3">Stretch</span>
+<span class="chip">8-10 wk</span><span class="score">23/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>Multimedia Communications</b> (MDC214A2), Semester 1. Level: Advanced / research. Primary track A; secondary: C. Estimated effort: 8-10 weeks (about 96-120 focused hours at roughly 12 h/week).</p>
+<p><b>Syllabus mapping:</b> Unit II/III compression principles (transform, quantisation, entropy coding) applied to activations</p>
+<h4>Engineering problem</h4><p>DRAM bandwidth often limits accelerators. Activations are sparse and compressible; the question is the compression ratio versus hardware cost and accuracy loss.</p>
+<h4>Proposed solution and architecture</h4><p>Capture activations from a small CNN, evaluate zero-run-length, bitmask and quantised-transform codecs, model decoder/encoder hardware cost, and compute net bandwidth saving using the GEMM scheduler. Related published work exists on activation compression, so the contribution is an honest comparative study.</p>
+<div class="flow"><span class="n">Activation capture</span><span class="ar">&rarr;</span><span class="n">Codec library</span><span class="ar">&rarr;</span><span class="n">Hardware cost model</span><span class="ar">&rarr;</span><span class="n">Bandwidth model</span><span class="ar">&rarr;</span><span class="n">Accuracy check</span></div>
+
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Study: sparsity, entropy, existing activation compression papers. Gate: survey table.</li><li>Build: codecs in Python with exact size accounting. Gate: lossless round-trip.</li><li>Add: lossy variant and accuracy impact. Gate: accuracy measured.</li><li>Model: decoder area/energy from a small RTL decoder synthesised. Gate: cost numbers.</li><li>Conclude: net saving per layer; document.</li></ol></div>
+<div><h4>Tools and resources</h4><p>PyTorch (CPU OK), Python, Yosys.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Uncompressed INT8.</li><li><b>Measure:</b> Compression ratio, accuracy drop, estimated bandwidth and energy saving.</li><li><b>Success looks like:</b> Net benefit shown or negative result clearly reported.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>Code, data, report, paper draft.</p>
+<h4>Career value</h4><p><b>Competencies:</b> Memory-bandwidth reasoning, compression design.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Evaluated activation compression schemes for accelerator bandwidth reduction with RTL-costed decoders.</p>
+<p><b>Likely interview questions:</b></p><ul><li>Why is bandwidth more important than MACs?</li><li>How do you handle random access?</li><li>Decoder cost?</li><li>Where does it not help?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Gains eaten by decoder cost. Fallback: report it.</p></div><div><h4>Extensions</h4><ul><li>Weight compression</li><li>Integrate into RTL accelerator DMA</li></ul></div></div>
+<h4>Score (23/30)</h4><div class="sc"><div><b>4</b>Relevance</div><div><b>4</b>Depth</div><div><b>4</b>Feasibility</div><div><b>4</b>Evaluation</div><div><b>3</b>Portfolio</div><div><b>4</b>Research</div></div><p class="meta">Strongest on relevance (4/5); weakest on portfolio distinctiveness (3/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details></section><section class="course elec" id="MPE214A3"><header><h2><span class="ebadge sm">ELECTIVE</span> Electric and Hybrid Vehicles</h2>
+<div class="meta"><span class="pid">MPE214A3</span> &middot; Professional Cluster Elective A &middot; Credits L:T:P 3:1:0 (4) &middot; Theory</div></header>
+<div class="units"><b>Syllabus units:</b> I EV/HEV basics, vehicle performance, drive trains · II Electric traction, motor drives · III Energy storage and management · IV Traction motor and hybrid design · V DC-DC converters</div><div class="bridge">Bridge subject: use automotive electrification as an application for embedded control, fixed-point hardware and power budgeting.</div><details class="proj" id="MPE214A3-P1"><summary>
+<span class="pid">MPE214A3-P1</span><span class="ptitle">Battery SoC Estimation: EKF in Fixed-Point C on an MCU</span>
+<span class="chip tB">Track B</span><span class="chip">Intermediate</span><span class="chip lbl1">Build first</span>
+<span class="chip">4-6 wk</span><span class="score">20/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>Electric and Hybrid Vehicles</b> (MPE214A3), Semester 1. Level: Foundational. Primary track B; secondary: C. Estimated effort: 4-6 weeks (about 48-72 focused hours at roughly 12 h/week).</p>
+<p><b>Syllabus mapping:</b> Unit III battery energy storage and management; Unit I performance models</p>
+<h4>Engineering problem</h4><p>Coulomb counting drifts. An extended Kalman filter fixes it but must run in real time on a small MCU in fixed point.</p>
+<h4>Proposed solution and architecture</h4><p>Build an equivalent-circuit battery model, validate on a public cell dataset, implement coulomb counting and an EKF in float then fixed point, and run on an MCU or emulator with timing measured.</p>
+<div class="flow"><span class="n">Cell model</span><span class="ar">&rarr;</span><span class="n">EKF</span><span class="ar">&rarr;</span><span class="n">Fixed-point conversion</span><span class="ar">&rarr;</span><span class="n">MCU harness</span><span class="ar">&rarr;</span><span class="n">Evaluation</span></div>
+
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Study: ECM, Kalman filter. Gate: simulate in Python.</li><li>Build: parameter fit on public data (for example NASA/CALCE-style datasets). Gate: voltage fit error stated.</li><li>Build: EKF float vs coulomb counting. Gate: error plots.</li><li>Port: fixed-point with Q-format analysis. Gate: error vs float bounded.</li><li>Run on MCU/emulator; record cycles and RAM.</li></ol></div>
+<div><h4>Tools and resources</h4><p>Python, NumPy, C, Renode/QEMU or Cortex-M board.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Coulomb counting.</li><li><b>Measure:</b> SoC RMSE, cycles per update, RAM/flash.</li><li><b>Success looks like:</b> Bounded error in fixed point.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>Models, firmware, report.</p>
+<h4>Career value</h4><p><b>Competencies:</b> State estimation, fixed-point embedded implementation.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Implemented fixed-point EKF SoC estimator on a Cortex-M and compared error to coulomb counting.</p>
+<p><b>Likely interview questions:</b></p><ul><li>Why EKF over KF?</li><li>How do you choose Q format?</li><li>What about temperature?</li><li>Cycle budget?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Dataset mismatch. Fallback: synthetic model.</p></div><div><h4>Extensions</h4><ul><li>Add SoH tracking</li><li>Hardware EKF block</li></ul></div></div>
+<h4>Score (20/30)</h4><div class="sc"><div><b>3</b>Relevance</div><div><b>3</b>Depth</div><div><b>5</b>Feasibility</div><div><b>4</b>Evaluation</div><div><b>3</b>Portfolio</div><div><b>2</b>Research</div></div><p class="meta">Strongest on feasibility (low cost) (5/5); weakest on research potential (2/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details><details class="proj" id="MPE214A3-P2"><summary>
+<span class="pid">MPE214A3-P2</span><span class="ptitle">FOC Motor-Control Pipeline in RTL (Clarke, Park, PI, SVPWM)</span>
+<span class="chip tC">Track C</span><span class="chip">Advanced</span><span class="chip lbl2">Build next</span>
+<span class="chip">6-8 wk</span><span class="score">20/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>Electric and Hybrid Vehicles</b> (MPE214A3), Semester 1. Level: Industry-oriented. Primary track C; secondary: A. Estimated effort: 6-8 weeks (about 72-96 focused hours at roughly 12 h/week).</p>
+<p><b>Syllabus mapping:</b> Unit II motor drive control (induction, PM motors); Unit V converters</p>
+<h4>Engineering problem</h4><p>Field-oriented control needs deterministic microsecond loops. Hardware pipelines achieve fixed latency that software on a busy MCU cannot guarantee.</p>
+<h4>Proposed solution and architecture</h4><p>Implement Clarke, Park, PI controllers and SVPWM in fixed-point Verilog with a Python or Verilator motor-plant model in the loop. Measure loop latency, quantisation effects and stability.</p>
+<div class="flow"><span class="n">ADC interface model</span><span class="ar">&rarr;</span><span class="n">Clarke/Park</span><span class="ar">&rarr;</span><span class="n">PI</span><span class="ar">&rarr;</span><span class="n">SVPWM</span><span class="ar">&rarr;</span><span class="n">Plant model</span><span class="ar">&rarr;</span><span class="n">HIL harness</span></div>
+<div class="note"><b>FPGA note:</b> board optional. RTL simulation plus synthesis reports is a valid path; results are then simulation and synthesis estimates, not on-board measurements.</div>
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Study: FOC theory. Gate: Python floating-point FOC stable.</li><li>Build: fixed-point RTL blocks. Gate: bit-accurate vs Python.</li><li>Integrate: plant co-simulation. Gate: step response matches reference.</li><li>Analyse: word length, saturation, anti-windup. Gate: documented.</li><li>Report: latency cycles, resources.</li></ol></div>
+<div><h4>Tools and resources</h4><p>Verilator/cocotb, Python, Yosys.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Floating-point Python controller.</li><li><b>Measure:</b> Loop latency, step response overshoot, steady-state error, resources.</li><li><b>Success looks like:</b> Stable response with word length justified.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>RTL, plant model, plots, report.</p>
+<h4>Career value</h4><p><b>Competencies:</b> Fixed-point control hardware, co-simulation.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Implemented a fixed-point FOC pipeline in RTL co-simulated with a motor plant.</p>
+<p><b>Likely interview questions:</b></p><ul><li>Why Park transform?</li><li>Anti-windup?</li><li>Latency budget?</li><li>Sine/cos implementation?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Control tuning time. Fallback: current loop only.</p></div><div><h4>Extensions</h4><ul><li>Add speed loop</li><li>Move to RISC-V custom instruction</li></ul></div></div>
+<h4>Score (20/30)</h4><div class="sc"><div><b>3</b>Relevance</div><div><b>4</b>Depth</div><div><b>4</b>Feasibility</div><div><b>4</b>Evaluation</div><div><b>3</b>Portfolio</div><div><b>2</b>Research</div></div><p class="meta">Strongest on technical depth (4/5); weakest on research potential (2/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details><details class="proj" id="MPE214A3-P3"><summary>
+<span class="pid">MPE214A3-P3</span><span class="ptitle">Thermal- and Power-Aware Governor for an Automotive Edge AI Accelerator</span>
+<span class="chip tA">Track A</span><span class="chip">Research-grade</span><span class="chip lbl3">Stretch</span>
+<span class="chip">6-8 wk</span><span class="score">20/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>Electric and Hybrid Vehicles</b> (MPE214A3), Semester 1. Level: Advanced / research. Primary track A; secondary: B. Estimated effort: 6-8 weeks (about 72-96 focused hours at roughly 12 h/week).</p>
+<p><b>Syllabus mapping:</b> Unit III energy management strategies; Unit I power-source and performance modelling</p>
+<h4>Engineering problem</h4><p>Vehicle ECUs have strict power and thermal limits. A runtime governor must trade inference throughput against temperature.</p>
+<h4>Proposed solution and architecture</h4><p>Build an RC thermal model and power model for an accelerator (calibrated from your low-power study), implement governor policies (threshold, PID, predictive), and evaluate under drive-cycle workloads in simulation. State clearly it is simulation.</p>
+<div class="flow"><span class="n">Workload generator</span><span class="ar">&rarr;</span><span class="n">Power model</span><span class="ar">&rarr;</span><span class="n">Thermal RC model</span><span class="ar">&rarr;</span><span class="n">Governor policies</span><span class="ar">&rarr;</span><span class="n">Evaluation</span></div>
+
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Study: thermal RC networks, DVFS policies. Gate: model validated on a textbook case.</li><li>Build: power/thermal models. Gate: step response plausible.</li><li>Implement: three governors. Gate: no oscillation in baseline.</li><li>Evaluate: throughput vs temperature violations. Gate: results across workloads.</li><li>Document assumptions.</li></ol></div>
+<div><h4>Tools and resources</h4><p>Python, SimPy optional.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> No-throttle and reactive throttle.</li><li><b>Measure:</b> Time above limit, average throughput, energy.</li><li><b>Success looks like:</b> Pareto of throughput vs limit violation.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>Simulator, report.</p>
+<h4>Career value</h4><p><b>Competencies:</b> Systems modelling, control policy.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Simulated thermal/power governors for an automotive accelerator and compared throughput vs thermal violations.</p>
+<p><b>Likely interview questions:</b></p><ul><li>How is thermal capacitance chosen?</li><li>Why predictive?</li><li>Control stability?</li><li>Calibration source?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Models are assumed. Fallback: sensitivity analysis.</p></div><div><h4>Extensions</h4><ul><li>Run policy on real Cortex-M with a thermal model</li><li>Include multi-chip</li></ul></div></div>
+<h4>Score (20/30)</h4><div class="sc"><div><b>3</b>Relevance</div><div><b>3</b>Depth</div><div><b>5</b>Feasibility</div><div><b>3</b>Evaluation</div><div><b>3</b>Portfolio</div><div><b>3</b>Research</div></div><p class="meta">Strongest on feasibility (low cost) (5/5); weakest on relevance (3/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details></section><section class="course elec" id="MVE214A4"><header><h2><span class="ebadge sm">ELECTIVE</span> Digital System Design with FPGA</h2>
+<div class="meta"><span class="pid">MVE214A4</span> &middot; Professional Cluster Elective A &middot; Credits L:T:P 3:1:0 (4) &middot; Theory</div></header>
+<div class="units"><b>Syllabus units:</b> I Verilog and methodology · II Modelling styles (Vivado) · III Synthesis of subsystems · IV CPLD/FPGA architectures · V Processor design and system development</div><div class="bridge">The RTL and FPGA foundation: every accelerator and SoC project in the playbook starts here.</div><details class="proj" id="MVE214A4-P1"><summary>
+<span class="pid">MVE214A4-P1</span><span class="ptitle">Parameterised INT8 MAC Array and GEMM Engine on FPGA</span>
+<span class="chip tA">Track A</span><span class="chip">Intermediate</span><span class="chip lbl1">Build first</span>
+<span class="chip">5-7 wk</span><span class="score">23/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>Digital System Design with FPGA</b> (MVE214A4), Semester 1. Level: Foundational. Primary track A; secondary: C. Estimated effort: 5-7 weeks (about 60-84 focused hours at roughly 12 h/week).</p>
+<p><b>Syllabus mapping:</b> Units II, III, V: modelling, synthesis, datapath and controller design</p>
+<h4>Engineering problem</h4><p>FPGA DSP and BRAM mapping decide performance. Students rarely examine how RTL maps to resources.</p>
+<h4>Proposed solution and architecture</h4><p>Design a weight-stationary 4x4 to 16x16 MAC array with BRAM tiles and a small controller; verify against NumPy; synthesise and record resource use and Fmax.</p>
+<div class="flow"><span class="n">PE</span><span class="ar">&rarr;</span><span class="n">Array</span><span class="ar">&rarr;</span><span class="n">BRAM tile buffers</span><span class="ar">&rarr;</span><span class="n">FSM controller</span><span class="ar">&rarr;</span><span class="n">Testbench + NumPy golden</span></div>
+<div class="note"><b>FPGA note:</b> board optional. RTL simulation plus synthesis reports is a valid path; results are then simulation and synthesis estimates, not on-board measurements.</div>
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Study: FPGA slices, DSP48, BRAM. Gate: map a MAC to a DSP.</li><li>Build: PE and array. Gate: matches reference.</li><li>Build: BRAM buffering and controller. Gate: full tile matmul.</li><li>Synthesise: resource/Fmax report. Gate: documented.</li><li>Optimise: pipeline DSP; compare variants.</li></ol></div>
+<div><h4>Tools and resources</h4><p>Vivado (free edition for supported devices) or Yosys/nextpnr for supported FPGAs; Verilator. Any FPGA board is optional; simulation is valid.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Naive combinational array.</li><li><b>Measure:</b> LUT/FF/DSP/BRAM, Fmax, GOPS (computed), correctness.</li><li><b>Success looks like:</b> Matches golden model; resource table.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>RTL, TB, reports.</p>
+<h4>Career value</h4><p><b>Competencies:</b> FPGA mapping, datapath design.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Implemented a parameterised INT8 GEMM engine on FPGA (state measured Fmax and resources).</p>
+<p><b>Likely interview questions:</b></p><ul><li>Why DSP packing?</li><li>Weight vs output stationary?</li><li>BRAM ports?</li><li>Fmax limit?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Tool setup. Fallback: simulation + Yosys.</p></div><div><h4>Extensions</h4><ul><li>Add AXI-Stream</li><li>Add sparsity</li></ul></div></div>
+<h4>Score (23/30)</h4><div class="sc"><div><b>5</b>Relevance</div><div><b>3</b>Depth</div><div><b>5</b>Feasibility</div><div><b>4</b>Evaluation</div><div><b>4</b>Portfolio</div><div><b>2</b>Research</div></div><p class="meta">Strongest on relevance (5/5); weakest on research potential (2/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details><details class="proj" id="MVE214A4-P2"><summary>
+<span class="pid">MVE214A4-P2</span><span class="ptitle">Streaming 3x3 Convolution Engine with Line Buffers</span>
+<span class="chip tA">Track A</span><span class="chip">Advanced</span><span class="chip lbl2">Build next</span>
+<span class="chip">5-7 wk</span><span class="score">24/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>Digital System Design with FPGA</b> (MVE214A4), Semester 1. Level: Industry-oriented. Primary track A; secondary: C. Estimated effort: 5-7 weeks (about 60-84 focused hours at roughly 12 h/week).</p>
+<p><b>Syllabus mapping:</b> Units III, IV, V: synthesis, FPGA fabric, filters and signal processors</p>
+<h4>Engineering problem</h4><p>Streaming convolution minimises memory traffic by reuse via line buffers. Correct boundary handling is subtle.</p>
+<h4>Proposed solution and architecture</h4><p>Build a pixel-stream 3x3 conv with BRAM line buffers, INT8 weights, padding modes, backpressure. Verify against OpenCV/NumPy on images; measure throughput.</p>
+<div class="flow"><span class="n">Line buffers</span><span class="ar">&rarr;</span><span class="n">Window generator</span><span class="ar">&rarr;</span><span class="n">MAC tree</span><span class="ar">&rarr;</span><span class="n">Backpressure FSM</span><span class="ar">&rarr;</span><span class="n">Reference</span></div>
+<div class="note"><b>FPGA note:</b> board optional. RTL simulation plus synthesis reports is a valid path; results are then simulation and synthesis estimates, not on-board measurements.</div>
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Study: streaming window design. Gate: draw timing diagram.</li><li>Build: window generator. Gate: windows match software.</li><li>Build: MAC tree with pipelining. Gate: outputs match.</li><li>Integrate: AXI-Stream handshake. Gate: random stall tests.</li><li>Evaluate: pixels/cycle, resources.</li></ol></div>
+<div><h4>Tools and resources</h4><p>Verilator/cocotb, OpenCV for reference, Yosys/Vivado.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Software OpenCV filter2D on CPU.</li><li><b>Measure:</b> Pixels/cycle, latency, resources, correctness.</li><li><b>Success looks like:</b> Bit-exact on test suite incl. borders.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>RTL, TB, images, report.</p>
+<h4>Career value</h4><p><b>Competencies:</b> Streaming datapaths, handshakes.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Built a backpressure-safe streaming conv engine verified on randomized stalls.</p>
+<p><b>Likely interview questions:</b></p><ul><li>How handle borders?</li><li>Line buffer size?</li><li>Backpressure?</li><li>Throughput limit?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Handshake bugs. Fallback: no backpressure then add.</p></div><div><h4>Extensions</h4><ul><li>Multi-channel</li><li>Depthwise variant</li></ul></div></div>
+<h4>Score (24/30)</h4><div class="sc"><div><b>5</b>Relevance</div><div><b>4</b>Depth</div><div><b>4</b>Feasibility</div><div><b>5</b>Evaluation</div><div><b>4</b>Portfolio</div><div><b>2</b>Research</div></div><p class="meta">Strongest on relevance (5/5); weakest on research potential (2/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details><details class="proj" id="MVE214A4-P3"><summary>
+<span class="pid">MVE214A4-P3</span><span class="ptitle">RV32I 5-Stage Core from Scratch with riscv-formal Checks</span>
+<span class="chip tC">Track C</span><span class="chip">Research-grade</span><span class="chip lbl3">Stretch</span>
+<span class="chip">8-12 wk</span><span class="score">26/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>Digital System Design with FPGA</b> (MVE214A4), Semester 1. Level: Advanced / research. Primary track C; secondary: A. Estimated effort: 8-12 weeks (about 96-144 focused hours at roughly 12 h/week).</p>
+<p><b>Syllabus mapping:</b> Unit V processor design and system development; Units I-III for HDL modelling</p>
+<h4>Engineering problem</h4><p>Designing a pipelined CPU teaches hazards, forwarding, and verification at depth. The portfolio value is a verified core you control and can extend with custom instructions.</p>
+<h4>Proposed solution and architecture</h4><p>Implement RV32I with pipeline, forwarding, hazard detection, CSR basics, and a memory interface; verify with the RISC-V compliance tests and riscv-formal; run on FPGA or simulation executing C programs.</p>
+<div class="flow"><span class="n">Fetch</span><span class="ar">&rarr;</span><span class="n">Decode</span><span class="ar">&rarr;</span><span class="n">Execute</span><span class="ar">&rarr;</span><span class="n">Memory</span><span class="ar">&rarr;</span><span class="n">Writeback</span><span class="ar">&rarr;</span><span class="n">Hazard unit</span><span class="ar">&rarr;</span><span class="n">Formal harness</span></div>
+<div class="note"><b>FPGA note:</b> board optional. RTL simulation plus synthesis reports is a valid path; results are then simulation and synthesis estimates, not on-board measurements.</div>
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Study: RISC-V ISA volume I; pipeline hazards. Gate: single-cycle core passes tests.</li><li>Build: pipeline stages. Gate: no hazards in test programs.</li><li>Add: forwarding/stalls/branches. Gate: compliance subset passes.</li><li>Verify: riscv-formal checks. Gate: documented results.</li><li>Run: Dhrystone/CoreMark; report CPI.</li></ol></div>
+<div><h4>Tools and resources</h4><p>Verilator, RISC-V toolchain, riscv-formal, SymbiYosys, riscv-arch-test. Compare with open cores (e.g., Ibex) for reference.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Single-cycle version.</li><li><b>Measure:</b> CPI, Fmax, compliance pass rate, formal results.</li><li><b>Success looks like:</b> Core passes selected compliance tests; formal results stated honestly.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>RTL, tests, formal config, report.</p>
+<h4>Career value</h4><p><b>Competencies:</b> CPU microarchitecture, formal verification.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Designed and formally checked an RV32I 5-stage core and measured CPI on benchmarks.</p>
+<p><b>Likely interview questions:</b></p><ul><li>How forwarding works?</li><li>Load-use hazard?</li><li>Branch penalty?</li><li>What does riscv-formal prove?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Debug time. Fallback: 3-stage.</p></div><div><h4>Extensions</h4><ul><li>Add M extension</li><li>Add custom MAC instruction (feeds MVE433P)</li></ul></div></div>
+<h4>Score (26/30)</h4><div class="sc"><div><b>5</b>Relevance</div><div><b>5</b>Depth</div><div><b>4</b>Feasibility</div><div><b>4</b>Evaluation</div><div><b>5</b>Portfolio</div><div><b>3</b>Research</div></div><p class="meta">Strongest on relevance (5/5); weakest on research potential (3/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details></section></div></div></main>
+<footer>VLSI Engineering Project Playbook, built from the RVCE M.Tech VLSI Design &amp; Embedded Systems 2024 scheme. Project cards are plans. Scores, effort and outcomes are estimates until you build and measure. Nothing here promises a job or a salary.</footer>
+<script src="app.js?v=1792434064"></script></body></html>
