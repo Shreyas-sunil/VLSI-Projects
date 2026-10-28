@@ -1,0 +1,354 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Semester IV | VLSI Engineering Project Playbook</title><meta name="description" content="Semester IV courses and project cards, 2026 scheme.">
+<link rel="stylesheet" href="style.css?v=1793195114"></head><body>
+<header class="top"><div class="bar"><a class="brand" href="index.html">VLSI <span>Project Playbook</span></a>
+<nav class="main"><a href="index.html">Home</a><a href="semester-1.html">Sem I</a><a href="semester-2.html">Sem II</a><a href="semester-3.html">Sem III</a><a href="semester-4.html" class=on>Sem IV</a><a href="syllabus.html">Syllabus</a><a href="timetable.html">Timetable</a><a href="gpa.html">SGPA/CGPA</a><a href="explorer.html">All projects</a><a href="changes.html">What changed</a><a href="roadmap.html">Roadmap</a><a href="shortlists.html">Shortlists</a><a href="guide.html">Guide</a><a href="tools.html">Tools</a><a href="glossary.html">Glossary</a><a href="references.html">References</a><a href="coverage.html">Coverage audit</a></nav>
+<form class="search" id="gs"><input id="gq" type="search" placeholder="Search projects" aria-label="Search projects"><button type="button" onclick="toggleTheme()" title="Toggle theme">Theme</button></form></div></header>
+<div id="medal" aria-live="polite"></div>
+<main><h1>Semester IV</h1>
+<p class="lead">You take <b>2 subjects</b> this semester: 1 core plus 1 elective (one option from the group). 7 credits in total.</p>
+<p class="meta">The page lists 5 entries because every elective option is shown, so you can compare them before choosing. Each entry has 3 project cards (15 cards in all). You only need the cards for the subjects you take.</p>
+<div class="card"><h3>Semester IV - the major project and research</h3><p><b>Build these first:</b> <a class="chip" href="#MVE442PA-P1">MVE442PA-P1</a><a class="chip" href="#MVE442PA-P2">MVE442PA-P2</a><a class="chip" href="#MVE442PA-P3">MVE442PA-P3</a><a class="chip" href="#MVE341EA-P1">MVE341EA-P1</a></p><p>Prerequisites: the minor-project accelerator, an RV32 core, a UVM environment, a literature map and a measurement database. The 18-week major project is individual and requires presenting or publishing the work.</p><p>Semester IV is only 7 credits on paper (major project 5 plus one 2-credit MOOC), but the major project is still 18 weeks of full-time work. Choose one major-project path and use the Group E MOOC as supporting study.</p></div>
+<section id="books" class="booksec"><h2>Books for this semester</h2><p class="meta">PDFs are stored in the <code>books/</code> folder and open in a new tab. Books shared with another semester link to that semester&#39;s copy. Each course section below also links the books that cover it.</p><div class="grid"><div class="card book"><h3><a href="books/semester-1/Bhasker-Chadha_Static-Timing-Analysis-for-Nanometer-Designs.pdf" target="_blank" rel="noopener">Static Timing Analysis for Nanometer Designs: A Practical Approach</a></h3><p class="meta">J. Bhasker, R. Chadha. Springer, 2009. Shared with Sem I</p><p class="meta">PDF, 3.4 MB, 515 pages. Stored in books/semester-1/.</p><p><b>Use for:</b> <a href="#MVE341EA">MVE341EA VLSI Design Flow: RTL to GDS</a>, Weeks 6-8 (reference book 5).</p><p class="meta"><b>Start with:</b> Ch. 3 libraries, Ch. 7 constraints, Ch. 8 timing checks.</p><p class="bact"><a class="btn gold" href="books/semester-1/Bhasker-Chadha_Static-Timing-Analysis-for-Nanometer-Designs.pdf" target="_blank" rel="noopener">Open PDF</a><a class="btn" href="books/semester-1/Bhasker-Chadha_Static-Timing-Analysis-for-Nanometer-Designs.pdf" download>Download</a></p></div><div class="card book"><h3><a href="books/semester-1/Rabaey-Chandrakasan-Nikolic_Digital-Integrated-Circuits.pdf" target="_blank" rel="noopener">Digital Integrated Circuits: A Design Perspective (2nd ed.)</a></h3><p class="meta">J. M. Rabaey, A. Chandrakasan, B. Nikolić. Prentice Hall, 2003. Shared with Sem I</p><p class="meta">PDF, 6.3 MB, 370 pages. Stored in books/semester-1/.</p><p><b>Use for:</b> Background for <a href="#MVE341EC">MVE341EC CMOS Digital VLSI Design</a>. Supplementary: the MOOC lists Weste and Harris.</p><p class="meta"><b>Start with:</b> Ch. 5 inverter, Ch. 6 combinational logic and logical effort, Ch. 7 sequential logic, Ch. 10 timing and clocking.</p><p class="bact"><a class="btn gold" href="books/semester-1/Rabaey-Chandrakasan-Nikolic_Digital-Integrated-Circuits.pdf" target="_blank" rel="noopener">Open PDF</a><a class="btn" href="books/semester-1/Rabaey-Chandrakasan-Nikolic_Digital-Integrated-Circuits.pdf" download>Download</a></p></div><div class="card book"><h3><a href="books/semester-2/Golshan_Physical-Design-Essentials.pdf" target="_blank" rel="noopener">Physical Design Essentials: An ASIC Design Implementation Perspective</a></h3><p class="meta">K. Golshan. Springer, 2007. Shared with Sem II</p><p class="meta">PDF, 3.0 MB, 212 pages. Stored in books/semester-2/.</p><p><b>Use for:</b> Physical-design weeks of <a href="#MVE341EA">MVE341EA</a> (Weeks 10-12). Supplementary.</p><p class="meta"><b>Start with:</b> Ch. 2-4 floorplan, placement, CTS and routing; Ch. 5 physical verification and sign-off.</p><p class="bact"><a class="btn gold" href="books/semester-2/Golshan_Physical-Design-Essentials.pdf" target="_blank" rel="noopener">Open PDF</a><a class="btn" href="books/semester-2/Golshan_Physical-Design-Essentials.pdf" download>Download</a></p></div><div class="card book"><h3><a href="books/semester-2/Kahng-Lienig-Markov-Hu_VLSI-Physical-Design.pdf" target="_blank" rel="noopener">VLSI Physical Design: From Graph Partitioning to Timing Closure</a></h3><p class="meta">A. B. Kahng, J. Lienig, I. L. Markov, J. Hu. Springer, 2011. Shared with Sem II</p><p class="meta">PDF, 15 MB, 193 pages. Stored in books/semester-2/.</p><p><b>Use for:</b> Chip planning, placement, CTS and routing weeks of <a href="#MVE341EA">MVE341EA</a>. Supplementary.</p><p class="meta"><b>Start with:</b> Ch. 3-7.</p><p class="bact"><a class="btn gold" href="books/semester-2/Kahng-Lienig-Markov-Hu_VLSI-Physical-Design.pdf" target="_blank" rel="noopener">Open PDF</a><a class="btn" href="books/semester-2/Kahng-Lienig-Markov-Hu_VLSI-Physical-Design.pdf" download>Download</a></p></div></div></section><h2>This semester at a glance</h2><div class="glance"><div class="gcol core"><h3>Core courses <small>compulsory</small></h3><ul><li><a href="#MVE442PA"><span class="pid">MVE442PA</span> Major Project</a></li></ul></div><div class="gcol elective"><span class="ebadge">ELECTIVE: PICK 1 OF 4</span><h3>Professional Elective Group E (MOOC)</h3><ul><li><a href="#MVE341EA"><span class="pid">MVE341EA</span> VLSI Design Flow: RTL to GDS</a></li><li><a href="#MVE341EB"><span class="pid">MVE341EB</span> VLSI Data Conversion Circuits</a></li><li><a href="#MVE341EC"><span class="pid">MVE341EC</span> CMOS Digital VLSI Design</a></li><li><a href="#MVE341ED"><span class="pid">MVE341ED</span> Phase-Locked Loops</a></li></ul></div></div><div class="tools"><button onclick="setAll(true)">Expand all projects</button><button onclick="setAll(false)">Collapse all</button></div><div class="layout"><aside class="side"><b>Books</b><a href="#books">Semester IV books (4)</a><b>Core courses</b><a href="#MVE442PA"><span class="pid">MVE442PA</span><br>Major Project</a><b class="elb">Elective: Professional Elective Group E (MOOC)</b><a href="#MVE341EA"><span class="pid">MVE341EA</span><br>VLSI Design Flow: RTL to GDS</a><a href="#MVE341EB"><span class="pid">MVE341EB</span><br>VLSI Data Conversion Circuits</a><a href="#MVE341EC"><span class="pid">MVE341EC</span><br>CMOS Digital VLSI Design</a><a href="#MVE341ED"><span class="pid">MVE341ED</span><br>Phase-Locked Loops</a></aside><div><div class="band core"><h2>Core courses</h2><p class="meta">Everyone takes these. 1 entries, 5 credits.</p></div><section class="course" id="MVE442PA"><header><h2>Major Project</h2>
+<div class="meta"><span class="pid">MVE442PA</span> &middot; Core &middot; Credits L:T:P 0:0:5 (5) &middot; Lab</div></header>
+<div class="units"><b>Syllabus units:</b> 18-week individual project; literature survey and gap analysis; guide assigned; may be in industry or in-house (CoE/CoC); progress diary; mandatory presentation or publication in a conference or journal; committee approval; report formatting rules</div><div class="bridge">Select one and expand it into the main thesis. It is now 5 credits on paper but still 18 weeks of work; the shortlist page explains prerequisites.</div><details class="proj" id="MVE442PA-P1"><summary>
+<span class="pid">MVE442PA-P1</span><span class="ptitle">Quantised Inference SoC: RISC-V Host + INT8 Systolic Engine + DMA, FPGA and PPA</span>
+<span class="chip tA">Track A</span><span class="chip">Research-grade</span><span class="chip lbl1">Build first</span>
+<span class="chip">18 wk</span><span class="score">27/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>Major Project</b> (MVE442PA), Semester 4. Level: Foundational. Primary track A; secondary: C. Estimated effort: 18 weeks (about 216 focused hours at roughly 12 h/week). Carried over from the 2024 card MVE442P-P1.</p>
+<p><b>Syllabus mapping:</b> Guideline: gap analysis, individual implementation, mandatory presentation or publication</p>
+<h4>Engineering problem</h4><p>Integration is the hard part: host, driver, DMA, accelerator and memory must work together and be measured against baselines.</p>
+<h4>Proposed solution and architecture</h4><p>Integrate your RV32 core, the minor-project accelerator, DMA and scratchpads over AXI; software stack with driver and a compiler-like layer mapping a small CNN or transformer block; end-to-end inference, measured against CPU and GPU baselines.</p>
+<div class="flow"><span class="n">RISC-V host</span><span class="ar">&rarr;</span><span class="n">AXI interconnect</span><span class="ar">&rarr;</span><span class="n">DMA</span><span class="ar">&rarr;</span><span class="n">Accelerator</span><span class="ar">&rarr;</span><span class="n">Driver</span><span class="ar">&rarr;</span><span class="n">Model mapper</span><span class="ar">&rarr;</span><span class="n">Benchmarks</span></div>
+<div class="note"><b>FPGA note:</b> board optional. RTL simulation plus synthesis reports is a valid path; results are then simulation and synthesis estimates, not on-board measurements.</div>
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Gap analysis and spec.</li><li>Integration.</li><li>Software stack.</li><li>End-to-end model.</li><li>Evaluation.</li><li>Paper.</li></ol></div>
+<div><h4>Tools and resources</h4><p>Verilator, Yosys, OpenLane, FPGA optional, PyTorch, Timeloop optional.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> CPU-only inference, accelerator without SoC.</li><li><b>Measure:</b> End-to-end latency, throughput, energy proxy, area, accuracy.</li><li><b>Success looks like:</b> Accurate end-to-end results with stated baselines.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>RTL, software, report, paper, demo.</p>
+<h4>Career value</h4><p><b>Competencies:</b> SoC integration, HW/SW co-design.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Built an end-to-end RISC-V + INT8 accelerator SoC with measured latency, area and accuracy.</p>
+<p><b>Likely interview questions:</b></p><ul><li>Where is the bottleneck?</li><li>DMA design?</li><li>Mapping strategy?</li><li>Verification?</li><li>What would silicon change?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Integration risk. Fallback: scoped model.</p></div><div><h4>Extensions</h4><ul><li>Sparsity</li><li>Mixed precision</li></ul></div></div>
+<h4>Score (27/30)</h4><div class="sc"><div><b>5</b>Relevance</div><div><b>5</b>Depth</div><div><b>3</b>Feasibility</div><div><b>5</b>Evaluation</div><div><b>5</b>Portfolio</div><div><b>4</b>Research</div></div><p class="meta">Strongest on relevance (5/5); weakest on feasibility (low cost) (3/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details><details class="proj" id="MVE442PA-P2"><summary>
+<span class="pid">MVE442PA-P2</span><span class="ptitle">Mixed-Precision Sparse Dataflow Accelerator with Analytical Model Validated Against RTL</span>
+<span class="chip tA">Track A</span><span class="chip">Research-grade</span><span class="chip lbl2">Build next</span>
+<span class="chip">18 wk</span><span class="score">28/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>Major Project</b> (MVE442PA), Semester 4. Level: Industry-oriented. Primary track A; secondary: C. Estimated effort: 18 weeks (about 216 focused hours at roughly 12 h/week). Carried over from the 2024 card MVE442P-P2.</p>
+<p><b>Syllabus mapping:</b> Guideline: research gap analysis, mandatory presentation or publication</p>
+<h4>Engineering problem</h4><p>Architecture exploration needs fast models validated against RTL; the claim is model accuracy and design guidance.</p>
+<h4>Proposed solution and architecture</h4><p>Implement INT8/INT4 and structured sparsity support in RTL; build a Timeloop-style analytical model; validate cycle counts and energy trends vs RTL; explore dataflows; related published work is extensive (for example Eyeriss, EIE, SCNN, Timeloop) so define your gap precisely.</p>
+<div class="flow"><span class="n">Precision-scalable PE</span><span class="ar">&rarr;</span><span class="n">Sparse controller</span><span class="ar">&rarr;</span><span class="n">Analytical model</span><span class="ar">&rarr;</span><span class="n">RTL validation</span><span class="ar">&rarr;</span><span class="n">DSE</span></div>
+<div class="note"><b>FPGA note:</b> board optional. RTL simulation plus synthesis reports is a valid path; results are then simulation and synthesis estimates, not on-board measurements.</div>
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Literature gap.</li><li>RTL.</li><li>Model.</li><li>Validation.</li><li>DSE.</li><li>Paper.</li></ol></div>
+<div><h4>Tools and resources</h4><p>Verilator, Python, Timeloop/Accelergy optional, OpenLane.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Dense INT8 baseline.</li><li><b>Measure:</b> Model-vs-RTL error, energy/area trade-offs.</li><li><b>Success looks like:</b> Model error quantified; honest claims.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>RTL, model, paper draft.</p>
+<h4>Career value</h4><p><b>Competencies:</b> Architecture research.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Validated an analytical accelerator model against RTL and explored precision/sparsity trade-offs.</p>
+<p><b>Likely interview questions:</b></p><ul><li>How validated?</li><li>Sparsity overhead?</li><li>Mapping?</li><li>Novelty?</li><li>Limits?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Crowded area. Choose narrow gap.</p></div><div><h4>Extensions</h4><ul><li>Transformer layers</li><li>Add an auto-mapper that searches tilings using the validated model</li></ul></div></div>
+<h4>Score (28/30)</h4><div class="sc"><div><b>5</b>Relevance</div><div><b>5</b>Depth</div><div><b>3</b>Feasibility</div><div><b>5</b>Evaluation</div><div><b>5</b>Portfolio</div><div><b>5</b>Research</div></div><p class="meta">Strongest on relevance (5/5); weakest on feasibility (low cost) (3/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details><details class="proj" id="MVE442PA-P3"><summary>
+<span class="pid">MVE442PA-P3</span><span class="ptitle">Open SIMT GPU with CUDA-Like Toolchain: Assembler, Runtime and Performance Counters</span>
+<span class="chip tA">Track A</span><span class="chip">Research-grade</span><span class="chip lbl3">Stretch</span>
+<span class="chip">18 wk</span><span class="score">26/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>Major Project</b> (MVE442PA), Semester 4. Level: Advanced / research. Primary track A; secondary: B. Estimated effort: 18 weeks (about 216 focused hours at roughly 12 h/week). Carried over from the 2024 card MVE442P-P3.</p>
+<p><b>Syllabus mapping:</b> Guideline: individual implementation, mandatory presentation or publication</p>
+<h4>Engineering problem</h4><p>A vertically integrated mini-GPU stack shows microarchitecture, compiler and runtime/firmware understanding.</p>
+<h4>Proposed solution and architecture</h4><p>Extend the SIMT core (MVE333DB) with a small C-subset-to-ISA compiler front-end or PTX-like assembler, a host runtime/driver (launch, memory copy, completion), and counters; run GEMM and reduction kernels and analyse scaling; compare qualitatively with CUDA experiments.</p>
+<div class="flow"><span class="n">SIMT core</span><span class="ar">&rarr;</span><span class="n">Compiler</span><span class="ar">&rarr;</span><span class="n">Runtime/driver</span><span class="ar">&rarr;</span><span class="n">Host interface</span><span class="ar">&rarr;</span><span class="n">Counters</span><span class="ar">&rarr;</span><span class="n">Kernels</span></div>
+<div class="note"><b>FPGA note:</b> board optional. RTL simulation plus synthesis reports is a valid path; results are then simulation and synthesis estimates, not on-board measurements.</div>
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Scope.</li><li>Core completion.</li><li>Compiler.</li><li>Runtime.</li><li>Kernels.</li><li>Analysis and paper.</li></ol></div>
+<div><h4>Tools and resources</h4><p>Verilator, Python or LLVM-based front-end (optional), FPGA optional.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Scalar baseline and CUDA trends.</li><li><b>Measure:</b> Kernel cycles, utilisation, divergence cost.</li><li><b>Success looks like:</b> Kernels correct; analysis documented.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>RTL, toolchain, report.</p>
+<h4>Career value</h4><p><b>Competencies:</b> GPU systems stack.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Built a mini-GPU stack (core, compiler front-end, runtime) and analysed kernel performance.</p>
+<p><b>Likely interview questions:</b></p><ul><li>How are kernels launched?</li><li>Memory model?</li><li>Compiler limits?</li><li>Divergence cost?</li><li>Scaling?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Largest scope. Fallback: assembler only.</p></div><div><h4>Extensions</h4><ul><li>Tensor unit</li><li>More kernels</li></ul></div></div>
+<h4>Score (26/30)</h4><div class="sc"><div><b>5</b>Relevance</div><div><b>5</b>Depth</div><div><b>3</b>Feasibility</div><div><b>4</b>Evaluation</div><div><b>5</b>Portfolio</div><div><b>4</b>Research</div></div><p class="meta">Strongest on relevance (5/5); weakest on feasibility (low cost) (3/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details></section><div class="band elective"><span class="ebadge">ELECTIVE</span><h2>Professional Elective Group E (MOOC)</h2><p class="meta">Choose one of these 4 options. You do not take all of them, so build the projects only for the option you pick. Credits per option: 2:0:0 (2). NPTEL/MOOC courses: no CIE, the SEE is the NPTEL examination.</p><p><a class="chip" href="#MVE341EA">MVE341EA</a><a class="chip" href="#MVE341EB">MVE341EB</a><a class="chip" href="#MVE341EC">MVE341EC</a><a class="chip" href="#MVE341ED">MVE341ED</a></p></div><section class="course" id="MVE341EA"><header><h2>VLSI Design Flow: RTL to GDS</h2>
+<div class="meta"><span class="pid">MVE341EA</span> &middot; Professional Elective Group E (MOOC) &middot; Credits L:T:P 2:0:0 (2) &middot; Theory (MOOC)</div></header>
+<div class="units"><b>Syllabus units:</b> 12 weeks: IC basics and design flow, Verilog and simulation, RTL synthesis, logic optimisation, formal verification (BDD, SAT, model and equivalence checking), libraries, STA and constraints, technology mapping, power, DFT and ATPG, partitioning, floorplan, placement, CTS, routing, extraction, LVS/DRC, ECO and sign-off</div><p class="meta booksline"><b>Books:</b> <a href="books/semester-1/Bhasker-Chadha_Static-Timing-Analysis-for-Nanometer-Designs.pdf" target="_blank" rel="noopener">Bhasker &amp; Chadha</a> · <a href="books/semester-2/Golshan_Physical-Design-Essentials.pdf" target="_blank" rel="noopener">Golshan</a> · <a href="books/semester-2/Kahng-Lienig-Markov-Hu_VLSI-Physical-Design.pdf" target="_blank" rel="noopener">Kahng et al.</a></p><details class="proj" id="MVE341EA-P1"><summary>
+<span class="pid">MVE341EA-P1</span><span class="ptitle">One-Command Reproducible RTL-to-GDS Flow with Sign-Off Checklist</span>
+<span class="chip tC">Track C</span><span class="chip">Intermediate</span><span class="chip lbl1">Build first</span>
+<span class="chip">4-6 wk</span><span class="score">22/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>VLSI Design Flow: RTL to GDS</b> (MVE341EA), Semester 4. Level: Foundational. Primary track C; secondary: A. Estimated effort: 4-6 weeks (about 48-72 focused hours at roughly 12 h/week). Carried over from the 2024 card MVE341F1-P1.</p>
+<p><b>Syllabus mapping:</b> Weeks 2-12: the complete flow</p>
+<h4>Engineering problem</h4><p>Reproducibility is what makes PPA claims credible.</p>
+<h4>Proposed solution and architecture</h4><p>Wrap the open flow in a Makefile or workflow with pinned tool versions, containerisation, automated sign-off checks (DRC, LVS, STA, LEC) and archived reports for two designs.</p>
+<div class="flow"><span class="n">Container</span><span class="ar">&rarr;</span><span class="n">Flow wrapper</span><span class="ar">&rarr;</span><span class="n">Checks</span><span class="ar">&rarr;</span><span class="n">Reports</span></div>
+
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Pin tools.</li><li>Wrapper.</li><li>Checks.</li><li>Two designs.</li><li>Docs.</li></ol></div>
+<div><h4>Tools and resources</h4><p>OpenLane/OpenROAD-flow-scripts, Docker, Yosys.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Manual runs.</li><li><b>Measure:</b> Pass/fail checks, reproducibility.</li><li><b>Success looks like:</b> Same results on second machine.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>Repo, reports.</p>
+<h4>Career value</h4><p><b>Competencies:</b> Flow engineering.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Built a containerised reproducible RTL-to-GDS flow with automated sign-off checks.</p>
+<p><b>Likely interview questions:</b></p><ul><li>Why pin versions?</li><li>LEC?</li><li>What does sign-off mean in open flow?</li><li>Seeds?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Tool versions. Fallback: single design.</p></div><div><h4>Extensions</h4><ul><li>CI</li><li>Add a nightly run on a CI runner with archived artifacts</li></ul></div></div>
+<h4>Score (22/30)</h4><div class="sc"><div><b>5</b>Relevance</div><div><b>3</b>Depth</div><div><b>5</b>Feasibility</div><div><b>4</b>Evaluation</div><div><b>4</b>Portfolio</div><div><b>1</b>Research</div></div><p class="meta">Strongest on relevance (5/5); weakest on research potential (1/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details><details class="proj" id="MVE341EA-P2"><summary>
+<span class="pid">MVE341EA-P2</span><span class="ptitle">Tape-Out Readiness Dashboard and Regression Across Designs</span>
+<span class="chip tC">Track C</span><span class="chip">Intermediate</span><span class="chip lbl2">Build next</span>
+<span class="chip">4-6 wk</span><span class="score">19/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>VLSI Design Flow: RTL to GDS</b> (MVE341EA), Semester 4. Level: Industry-oriented. Primary track C; secondary: B. Estimated effort: 4-6 weeks (about 48-72 focused hours at roughly 12 h/week). Carried over from the 2024 card MVE341F1-P2.</p>
+<p><b>Syllabus mapping:</b> Weeks 7-12: STA, constraints, physical verification and sign-off</p>
+<h4>Engineering problem</h4><p>Teams track dozens of metrics across blocks; automation reveals regressions.</p>
+<h4>Proposed solution and architecture</h4><p>Collect metrics from multiple designs and runs, build a dashboard with thresholds, trends, and failure drill-down.</p>
+<div class="flow"><span class="n">Collectors</span><span class="ar">&rarr;</span><span class="n">DB</span><span class="ar">&rarr;</span><span class="n">Dashboard</span></div>
+
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Define metrics.</li><li>Collectors.</li><li>DB.</li><li>UI.</li><li>Test.</li></ol></div>
+<div><h4>Tools and resources</h4><p>Python, SQLite, static HTML.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Manual log reading.</li><li><b>Measure:</b> Detection of seeded regressions.</li><li><b>Success looks like:</b> Regressions flagged.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>Tool, report.</p>
+<h4>Career value</h4><p><b>Competencies:</b> Tooling.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Built a signoff metrics dashboard with regression detection.</p>
+<p><b>Likely interview questions:</b></p><ul><li>Which metrics?</li><li>Thresholds?</li><li>Noise?</li><li>Triage?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Scope. Fallback: fewer metrics.</p></div><div><h4>Extensions</h4><ul><li>Integrate MVE222IA coverage</li><li>Add alerting and a weekly digest of metric trends</li></ul></div></div>
+<h4>Score (19/30)</h4><div class="sc"><div><b>4</b>Relevance</div><div><b>2</b>Depth</div><div><b>5</b>Feasibility</div><div><b>4</b>Evaluation</div><div><b>3</b>Portfolio</div><div><b>1</b>Research</div></div><p class="meta">Strongest on feasibility (low cost) (5/5); weakest on research potential (1/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details><details class="proj" id="MVE341EA-P3"><summary>
+<span class="pid">MVE341EA-P3</span><span class="ptitle">Flow Hyperparameter Tuning with Bayesian Optimisation vs DoE</span>
+<span class="chip tC">Track C</span><span class="chip">Research-grade</span><span class="chip lbl3">Stretch</span>
+<span class="chip">8-10 wk</span><span class="score">25/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>VLSI Design Flow: RTL to GDS</b> (MVE341EA), Semester 4. Level: Advanced / research. Primary track C; secondary: A. Estimated effort: 8-10 weeks (about 96-120 focused hours at roughly 12 h/week). Carried over from the 2024 card MVE341F1-P3.</p>
+<p><b>Syllabus mapping:</b> Weeks 4-12: optimisation parameters across the flow</p>
+<h4>Engineering problem</h4><p>Flow parameters strongly affect PPA; OpenROAD already offers an AutoTuner, so the contribution is a controlled comparison.</p>
+<h4>Proposed solution and architecture</h4><p>Compare random search, DoE (from MIM426RT), OpenROAD AutoTuner and your BO on multiple designs with seeds; report results with statistics.</p>
+<div class="flow"><span class="n">Search space</span><span class="ar">&rarr;</span><span class="n">Runner</span><span class="ar">&rarr;</span><span class="n">Optimisers</span><span class="ar">&rarr;</span><span class="n">Stats</span></div>
+
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Define space.</li><li>Runner.</li><li>Run optimisers.</li><li>Stats.</li><li>Report.</li></ol></div>
+<div><h4>Tools and resources</h4><p>OpenROAD-flow-scripts, Ray Tune/AutoTuner, Python.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Default config.</li><li><b>Measure:</b> PPA improvement, evaluations used.</li><li><b>Success looks like:</b> Supported ranking.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>Scripts, report.</p>
+<h4>Career value</h4><p><b>Competencies:</b> EDA optimisation.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Compared flow-tuning strategies with statistical rigour on open designs.</p>
+<p><b>Likely interview questions:</b></p><ul><li>Noise?</li><li>Overfit to design?</li><li>Cost?</li><li>Objective?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Compute. Fallback: small designs.</p></div><div><h4>Extensions</h4><ul><li>Transfer learning</li><li>Add multi-objective optimisation of timing, power and area together</li></ul></div></div>
+<h4>Score (25/30)</h4><div class="sc"><div><b>4</b>Relevance</div><div><b>4</b>Depth</div><div><b>4</b>Feasibility</div><div><b>5</b>Evaluation</div><div><b>4</b>Portfolio</div><div><b>4</b>Research</div></div><p class="meta">Strongest on measurable evaluation (5/5); weakest on relevance (4/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details></section><section class="course" id="MVE341EB"><header><h2>VLSI Data Conversion Circuits</h2>
+<div class="meta"><span class="pid">MVE341EB</span> &middot; Professional Elective Group E (MOOC) &middot; Credits L:T:P 2:0:0 (2) &middot; Theory (MOOC)</div></header>
+<div class="units"><b>Syllabus units:</b> 12 weeks: sampling and time-interleaving, sampling switches and bootstrapping, S/H characterisation and FFT windows, SC circuits and fully differential operation, ADC metrics, flash ADC design, DACs and current steering, oversampling, discrete- and continuous-time delta-sigma modulators, mismatch shaping and jitter</div><details class="proj" id="MVE341EB-P1"><summary>
+<span class="pid">MVE341EB-P1</span><span class="ptitle">SAR ADC Behavioural Model with Capacitor Mismatch and ENOB Analysis</span>
+<span class="chip tA">Track A</span><span class="chip">Intermediate</span><span class="chip lbl1">Build first</span>
+<span class="chip">4-6 wk</span><span class="score">20/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>VLSI Data Conversion Circuits</b> (MVE341EB), Semester 4. Level: Foundational. Primary track A; secondary: C. Estimated effort: 4-6 weeks (about 48-72 focused hours at roughly 12 h/week). Carried over from the 2024 card MVE341F3-P1.</p>
+<p><b>Syllabus mapping:</b> Weeks 3 and 5: FFT-based characterisation and ADC metrics (the SAR architecture itself is in MVE221IA Unit IV)</p>
+<h4>Engineering problem</h4><p>ENOB depends on mismatch, noise and comparator offset.</p>
+<h4>Proposed solution and architecture</h4><p>Model a SAR ADC in Python with capacitor mismatch and comparator noise, compute INL/DNL/ENOB, and implement the SAR logic in RTL.</p>
+<div class="flow"><span class="n">Behavioural model</span><span class="ar">&rarr;</span><span class="n">Metrics</span><span class="ar">&rarr;</span><span class="n">SAR RTL</span></div>
+
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Study.</li><li>Model.</li><li>Metrics.</li><li>RTL.</li><li>Verify.</li></ol></div>
+<div><h4>Tools and resources</h4><p>Python, Verilator.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Ideal.</li><li><b>Measure:</b> INL, DNL, ENOB.</li><li><b>Success looks like:</b> Consistent with theory.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>Code, RTL.</p>
+<h4>Career value</h4><p><b>Competencies:</b> Data converters.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Modelled SAR ADC non-idealities and implemented control logic in RTL.</p>
+<p><b>Likely interview questions:</b></p><ul><li>Binary search?</li><li>Mismatch?</li><li>Calibration?</li><li>Noise?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Behavioural only. State.</p></div><div><h4>Extensions</h4><ul><li>Redundancy</li><li>Add background calibration of capacitor weights and measure the ENOB gain</li></ul></div></div>
+<h4>Score (20/30)</h4><div class="sc"><div><b>3</b>Relevance</div><div><b>3</b>Depth</div><div><b>5</b>Feasibility</div><div><b>4</b>Evaluation</div><div><b>3</b>Portfolio</div><div><b>2</b>Research</div></div><p class="meta">Strongest on feasibility (low cost) (5/5); weakest on research potential (2/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details><details class="proj" id="MVE341EB-P2"><summary>
+<span class="pid">MVE341EB-P2</span><span class="ptitle">Sigma-Delta Modulator Study with CIC Decimator in RTL</span>
+<span class="chip tA">Track A</span><span class="chip">Advanced</span><span class="chip lbl2">Build next</span>
+<span class="chip">5-7 wk</span><span class="score">20/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>VLSI Data Conversion Circuits</b> (MVE341EB), Semester 4. Level: Industry-oriented. Primary track A; secondary: C. Estimated effort: 5-7 weeks (about 60-84 focused hours at roughly 12 h/week). Carried over from the 2024 card MVE341F3-P2.</p>
+<p><b>Syllabus mapping:</b> Weeks 9-11: oversampling, discrete- and continuous-time delta-sigma modulators</p>
+<h4>Engineering problem</h4><p>Oversampling trades speed for resolution; noise shaping needs decimation hardware.</p>
+<h4>Proposed solution and architecture</h4><p>Simulate first/second-order modulators, compute SNR vs OSR, implement CIC decimation in RTL and validate end-to-end.</p>
+<div class="flow"><span class="n">Modulator model</span><span class="ar">&rarr;</span><span class="n">CIC</span><span class="ar">&rarr;</span><span class="n">SNR analysis</span></div>
+<div class="note"><b>FPGA note:</b> board optional. RTL simulation plus synthesis reports is a valid path; results are then simulation and synthesis estimates, not on-board measurements.</div>
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Study.</li><li>Model.</li><li>CIC RTL.</li><li>End-to-end.</li><li>Report.</li></ol></div>
+<div><h4>Tools and resources</h4><p>Python, Verilator.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Nyquist ADC.</li><li><b>Measure:</b> SNR vs OSR.</li><li><b>Success looks like:</b> Matches theory.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>Code, RTL.</p>
+<h4>Career value</h4><p><b>Competencies:</b> Mixed-signal DSP.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Implemented sigma-delta simulation and RTL decimation validated against SNR theory.</p>
+<p><b>Likely interview questions:</b></p><ul><li>Noise shaping?</li><li>Stability?</li><li>CIC order?</li><li>Droop?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Stability issues. Fallback: first order.</p></div><div><h4>Extensions</h4><ul><li>Higher order</li><li>Add a compensation FIR and measure passband droop correction</li></ul></div></div>
+<h4>Score (20/30)</h4><div class="sc"><div><b>3</b>Relevance</div><div><b>4</b>Depth</div><div><b>4</b>Feasibility</div><div><b>4</b>Evaluation</div><div><b>3</b>Portfolio</div><div><b>2</b>Research</div></div><p class="meta">Strongest on technical depth (4/5); weakest on research potential (2/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details><details class="proj" id="MVE341EB-P3"><summary>
+<span class="pid">MVE341EB-P3</span><span class="ptitle">ADC Resolution vs Accuracy and Energy in Compute-in-Memory Readout (System Study)</span>
+<span class="chip tA">Track A</span><span class="chip">Research-grade</span><span class="chip lbl3">Stretch</span>
+<span class="chip">8-10 wk</span><span class="score">22/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>VLSI Data Conversion Circuits</b> (MVE341EB), Semester 4. Level: Advanced / research. Primary track A; secondary: C. Estimated effort: 8-10 weeks (about 96-120 focused hours at roughly 12 h/week). Carried over from the 2024 card MVE341F3-P3.</p>
+<p><b>Syllabus mapping:</b> Weeks 1-7: sampling, ADC metrics and flash architecture applied to analog dot-product readout</p>
+<h4>Engineering problem</h4><p>Analog compute-in-memory moves cost to ADCs. The question is how ADC bits trade accuracy, energy and throughput.</p>
+<h4>Proposed solution and architecture</h4><p>Model crossbar column sums with noise and variation, quantise with ADC models of various resolutions, evaluate network accuracy and ADC energy using published figure-of-merit assumptions (for example Murmann&#x27;s ADC survey as a labelled source); simulation-only.</p>
+<div class="flow"><span class="n">Crossbar model</span><span class="ar">&rarr;</span><span class="n">ADC model</span><span class="ar">&rarr;</span><span class="n">Accuracy evaluation</span><span class="ar">&rarr;</span><span class="n">Energy model</span></div>
+
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Study CIM.</li><li>Model.</li><li>Accuracy.</li><li>Energy.</li><li>Trade-off.</li></ol></div>
+<div><h4>Tools and resources</h4><p>PyTorch CPU, Python.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Digital MAC baseline.</li><li><b>Measure:</b> Accuracy, ADC energy, throughput.</li><li><b>Success looks like:</b> Pareto with stated assumptions.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>Code, report.</p>
+<h4>Career value</h4><p><b>Competencies:</b> Analog-digital system analysis.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Evaluated ADC resolution trade-offs for compute-in-memory in simulation.</p>
+<p><b>Likely interview questions:</b></p><ul><li>Why ADC dominates?</li><li>Bit slicing?</li><li>Noise?</li><li>Assumptions?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Models idealised. State.</p></div><div><h4>Extensions</h4><ul><li>Calibration</li><li>Add a bit-slicing scheme and compare to a single high-resolution ADC</li></ul></div></div>
+<h4>Score (22/30)</h4><div class="sc"><div><b>4</b>Relevance</div><div><b>4</b>Depth</div><div><b>4</b>Feasibility</div><div><b>3</b>Evaluation</div><div><b>3</b>Portfolio</div><div><b>4</b>Research</div></div><p class="meta">Strongest on relevance (4/5); weakest on measurable evaluation (3/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details></section><section class="course" id="MVE341EC"><header><h2>CMOS Digital VLSI Design</h2>
+<div class="meta"><span class="pid">MVE341EC</span> &middot; Professional Elective Group E (MOOC) &middot; Credits L:T:P 2:0:0 (2) &middot; Theory (MOOC)</div></header>
+<div class="units"><b>Syllabus units:</b> 8 weeks: MOS transistor and SPICE models, CMOS inverter, power analysis, SPICE simulation, combinational logic design, logical effort, sequential logic design, clocking strategies, memory design</div><p class="meta booksline"><b>Books:</b> <a href="books/semester-1/Rabaey-Chandrakasan-Nikolic_Digital-Integrated-Circuits.pdf" target="_blank" rel="noopener">Rabaey et al., Digital Integrated Circuits</a></p><details class="proj" id="MVE341EC-P1"><summary>
+<span class="pid">MVE341EC-P1</span><span class="ptitle">Logical-Effort Path Sizing Tool Calibrated and Verified Against ngspice in sky130</span>
+<span class="chip tA">Track A</span><span class="chip">Intermediate</span><span class="chip lbl1">Build first</span>
+<span class="chip">3-5 wk</span><span class="score">22/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>CMOS Digital VLSI Design</b> (MVE341EC), Semester 4. Level: Foundational. Primary track A; secondary: C. Estimated effort: 3-5 weeks (about 36-60 focused hours at roughly 12 h/week). New for the 2026 scheme.</p>
+<p><b>Syllabus mapping:</b> Weeks 3-5: combinational logic design and logical effort; Weeks 1-2: inverter, power and SPICE simulation</p>
+<h4>Engineering problem</h4><p>Logical effort gives a quick estimate of the best gate sizes and number of stages, but its parameters must be calibrated for a real process. The project checks how good those estimates are in sky130.</p>
+<h4>Proposed solution and architecture</h4><p>Characterise sky130 inverter, NAND2, NOR2 and a complex gate in ngspice to extract tau, parasitic delay p and logical effort g. Build a tool that, for a given path and load, computes the optimal number of stages and gate sizes, generates a sized SPICE netlist and compares predicted with simulated delay on decoders, a carry chain and a high-fanout buffer chain.</p>
+<div class="flow"><span class="n">Gate characterisation</span><span class="ar">&rarr;</span><span class="n">Parameter extraction (tau, p, g)</span><span class="ar">&rarr;</span><span class="n">Path optimiser</span><span class="ar">&rarr;</span><span class="n">Netlist generator</span><span class="ar">&rarr;</span><span class="n">SPICE verification</span><span class="ar">&rarr;</span><span class="n">Error analysis</span></div>
+
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Study: logical effort (Weste and Harris ch. 4). Build: FO4 inverter and gate characterisation in ngspice. Gate: extracted parameters with fitting error.</li><li>Build: a path optimiser for N stages with branching. Gate: matches textbook examples.</li><li>Generate sized netlists and simulate them. Gate: predicted vs simulated delay for 5 paths.</li><li>Analyse errors from input slope, unequal rise and fall, and wire load. Gate: each large error explained.</li><li>Package the tool with a short guide and examples.</li></ol></div>
+<div><h4>Tools and resources</h4><p>ngspice, sky130 PDK, Python. CPU only.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Unit-sized gates, or a fanout-of-4 rule of thumb.</li><li><b>Measure:</b> Predicted vs simulated path delay, extracted g and p, error per path.</li><li><b>Success looks like:</b> A calibrated tool with documented error bounds for sky130. Simulation only.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>Tool, characterisation data, netlists, report.</p>
+<h4>Career value</h4><p><b>Competencies:</b> Logical effort, gate characterisation, SPICE automation.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Calibrated logical effort for sky130 and built a path-sizing tool whose predictions were within X percent of ngspice on 5 paths (report your numbers).</p>
+<p><b>Likely interview questions:</b></p><ul><li>What is the electrical effort of a path?</li><li>Why is the optimum stage effort close to 4?</li><li>How does branching affect sizing?</li><li>Where does logical effort break down?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Rise/fall asymmetry complicates extraction; average them first. Fallback: inverter chains and NAND2 only.</p></div><div><h4>Extensions</h4><ul><li>Compare with Yosys/ABC gate sizing on the same paths</li><li>Add wire load from the Elmore calculator of <a href="semester-3.html#MVE333DC-P1">MVE333DC-P1</a></li></ul></div></div>
+<h4>Score (22/30)</h4><div class="sc"><div><b>4</b>Relevance</div><div><b>3</b>Depth</div><div><b>5</b>Feasibility</div><div><b>5</b>Evaluation</div><div><b>3</b>Portfolio</div><div><b>2</b>Research</div></div><p class="meta">Strongest on feasibility (low cost) (5/5); weakest on research potential (2/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details><details class="proj" id="MVE341EC-P2"><summary>
+<span class="pid">MVE341EC-P2</span><span class="ptitle">Mini Standard-Cell Library: Layout, Characterisation to Liberty and OpenROAD Use</span>
+<span class="chip tC">Track C</span><span class="chip">Advanced</span><span class="chip lbl2">Build next</span>
+<span class="chip">6-9 wk</span><span class="score">23/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>CMOS Digital VLSI Design</b> (MVE341EC), Semester 4. Level: Industry-oriented. Primary track C; secondary: A. Estimated effort: 6-9 weeks (about 72-108 focused hours at roughly 12 h/week). Carried over from the 2024 card MVE427SL-P2.</p>
+<p><b>Syllabus mapping:</b> Weeks 2-7: CMOS inverter, SPICE simulation, combinational and sequential cell design</p>
+<h4>Engineering problem</h4><p>Standard cell libraries tie transistor-level design to the timing models synthesis uses. Building a few cells and characterising them makes the weeks on inverters, combinational and sequential cells concrete.</p>
+<h4>Proposed solution and architecture</h4><p>Lay out INV, NAND2, NOR2, AOI21 and a DFF; script ngspice characterisation to Liberty tables, generate LEF; run a small design through OpenROAD with your cells.</p>
+<div class="flow"><span class="n">Layouts</span><span class="ar">&rarr;</span><span class="n">Characterisation scripts</span><span class="ar">&rarr;</span><span class="n">Liberty</span><span class="ar">&rarr;</span><span class="n">LEF</span><span class="ar">&rarr;</span><span class="n">Flow test</span></div>
+
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Layouts.</li><li>DRC/LVS.</li><li>Characterise.</li><li>Liberty/LEF.</li><li>Flow.</li></ol></div>
+<div><h4>Tools and resources</h4><p>Magic or KLayout, ngspice, Python, OpenROAD, sky130 PDK. All open source.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Library cells from PDK.</li><li><b>Measure:</b> Delay error vs PDK cells, flow success.</li><li><b>Success looks like:</b> Design closes with custom cells.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>Cells, scripts, report.</p>
+<h4>Career value</h4><p><b>Competencies:</b> Library flow.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Built and characterised a mini standard-cell library used in an OpenROAD flow.</p>
+<p><b>Likely interview questions:</b></p><ul><li>Liberty tables?</li><li>Characterisation corners?</li><li>LEF?</li><li>Pin access?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Characterisation effort. Fallback: few cells.</p></div><div><h4>Extensions</h4><ul><li>More cells</li><li>Add multiple drive strengths and measure the QoR effect in a placed design</li></ul></div></div>
+<h4>Score (23/30)</h4><div class="sc"><div><b>4</b>Relevance</div><div><b>4</b>Depth</div><div><b>3</b>Feasibility</div><div><b>5</b>Evaluation</div><div><b>4</b>Portfolio</div><div><b>3</b>Research</div></div><p class="meta">Strongest on measurable evaluation (5/5); weakest on feasibility (low cost) (3/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details><details class="proj" id="MVE341EC-P3"><summary>
+<span class="pid">MVE341EC-P3</span><span class="ptitle">6T SRAM Bitcell and Sense Amplifier in sky130: Read/Write Margins and Monte-Carlo Yield</span>
+<span class="chip tA">Track A</span><span class="chip">Advanced</span><span class="chip lbl3">Stretch</span>
+<span class="chip">5-7 wk</span><span class="score">25/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>CMOS Digital VLSI Design</b> (MVE341EC), Semester 4. Level: Advanced / research. Primary track A; secondary: C. Estimated effort: 5-7 weeks (about 60-84 focused hours at roughly 12 h/week). New for the 2026 scheme.</p>
+<p><b>Syllabus mapping:</b> Week 8: memory design; Weeks 5-7: sequential logic and clocking (sense-amplifier timing); Weeks 1-2: device models</p>
+<h4>Engineering problem</h4><p>On-chip SRAM dominates accelerator area and much of its energy. The bitcell must read without flipping and write reliably under variation, and those margins shrink at low voltage.</p>
+<h4>Proposed solution and architecture</h4><p>Design a 6T bitcell, a small column with precharge and a latch-type sense amplifier in sky130. Measure hold and read static noise margin (butterfly curves), write margin, read current and access time vs supply voltage. Run Monte-Carlo on threshold mismatch to estimate the failure probability per cell, and relate it to the yield of an accelerator scratchpad of a given size.</p>
+<div class="flow"><span class="n">6T bitcell</span><span class="ar">&rarr;</span><span class="n">Butterfly SNM analysis</span><span class="ar">&rarr;</span><span class="n">Write-margin test</span><span class="ar">&rarr;</span><span class="n">Column with precharge</span><span class="ar">&rarr;</span><span class="n">Latch sense amplifier</span><span class="ar">&rarr;</span><span class="n">Monte-Carlo yield</span></div>
+
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Study: 6T operation, read stability and writability (Weste and Harris, memory chapter). Gate: sizing rationale (cell and pull-up ratios).</li><li>Build the bitcell and extract hold and read SNM from butterfly curves. Gate: method checked on a textbook example.</li><li>Measure write margin and read current vs VDD. Gate: curves from 1.8 V down to the failure point.</li><li>Build a 16-cell column with precharge and a latch sense amplifier; measure access time and sense-amplifier offset. Gate: correct reads at the nominal corner.</li><li>Monte-Carlo (500 or more samples on the cell): estimate failure probability and, with a Gaussian tail fit, the yield of a 64 KB array; state the extrapolation risk.</li></ol></div>
+<div><h4>Tools and resources</h4><p>ngspice, xschem, sky130 PDK with mismatch models, Python. CPU only; batch the Monte-Carlo runs.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Minimum-size cell with equal pull-down and access transistors.</li><li><b>Measure:</b> Hold and read SNM, write margin, read current, access time, failure probability, extrapolated array yield.</li><li><b>Success looks like:</b> Margins and failure estimates with clear statistical caveats. Simulation only; foundry SRAM cells use special rules not available here.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>Netlists, scripts, Monte-Carlo data, report.</p>
+<h4>Career value</h4><p><b>Competencies:</b> SRAM design, noise-margin analysis, statistical yield estimation.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Designed a 6T SRAM cell and sense amplifier in sky130 and estimated read-failure probability vs VDD with Monte-Carlo (report your numbers).</p>
+<p><b>Likely interview questions:</b></p><ul><li>Why is read stability worse than hold stability?</li><li>What sets the cell ratio?</li><li>Why does a sense amplifier need an offset budget?</li><li>Why is tail extrapolation risky?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Monte-Carlo runtime; use importance sampling if time allows. Fallback: corners plus 200 samples.</p></div><div><h4>Extensions</h4><ul><li>Add an 8T cell for low-voltage reads</li><li>Link scratchpad yield to the March-test MBIST of <a href="semester-2.html#MVE223TA-P3">MVE223TA-P3</a></li></ul></div></div>
+<h4>Score (25/30)</h4><div class="sc"><div><b>4</b>Relevance</div><div><b>4</b>Depth</div><div><b>5</b>Feasibility</div><div><b>5</b>Evaluation</div><div><b>4</b>Portfolio</div><div><b>3</b>Research</div></div><p class="meta">Strongest on feasibility (low cost) (5/5); weakest on research potential (3/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details></section><section class="course" id="MVE341ED"><header><h2>Phase-Locked Loops</h2>
+<div class="meta"><span class="pid">MVE341ED</span> &middot; Professional Elective Group E (MOOC) &middot; Credits L:T:P 2:0:0 (2) &middot; Theory (MOOC)</div></header>
+<div class="units"><b>Syllabus units:</b> 12 weeks: PLL basics, type I/II/III small-signal analysis, frequency acquisition, phase and phase-frequency detectors, charge-pump PLL design, non-linearities and noise, ring and supply-regulated oscillators, phase noise, PFD/charge-pump/divider circuits, wide-range and digital PLLs, hybrid PLLs</div><details class="proj" id="MVE341ED-P1"><summary>
+<span class="pid">MVE341ED-P1</span><span class="ptitle">Type-II Charge-Pump PLL Behavioural Model and Loop-Filter Design</span>
+<span class="chip tA">Track A</span><span class="chip">Intermediate</span><span class="chip lbl1">Build first</span>
+<span class="chip">4-6 wk</span><span class="score">18/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>Phase-Locked Loops</b> (MVE341ED), Semester 4. Level: Foundational. Primary track A; secondary: C. Estimated effort: 4-6 weeks (about 48-72 focused hours at roughly 12 h/week). Carried over from the 2024 card MVE341F2-P1.</p>
+<p><b>Syllabus mapping:</b> Weeks 1-5: PLL analysis and charge-pump design procedure</p>
+<h4>Engineering problem</h4><p>Loop filter design sets bandwidth, phase margin and lock time.</p>
+<h4>Proposed solution and architecture</h4><p>Build a Python/Verilog-AMS-free behavioural model and a discrete-time simulation; design loop filter for phase margin; compare with simulation lock time.</p>
+<div class="flow"><span class="n">Model</span><span class="ar">&rarr;</span><span class="n">Loop filter design</span><span class="ar">&rarr;</span><span class="n">Simulation</span></div>
+
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Study.</li><li>Model.</li><li>Design.</li><li>Simulate.</li><li>Compare.</li></ol></div>
+<div><h4>Tools and resources</h4><p>Python (SciPy), ngspice optional.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Analytic.</li><li><b>Measure:</b> PM, lock time.</li><li><b>Success looks like:</b> Agrees with analysis.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>Code, report.</p>
+<h4>Career value</h4><p><b>Competencies:</b> PLL design.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Designed a charge-pump PLL loop filter and validated lock behaviour in simulation.</p>
+<p><b>Likely interview questions:</b></p><ul><li>Why type II?</li><li>Zero?</li><li>Ripple?</li><li>Bandwidth limit?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Discrete approximations. State.</p></div><div><h4>Extensions</h4><ul><li>Noise</li><li>Add charge-pump mismatch and quantify the resulting spur</li></ul></div></div>
+<h4>Score (18/30)</h4><div class="sc"><div><b>3</b>Relevance</div><div><b>3</b>Depth</div><div><b>5</b>Feasibility</div><div><b>4</b>Evaluation</div><div><b>2</b>Portfolio</div><div><b>1</b>Research</div></div><p class="meta">Strongest on feasibility (low cost) (5/5); weakest on research potential (1/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details><details class="proj" id="MVE341ED-P2"><summary>
+<span class="pid">MVE341ED-P2</span><span class="ptitle">All-Digital PLL in RTL (TDC, Loop Filter, DCO Model)</span>
+<span class="chip tC">Track C</span><span class="chip">Advanced</span><span class="chip lbl2">Build next</span>
+<span class="chip">6-8 wk</span><span class="score">21/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>Phase-Locked Loops</b> (MVE341ED), Semester 4. Level: Industry-oriented. Primary track C; secondary: A. Estimated effort: 6-8 weeks (about 72-96 focused hours at roughly 12 h/week). Carried over from the 2024 card MVE341F2-P2.</p>
+<p><b>Syllabus mapping:</b> Weeks 11-12: digital PLLs</p>
+<h4>Engineering problem</h4><p>Digital PLLs are synthesizable and scalable.</p>
+<h4>Proposed solution and architecture</h4><p>Implement TDC, digital loop filter, DCO behavioural model; verify lock, jitter and tracking via simulation.</p>
+<div class="flow"><span class="n">TDC</span><span class="ar">&rarr;</span><span class="n">Filter</span><span class="ar">&rarr;</span><span class="n">DCO model</span><span class="ar">&rarr;</span><span class="n">Jitter analysis</span></div>
+<div class="note"><b>FPGA note:</b> board optional. RTL simulation plus synthesis reports is a valid path; results are then simulation and synthesis estimates, not on-board measurements.</div>
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Study.</li><li>RTL.</li><li>Verify lock.</li><li>Jitter.</li><li>Report.</li></ol></div>
+<div><h4>Tools and resources</h4><p>Verilator, Python.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Analog PLL model.</li><li><b>Measure:</b> Lock time, jitter.</li><li><b>Success looks like:</b> Stable lock.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>RTL, report.</p>
+<h4>Career value</h4><p><b>Competencies:</b> Digital clocking.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Implemented an all-digital PLL in RTL with jitter analysis.</p>
+<p><b>Likely interview questions:</b></p><ul><li>TDC resolution?</li><li>Dithering?</li><li>Limit cycles?</li><li>Behavioural vs real DCO?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Model idealised. State.</p></div><div><h4>Extensions</h4><ul><li>Hybrid</li><li>Add a bang-bang phase detector variant and compare jitter and lock time</li></ul></div></div>
+<h4>Score (21/30)</h4><div class="sc"><div><b>3</b>Relevance</div><div><b>4</b>Depth</div><div><b>4</b>Feasibility</div><div><b>4</b>Evaluation</div><div><b>3</b>Portfolio</div><div><b>3</b>Research</div></div><p class="meta">Strongest on technical depth (4/5); weakest on relevance (3/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details><details class="proj" id="MVE341ED-P3"><summary>
+<span class="pid">MVE341ED-P3</span><span class="ptitle">PLL Jitter Budget and Its Effect on MAC-Array Fmax</span>
+<span class="chip tA">Track A</span><span class="chip">Research-grade</span><span class="chip lbl3">Stretch</span>
+<span class="chip">7-9 wk</span><span class="score">22/30</span></summary>
+<div class="pbody">
+<h4>Identification</h4>
+<p><b>Phase-Locked Loops</b> (MVE341ED), Semester 4. Level: Advanced / research. Primary track A; secondary: C. Estimated effort: 7-9 weeks (about 84-108 focused hours at roughly 12 h/week). Carried over from the 2024 card MVE341F2-P3.</p>
+<p><b>Syllabus mapping:</b> Weeks 5-9: noise analysis, ring oscillators, phase noise</p>
+<h4>Engineering problem</h4><p>Jitter consumes timing margin; the question is how much frequency is lost.</p>
+<h4>Proposed solution and architecture</h4><p>Characterise ring-oscillator jitter in SPICE, convert to uncertainty, apply in STA constraints for the MAC array, and quantify Fmax loss vs jitter.</p>
+<div class="flow"><span class="n">Jitter extraction</span><span class="ar">&rarr;</span><span class="n">STA constraint link</span><span class="ar">&rarr;</span><span class="n">Fmax study</span></div>
+
+<div class="two"><div><h4>Implementation plan</h4><ol><li>Study.</li><li>Jitter.</li><li>STA.</li><li>Sweep.</li><li>Analyse.</li></ol></div>
+<div><h4>Tools and resources</h4><p>ngspice, OpenSTA, Python.</p>
+<h4>Measurable evaluation</h4><ul><li><b>Baseline:</b> Zero jitter.</li><li><b>Measure:</b> Fmax vs jitter.</li><li><b>Success looks like:</b> Quantified.</li></ul>
+<p class="note">Report each number as measured, simulated, analytical estimate or design target. Nothing here is a pre-measured result.</p></div></div>
+<h4>Final deliverables</h4><p>Report.</p>
+<h4>Career value</h4><p><b>Competencies:</b> Cross-domain analysis.</p>
+<p><b>Resume bullet (use only after you build it and fill in measured numbers):</b> Linked PLL jitter to STA margin for an accelerator.</p>
+<p><b>Likely interview questions:</b></p><ul><li>Period vs cycle jitter?</li><li>Uncertainty?</li><li>Margins?</li><li>Model?</li></ul>
+<div class="two"><div><h4>Risks and fallback</h4><p>Simplifications. State.</p></div><div><h4>Extensions</h4><ul><li>Adaptive clocking</li><li>Add supply-noise-induced jitter from the PDN study</li></ul></div></div>
+<h4>Score (22/30)</h4><div class="sc"><div><b>4</b>Relevance</div><div><b>4</b>Depth</div><div><b>4</b>Feasibility</div><div><b>4</b>Evaluation</div><div><b>3</b>Portfolio</div><div><b>3</b>Research</div></div><p class="meta">Strongest on relevance (4/5); weakest on portfolio distinctiveness (3/5). Scores are the author's planning estimates using the rubric on the Guide page.</p>
+</div></details></section></div></div></main>
+<footer>VLSI Engineering Project Playbook, built from the RVCE M.Tech VLSI Design &amp; Embedded Systems 2026 scheme. Project cards are plans. Scores, effort and outcomes are estimates until you build and measure. Nothing here promises a job or a salary.</footer>
+<script src="app.js?v=1793195114"></script></body></html>
